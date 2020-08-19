@@ -254,6 +254,7 @@
 			children = (
 			);
 			path = ProjectsVC;
+
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
