@@ -107,6 +107,11 @@
 		C392710624ECC0F10032202A /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C392712124ECC91B0032202A /* MainVC */,
+				C392712824ECC9800032202A /* ProjectsVC */,
+				C392712724ECC96B0032202A /* DashboardVC */,
+				C392712324ECC9430032202A /* ProfileVC */,
+				C392712224ECC9390032202A /* ReceiptsVC */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -190,6 +195,65 @@
 				C392711024ECC1E80032202A /* Projects.storyboard */,
 			);
 			path = Projects;
+			sourceTree = "<group>";
+		};
+		C392712124ECC91B0032202A /* MainVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MainVC;
+			sourceTree = "<group>";
+		};
+		C392712224ECC9390032202A /* ReceiptsVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ReceiptsVC;
+			sourceTree = "<group>";
+		};
+		C392712324ECC9430032202A /* ProfileVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProfileVC;
+			sourceTree = "<group>";
+		};
+		C392712424ECC94C0032202A /* FinancesVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FinancesVC;
+			sourceTree = "<group>";
+		};
+		C392712524ECC9590032202A /* ProductsVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProductsVC;
+			sourceTree = "<group>";
+		};
+		C392712624ECC9630032202A /* NotesVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NotesVC;
+			sourceTree = "<group>";
+		};
+		C392712724ECC96B0032202A /* DashboardVC */ = {
+			isa = PBXGroup;
+			children = (
+				C392712624ECC9630032202A /* NotesVC */,
+				C392712524ECC9590032202A /* ProductsVC */,
+				C392712424ECC94C0032202A /* FinancesVC */,
+			);
+			path = DashboardVC;
+			sourceTree = "<group>";
+		};
+		C392712824ECC9800032202A /* ProjectsVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProjectsVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
