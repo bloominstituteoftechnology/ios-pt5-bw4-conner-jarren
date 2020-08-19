@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13451D6824ECD90B009C9313 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13451D6724ECD90B009C9313 /* Project.swift */; };
+		13451D6A24ECD953009C9313 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13451D6924ECD953009C9313 /* Product.swift */; };
+		13451D6E24ECD96E009C9313 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 13451D6D24ECD96E009C9313 /* Note.m */; };
 		13EFFFEF24ECB73C0039F232 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EFFFEE24ECB73C0039F232 /* AppDelegate.swift */; };
 		13EFFFF124ECB73C0039F232 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EFFFF024ECB73C0039F232 /* SceneDelegate.swift */; };
 		13EFFFF624ECB73C0039F232 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13EFFFF424ECB73C0039F232 /* Main.storyboard */; };
@@ -23,6 +26,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		13451D6724ECD90B009C9313 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		13451D6924ECD953009C9313 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		13451D6B24ECD96D009C9313 /* ProjectManager-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ProjectManager-Bridging-Header.h"; sourceTree = "<group>"; };
+		13451D6C24ECD96E009C9313 /* Note.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
+		13451D6D24ECD96E009C9313 /* Note.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
 		13EFFFEB24ECB73C0039F232 /* ProjectManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13EFFFEE24ECB73C0039F232 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13EFFFF024ECB73C0039F232 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +59,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13451D6624ECD8DB009C9313 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				13451D6724ECD90B009C9313 /* Project.swift */,
+				13451D6924ECD953009C9313 /* Product.swift */,
+				13451D6C24ECD96E009C9313 /* Note.h */,
+				13451D6D24ECD96E009C9313 /* Note.m */,
+				13451D6B24ECD96D009C9313 /* ProjectManager-Bridging-Header.h */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		13EFFFE224ECB73C0039F232 = {
 			isa = PBXGroup;
 			children = (
@@ -70,7 +90,7 @@
 		13EFFFED24ECB73C0039F232 /* ProjectManager */ = {
 			isa = PBXGroup;
 			children = (
-				C392710224ECC09D0032202A /* Models */,
+				13451D6624ECD8DB009C9313 /* Models */,
 				C392710724ECC0FA0032202A /* Views */,
 				C392710624ECC0F10032202A /* View Controllers */,
 				C392710424ECC0AF0032202A /* Controllers */,
@@ -78,13 +98,6 @@
 				13EFFFFC24ECB73C0039F232 /* Info.plist */,
 			);
 			path = ProjectManager;
-			sourceTree = "<group>";
-		};
-		C392710224ECC09D0032202A /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		C392710424ECC0AF0032202A /* Controllers */ = {
@@ -288,6 +301,7 @@
 				TargetAttributes = {
 					13EFFFEA24ECB73C0039F232 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -335,8 +349,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13451D6E24ECD96E009C9313 /* Note.m in Sources */,
 				13EFFFEF24ECB73C0039F232 /* AppDelegate.swift in Sources */,
+				13451D6A24ECD953009C9313 /* Product.swift in Sources */,
 				13EFFFF124ECB73C0039F232 /* SceneDelegate.swift in Sources */,
+				13451D6824ECD90B009C9313 /* Project.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +383,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ProjectManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -374,6 +392,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.LambdaStudents.ProjectManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ProjectManager/Models/ProjectManager-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -383,6 +403,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ProjectManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -391,6 +412,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.LambdaStudents.ProjectManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ProjectManager/Models/ProjectManager-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
