@@ -109,7 +109,17 @@
                     <view key="view" contentMode="scaleToFill" id="ejQ-mK-Geb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ddw-rZ-5ly">
+                                <rect key="frame" x="40" y="791" width="334" height="2"/>
+                            </progressView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ddw-rZ-5ly" firstAttribute="leading" secondItem="ejQ-mK-Geb" secondAttribute="leadingMargin" constant="20" id="W6l-Bg-N36"/>
+                            <constraint firstItem="W0Z-3p-Y5D" firstAttribute="bottom" secondItem="ddw-rZ-5ly" secondAttribute="bottom" constant="20" id="fhv-ZZ-3Qm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ddw-rZ-5ly" secondAttribute="trailing" constant="20" id="irS-Tw-qX7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="W0Z-3p-Y5D"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Receipt" id="dSy-c3-Sqg"/>
@@ -117,6 +127,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HOJ-OQ-VG6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2022" y="-285"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9ey-Ky-zA6">
+            <objects>
+                <viewController id="JzO-Qj-LxR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="215-TV-reO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="0cH-bD-7Ff"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XMe-9p-HD4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2775" y="-285"/>
         </scene>
     </scenes>
     <resources>
