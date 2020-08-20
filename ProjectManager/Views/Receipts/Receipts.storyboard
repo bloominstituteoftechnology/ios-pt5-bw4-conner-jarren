@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="m4Y-BL-Mni">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ej1-5O-Czg">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -29,15 +29,43 @@
                             <outlet property="delegate" destination="m4Y-BL-Mni" id="jwR-WE-8RH"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Receipts" image="doc.text" catalog="system" id="aay-sj-XUa"/>
+                    <navigationItem key="navigationItem" title="Receipts" id="a5b-kA-9wK">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="hZ3-E2-yZ9">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="IO1-gW-VWT">
+                                <rect key="frame" x="-23" y="-15" width="18" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="plus" catalog="system"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rRm-oM-9d7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="170" y="140"/>
+            <point key="canvasLocation" x="1079.7101449275362" y="139.95535714285714"/>
+        </scene>
+        <!--Receipts-->
+        <scene sceneID="JO8-hA-UPl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ej1-5O-Czg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Receipts" image="doc.text" catalog="system" id="aay-sj-XUa"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="IDG-Y9-3pI">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="m4Y-BL-Mni" kind="relationship" relationship="rootViewController" id="ksY-Eg-Pxy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Cd-IM-Q2e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="169.56521739130437" y="139.95535714285714"/>
         </scene>
     </scenes>
     <resources>
         <image name="doc.text" catalog="system" width="115" height="128"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
     </resources>
 </document>
