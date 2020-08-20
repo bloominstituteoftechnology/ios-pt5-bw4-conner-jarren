@@ -102,7 +102,7 @@
             </objects>
             <point key="canvasLocation" x="169.56521739130437" y="139.95535714285714"/>
         </scene>
-        <!--Add Receipt-->
+        <!--Add Location-->
         <scene sceneID="KUV-pQ-5f7">
             <objects>
                 <viewController id="vyi-kX-Lnj" sceneMemberID="viewController">
@@ -131,9 +131,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sdu-Nd-Em4">
+                                <rect key="frame" x="191" y="721" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="JzO-Qj-LxR" kind="show" id="NoC-D3-kl5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="ddw-rZ-5ly" firstAttribute="top" secondItem="Sdu-Nd-Em4" secondAttribute="bottom" constant="40" id="2uR-La-oAf"/>
                             <constraint firstItem="2Ue-fF-S36" firstAttribute="top" secondItem="GzJ-S0-9fx" secondAttribute="bottom" constant="10" id="93D-DE-Mq9"/>
                             <constraint firstItem="Eb2-zF-39K" firstAttribute="centerX" secondItem="ejQ-mK-Geb" secondAttribute="centerX" id="E6Z-hA-IM8"/>
                             <constraint firstItem="GzJ-S0-9fx" firstAttribute="leading" secondItem="W0Z-3p-Y5D" secondAttribute="leading" constant="20" id="FXh-Uj-tDM"/>
@@ -145,29 +153,77 @@
                             <constraint firstItem="2Ue-fF-S36" firstAttribute="leading" secondItem="W0Z-3p-Y5D" secondAttribute="leading" constant="20" id="iZy-fR-g1y"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ddw-rZ-5ly" secondAttribute="trailing" constant="20" id="irS-Tw-qX7"/>
                             <constraint firstItem="W0Z-3p-Y5D" firstAttribute="trailing" secondItem="GzJ-S0-9fx" secondAttribute="trailing" constant="20" id="snX-b2-Oky"/>
+                            <constraint firstItem="Sdu-Nd-Em4" firstAttribute="centerX" secondItem="ejQ-mK-Geb" secondAttribute="centerX" id="xeq-PW-Iy8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="W0Z-3p-Y5D"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Receipt" id="dSy-c3-Sqg"/>
+                    <navigationItem key="navigationItem" title="Add Location" id="dSy-c3-Sqg"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HOJ-OQ-VG6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2022" y="-285"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Date-->
         <scene sceneID="9ey-Ky-zA6">
             <objects>
                 <viewController id="JzO-Qj-LxR" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="215-TV-reO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="G0z-0r-kEu">
+                                <rect key="frame" x="0.0" y="198" width="414" height="500"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="Flm-98-4zC"/>
+                                </constraints>
+                            </datePicker>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="jsC-Eu-oka">
+                                <rect key="frame" x="40" y="791" width="334" height="2"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8P7-uZ-cgp">
+                                <rect key="frame" x="191" y="721" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="P5h-h8-6kK" kind="show" id="pKb-Dd-N8v"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="8P7-uZ-cgp" firstAttribute="top" secondItem="G0z-0r-kEu" secondAttribute="bottom" constant="23" id="2t4-IE-Zxq"/>
+                            <constraint firstItem="jsC-Eu-oka" firstAttribute="top" secondItem="8P7-uZ-cgp" secondAttribute="bottom" constant="40" id="4aY-9h-73P"/>
+                            <constraint firstItem="jsC-Eu-oka" firstAttribute="leading" secondItem="215-TV-reO" secondAttribute="leadingMargin" constant="20" id="NlN-IZ-eWD"/>
+                            <constraint firstItem="8P7-uZ-cgp" firstAttribute="centerX" secondItem="215-TV-reO" secondAttribute="centerX" id="T4l-Gh-4gI"/>
+                            <constraint firstItem="G0z-0r-kEu" firstAttribute="leading" secondItem="0cH-bD-7Ff" secondAttribute="leading" id="fS0-AT-3h6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jsC-Eu-oka" secondAttribute="trailing" constant="20" id="gYX-0Y-UyL"/>
+                            <constraint firstItem="G0z-0r-kEu" firstAttribute="centerX" secondItem="215-TV-reO" secondAttribute="centerX" id="me5-c3-21F"/>
+                            <constraint firstItem="0cH-bD-7Ff" firstAttribute="bottom" secondItem="jsC-Eu-oka" secondAttribute="bottom" constant="20" id="tfD-Bh-IIL"/>
+                            <constraint firstItem="0cH-bD-7Ff" firstAttribute="trailing" secondItem="G0z-0r-kEu" secondAttribute="trailing" id="vOf-VU-fhj"/>
+                            <constraint firstItem="G0z-0r-kEu" firstAttribute="centerY" secondItem="215-TV-reO" secondAttribute="centerY" id="zt9-bf-cDB"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="0cH-bD-7Ff"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Add Date" id="iK7-sE-ocb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XMe-9p-HD4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2775" y="-285"/>
+        </scene>
+        <!--Add Picture-->
+        <scene sceneID="JuQ-rF-xha">
+            <objects>
+                <viewController id="P5h-h8-6kK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Kr-Kp-uxo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="9Vg-WJ-FXM"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Picture" id="Pf8-BI-ewr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O8V-R2-Unc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3529" y="-285"/>
         </scene>
     </scenes>
     <resources>
