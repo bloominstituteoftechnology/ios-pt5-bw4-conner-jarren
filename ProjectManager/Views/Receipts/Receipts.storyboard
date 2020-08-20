@@ -113,12 +113,38 @@
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ddw-rZ-5ly">
                                 <rect key="frame" x="40" y="791" width="334" height="2"/>
                             </progressView>
+                            <mapView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Eb2-zF-39K">
+                                <rect key="frame" x="82" y="190" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="MCa-Wx-9ZL"/>
+                                    <constraint firstAttribute="height" constant="250" id="i9K-7z-ndB"/>
+                                </constraints>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place of Purchase:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GzJ-S0-9fx">
+                                <rect key="frame" x="20" y="460" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Ue-fF-S36">
+                                <rect key="frame" x="20" y="491" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="2Ue-fF-S36" firstAttribute="top" secondItem="GzJ-S0-9fx" secondAttribute="bottom" constant="10" id="93D-DE-Mq9"/>
+                            <constraint firstItem="Eb2-zF-39K" firstAttribute="centerX" secondItem="ejQ-mK-Geb" secondAttribute="centerX" id="E6Z-hA-IM8"/>
+                            <constraint firstItem="GzJ-S0-9fx" firstAttribute="leading" secondItem="W0Z-3p-Y5D" secondAttribute="leading" constant="20" id="FXh-Uj-tDM"/>
+                            <constraint firstItem="W0Z-3p-Y5D" firstAttribute="trailing" secondItem="2Ue-fF-S36" secondAttribute="trailing" constant="20" id="TiE-jx-783"/>
                             <constraint firstItem="ddw-rZ-5ly" firstAttribute="leading" secondItem="ejQ-mK-Geb" secondAttribute="leadingMargin" constant="20" id="W6l-Bg-N36"/>
+                            <constraint firstItem="Eb2-zF-39K" firstAttribute="top" secondItem="W0Z-3p-Y5D" secondAttribute="top" constant="50" id="e4K-r8-Whn"/>
                             <constraint firstItem="W0Z-3p-Y5D" firstAttribute="bottom" secondItem="ddw-rZ-5ly" secondAttribute="bottom" constant="20" id="fhv-ZZ-3Qm"/>
+                            <constraint firstItem="GzJ-S0-9fx" firstAttribute="top" secondItem="Eb2-zF-39K" secondAttribute="bottom" constant="20" id="iVW-hQ-3bs"/>
+                            <constraint firstItem="2Ue-fF-S36" firstAttribute="leading" secondItem="W0Z-3p-Y5D" secondAttribute="leading" constant="20" id="iZy-fR-g1y"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ddw-rZ-5ly" secondAttribute="trailing" constant="20" id="irS-Tw-qX7"/>
+                            <constraint firstItem="W0Z-3p-Y5D" firstAttribute="trailing" secondItem="GzJ-S0-9fx" secondAttribute="trailing" constant="20" id="snX-b2-Oky"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="W0Z-3p-Y5D"/>
                     </view>
