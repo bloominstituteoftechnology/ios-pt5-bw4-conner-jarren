@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13136A2124EE205800761CA1 /* ProjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13136A2024EE205800761CA1 /* ProjectController.swift */; };
 		13451D6824ECD90B009C9313 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13451D6724ECD90B009C9313 /* Project.swift */; };
 		13451D6A24ECD953009C9313 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13451D6924ECD953009C9313 /* Product.swift */; };
 		13451D6E24ECD96E009C9313 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 13451D6D24ECD96E009C9313 /* Note.m */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		13136A2024EE205800761CA1 /* ProjectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectController.swift; sourceTree = "<group>"; };
 		13451D6724ECD90B009C9313 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		13451D6924ECD953009C9313 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		13451D6B24ECD96D009C9313 /* ProjectManager-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ProjectManager-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 		C392710424ECC0AF0032202A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				13136A2024EE205800761CA1 /* ProjectController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 			files = (
 				13451D6E24ECD96E009C9313 /* Note.m in Sources */,
 				13EFFFEF24ECB73C0039F232 /* AppDelegate.swift in Sources */,
+				13136A2124EE205800761CA1 /* ProjectController.swift in Sources */,
 				13451D6A24ECD953009C9313 /* Product.swift in Sources */,
 				13EFFFF124ECB73C0039F232 /* SceneDelegate.swift in Sources */,
 				13451D6824ECD90B009C9313 /* Project.swift in Sources */,
