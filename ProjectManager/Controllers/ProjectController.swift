@@ -9,8 +9,15 @@
 import Foundation
 
 class ProjectController {
+    // MARK: Projects Array
     var projects: [Project] = []
     
+    // MARK: Computed Properties
+    var count: Int {
+        projects.count
+    }
+    
+    // MARK: Functions
     func addProject(_ project: Project) {
         projects.append(project)
     }
@@ -19,7 +26,7 @@ class ProjectController {
         projects.remove(at: index)
     }
     
-    func replaceProject(at index: Int with project: Project) {
+    func replaceProject(at index: Int, with project: Project) {
         projects.remove(at: index)
         projects.insert(project, at: index)
     }

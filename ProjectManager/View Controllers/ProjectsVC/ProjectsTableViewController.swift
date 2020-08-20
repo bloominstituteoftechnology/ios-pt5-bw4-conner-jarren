@@ -10,7 +10,7 @@ import UIKit
 
 class ProjectsTableViewController: UITableViewController {
     
-    var projects: [Project] = []
+    let projectController = ProjectController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +33,7 @@ class ProjectsTableViewController: UITableViewController {
         testProject.products = gardenProducts
         testProject.notes = gardenNotes
         
-        projects.append(testProject)
+        projectController.addProject(testProject)
 
     }
 
@@ -41,13 +41,13 @@ class ProjectsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return projects.count
+        return projectController.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "projectCell", for: indexPath)
 
-        cell.textLabel?.text = projects[indexPath.row].title
+        cell.textLabel?.text = projectController.projects[indexPath.row].title
 
         return cell
     }
