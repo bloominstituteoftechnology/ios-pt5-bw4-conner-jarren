@@ -10,13 +10,30 @@ import UIKit
 
 class ProjectsTableViewController: UITableViewController {
     
-    var projectArray: [String] = []
+    var projects: [Project] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let exampleProjectName = "Test Project"
-        projectArray.append(exampleProjectName)
+        // Project created, haven't decided on [Product]s needed and haven't added any [Note]s
+        var testProject = Project(title: "Garden", description: "Building a wooden box for a raised garden bed")
+        
+        // Add products I have in mind
+        let gardenProducts = [
+            Product(name: "2x4", purchaseDate: NSDate.now, price: 5.00),
+            Product(name: "Topsoil", price: 10.00),     // User doesn't know purchase date, TODO: Add quantity to Product model
+        ]
+        
+        // Create some notes
+        let gardenNotes = [
+            Note(title: "Buy-list", contents: "I need to purchase a shovel")
+        ]
+        
+        // Add those to the project once done
+        testProject.products = gardenProducts
+        testProject.notes = gardenNotes
+        
+        projects.append(testProject)
 
     }
 
@@ -24,13 +41,13 @@ class ProjectsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return projectArray.count
+        return projects.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "projectCell", for: indexPath)
 
-        cell.textLabel?.text = projectArray[indexPath.row]
+        cell.textLabel?.text = projects[indexPath.row].title
 
         return cell
     }
@@ -51,7 +68,7 @@ class ProjectsTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
     */
 
