@@ -12,10 +12,16 @@ struct Product {
     var name: String
     var purchaseDate: Date?
     var price: Float
+    var quantity: Int
     
-    init(name: String, purchaseDate: Date? = nil, price: Float) {
+    var totalCost: Float {
+        price * Float(quantity)
+    }
+    
+    init(name: String, purchaseDate: Date? = nil, price: Float, quantity: Int = 1) {
         self.name = name
         self.purchaseDate = purchaseDate
         self.price = price
+        self.quantity = quantity
     }
 }
