@@ -32,7 +32,15 @@
                             <outlet property="delegate" destination="L1r-Sb-Dhv" id="sGN-6l-suI"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Projects" id="2Ut-u2-2ud"/>
+                    <navigationItem key="navigationItem" title="Projects" id="2Ut-u2-2ud">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="96P-LB-3On">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="DJg-gr-HrJ">
+                                <rect key="frame" x="-23" y="-15" width="18" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="plus" catalog="system"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1xf-bk-nM9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -65,4 +73,7 @@
             <point key="canvasLocation" x="371.01449275362324" y="-192.1875"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+    </resources>
 </document>
