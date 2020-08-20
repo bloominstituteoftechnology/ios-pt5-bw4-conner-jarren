@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Receipts-->
         <scene sceneID="9nQ-dK-B1w">
             <objects>
                 <tableViewController id="m4Y-BL-Mni" sceneMemberID="viewController">
@@ -29,10 +29,15 @@
                             <outlet property="delegate" destination="m4Y-BL-Mni" id="jwR-WE-8RH"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Receipts" image="doc.text" catalog="system" id="aay-sj-XUa"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rRm-oM-9d7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="170" y="140"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="doc.text" catalog="system" width="115" height="128"/>
+    </resources>
 </document>
