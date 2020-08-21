@@ -15,10 +15,10 @@ struct Receipt {
     var totalCost: Float
     var category: String
     var image: UIImage?
-    var date: NSDate
+    var date: String
     
     // Array of products on receipt
-    var productsPurchased: [Product]
+    var productsPurchased: [Product]?
     
     // Location
     var placeOfPurchase: String
