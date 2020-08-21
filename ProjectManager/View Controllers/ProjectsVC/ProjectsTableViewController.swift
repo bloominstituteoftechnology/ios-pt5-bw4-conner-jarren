@@ -48,7 +48,7 @@ class ProjectsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "projectCell", for: indexPath)
 
         cell.textLabel?.text = projectController.projects[indexPath.row].title
-
+        
         return cell
     }
 

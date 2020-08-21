@@ -24,14 +24,15 @@ class ReceiptsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return receiptController.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "receiptCell", for: indexPath)
 
-        // Configure the cell...
-
+        cell.textLabel?.text = "$\(receiptController.receipts[indexPath.row].totalCost)"
+        cell.detailTextLabel?.text = "\(receiptController.receipts[indexPath.row].date)"
+        
         return cell
     }
 
