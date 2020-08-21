@@ -665,14 +665,18 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLB-gL-oDJ">
-                                        <rect key="frame" x="0.0" y="142.5" width="8" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="142.5" width="153" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="pLB-gL-oDJ" secondAttribute="trailing" id="DFO-Sg-ZmF"/>
+                                    <constraint firstItem="pLB-gL-oDJ" firstAttribute="leading" secondItem="Qax-2c-ZPC" secondAttribute="leading" id="lCD-2D-rLt"/>
+                                </constraints>
                             </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CbA-AO-TTs">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CbA-AO-TTs">
                                 <rect key="frame" x="20" y="628" width="374" height="165"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -706,6 +710,16 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="categoryLabel" destination="4ay-sa-unW" id="aFn-D0-yZp"/>
+                        <outlet property="dateLabel" destination="UI8-XJ-Cjk" id="ad7-Tm-BCd"/>
+                        <outlet property="descriptionTextView" destination="CbA-AO-TTs" id="r0M-Op-ke1"/>
+                        <outlet property="itemNameLabel" destination="snC-la-gpT" id="vca-nh-2Bc"/>
+                        <outlet property="placeOfPurchaseLabel" destination="42L-EF-HKq" id="TIe-W4-M1S"/>
+                        <outlet property="priceLabel" destination="irK-8p-Nk5" id="Mev-Va-V0K"/>
+                        <outlet property="quantityLabel" destination="pLB-gL-oDJ" id="Wjb-5b-CNo"/>
+                        <outlet property="receiptPreviewImageView" destination="aO9-Ns-0qn" id="nrX-La-kx6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g0z-Ie-spC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
