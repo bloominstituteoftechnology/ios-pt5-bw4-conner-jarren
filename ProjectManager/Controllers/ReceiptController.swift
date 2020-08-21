@@ -9,6 +9,9 @@
 import Foundation
 
 class ReceiptController {
+    let date = Date(timeIntervalSinceReferenceDate: 118800)
+    let dateFormatter = DateFormatter()
+    
     var receipts: [Receipt] = []
     
     var count: Int {
@@ -21,6 +24,16 @@ class ReceiptController {
     
     func removeReceiptAtIndex(_ index: Int) {
         receipts.remove(at: index)
+    }
+    
+    func dateFormatterConfig(_ date: Date) -> String {
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        // US English Locale (en_US)
+        dateFormatter.locale = Locale(identifier: "en_US")
+        dateFormatter.setLocalizedDateFormatFromTemplate("MMddyy")
+        
+        return dateFormatter.string(from: date)
     }
     
 }
