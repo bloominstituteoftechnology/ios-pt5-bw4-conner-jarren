@@ -14,6 +14,7 @@
     if(self = [super init]) {
         _title = title;
         _contents = contents;
+        _date = NSDate.now;
     }
     return self;
 }

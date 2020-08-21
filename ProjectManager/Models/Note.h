@@ -13,7 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Note : NSObject
 
 @property (nonatomic, copy) NSString *title;
-@property (nonatomic, copy) NSString *contents;
+@property (nonatomic, copy) NSString *_Nullable contents;
+@property (nonatomic) NSDate *date;
 -(instancetype)initWithTitle:(NSString*)title contents:(NSString*)contents;
 
 @end
