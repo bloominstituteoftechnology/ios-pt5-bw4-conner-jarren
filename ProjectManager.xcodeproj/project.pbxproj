@@ -25,6 +25,7 @@
 		C32D7D2B24EF6BA200073746 /* AddPictureReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32D7D2A24EF6BA200073746 /* AddPictureReceiptViewController.swift */; };
 		C32D7D2E24EF6BC000073746 /* AddDetailsReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32D7D2D24EF6BC000073746 /* AddDetailsReceiptViewController.swift */; };
 		C32D7D3024EF6BD700073746 /* ReviewReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32D7D2F24EF6BD700073746 /* ReviewReceiptViewController.swift */; };
+		C32D7D3224EF6CE000073746 /* DetailReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32D7D3124EF6CE000073746 /* DetailReceiptViewController.swift */; };
 		C392711124ECC1E80032202A /* Projects.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C392711024ECC1E80032202A /* Projects.storyboard */; };
 		C392711324ECC1F80032202A /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C392711224ECC1F80032202A /* Dashboard.storyboard */; };
 		C392711524ECC2060032202A /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C392711424ECC2060032202A /* Notes.storyboard */; };
@@ -58,6 +59,7 @@
 		C32D7D2A24EF6BA200073746 /* AddPictureReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPictureReceiptViewController.swift; sourceTree = "<group>"; };
 		C32D7D2D24EF6BC000073746 /* AddDetailsReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDetailsReceiptViewController.swift; sourceTree = "<group>"; };
 		C32D7D2F24EF6BD700073746 /* ReviewReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewReceiptViewController.swift; sourceTree = "<group>"; };
+		C32D7D3124EF6CE000073746 /* DetailReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailReceiptViewController.swift; sourceTree = "<group>"; };
 		C392711024ECC1E80032202A /* Projects.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Projects.storyboard; sourceTree = "<group>"; };
 		C392711224ECC1F80032202A /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		C392711424ECC2060032202A /* Notes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notes.storyboard; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 				C32D7D2A24EF6BA200073746 /* AddPictureReceiptViewController.swift */,
 				C32D7D2D24EF6BC000073746 /* AddDetailsReceiptViewController.swift */,
 				C32D7D2F24EF6BD700073746 /* ReviewReceiptViewController.swift */,
+				C32D7D3124EF6CE000073746 /* DetailReceiptViewController.swift */,
 			);
 			path = ReceiptsVC;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 				C32D7D2324EF613C00073746 /* ReceiptsTableViewController.swift in Sources */,
 				13EFFFF124ECB73C0039F232 /* SceneDelegate.swift in Sources */,
 				13451D6824ECD90B009C9313 /* Project.swift in Sources */,
+				C32D7D3224EF6CE000073746 /* DetailReceiptViewController.swift in Sources */,
 				C32D7D2124EE074A00073746 /* ProjectsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
