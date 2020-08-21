@@ -13,11 +13,20 @@ struct Project {
     var description: String?
     var products: [Product]?
     var notes: [Note]?
+    var receipts: [Receipt]?
+    var spendingDictionary: [String:Float]
     
-    init(title: String, description: String? = nil, products: [Product]? = nil, notes: [Note]? = nil) {
+    init(title: String,
+         description: String? = nil,
+         products: [Product]? = nil,
+         notes: [Note]? = nil,
+         receipts: [Receipt]? = nil,
+         spendingDictionary: [String:Float] = [:])
+    {
         self.title = title
         self.description = description
         self.products = products
         self.notes = notes
+        self.spendingDictionary = spendingDictionary
     }
 }
