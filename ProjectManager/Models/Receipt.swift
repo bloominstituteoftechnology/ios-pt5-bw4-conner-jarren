@@ -18,7 +18,7 @@ struct Receipt {
     var date: NSDate
     
     // Array of products on receipt
-    var productsPurchased: [Product]
+    var productsPurchased: [Product]?
     
     // Location
     var placeOfPurchase: String

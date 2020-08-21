@@ -10,7 +10,7 @@
         <!--Receipts-->
         <scene sceneID="9nQ-dK-B1w">
             <objects>
-                <tableViewController id="m4Y-BL-Mni" sceneMemberID="viewController">
+                <tableViewController id="m4Y-BL-Mni" customClass="ReceiptsTableViewController" customModule="ProjectManager" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7vv-Uo-hsb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -659,7 +659,7 @@
                     <navigationItem key="navigationItem" title="Review Receipt" id="HLk-VR-yY5">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="cpI-XI-p8v">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gKf-jF-vCf">
-                                <rect key="frame" x="-23" y="-15" width="20" height="22"/>
+                                <rect key="frame" x="374" y="11" width="20" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="trash.fill" catalog="system"/>
