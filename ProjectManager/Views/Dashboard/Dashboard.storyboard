@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d1U-S9-juF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d1U-S9-juF">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,7 +14,20 @@
                     <view key="view" contentMode="scaleToFill" id="3op-L3-kc4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iqo-M8-yBL">
+                                <rect key="frame" x="186.5" y="433" width="41" height="30"/>
+                                <state key="normal" title="Notes"/>
+                                <connections>
+                                    <segue destination="ii9-22-AMq" kind="presentation" modalPresentationStyle="fullScreen" id="MiA-hM-Ne3"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="iqo-M8-yBL" firstAttribute="centerX" secondItem="3op-L3-kc4" secondAttribute="centerX" id="gmp-4y-LMt"/>
+                            <constraint firstItem="iqo-M8-yBL" firstAttribute="centerY" secondItem="3op-L3-kc4" secondAttribute="centerY" id="lqq-2d-1hy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="8v9-l7-DWk"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="0gC-lw-kiq"/>
@@ -24,8 +37,18 @@
             </objects>
             <point key="canvasLocation" x="407" y="-98"/>
         </scene>
+        <!--Notes-->
+        <scene sceneID="z0i-oE-YJm">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Notes" id="ii9-22-AMq" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="OsP-Yi-65Y"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x1m-lO-z25" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1165" y="-143"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="house" catalog="system" width="128" height="110"/>
+        <image name="house" catalog="system" width="64" height="54"/>
     </resources>
 </document>
