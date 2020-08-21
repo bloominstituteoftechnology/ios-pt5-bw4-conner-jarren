@@ -707,6 +707,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="trash.fill" catalog="system"/>
+                                <connections>
+                                    <segue destination="177-S7-SwJ" kind="unwind" unwindAction="unwindToReceiptTableView:" id="6KE-Lz-k4I"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -722,6 +725,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g0z-Ie-spC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="177-S7-SwJ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2022" y="388"/>
         </scene>
