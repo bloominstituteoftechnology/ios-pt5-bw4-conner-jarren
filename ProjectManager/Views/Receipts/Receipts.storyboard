@@ -217,6 +217,7 @@
                                 <rect key="frame" x="191" y="721" width="32" height="30"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
+                                    <action selector="nextButtonPressed:" destination="P5h-h8-6kK" eventType="touchUpInside" id="2UA-je-DhO"/>
                                     <segue destination="aEA-j0-tF4" kind="show" id="kE1-za-tXX"/>
                                 </connections>
                             </button>
@@ -232,6 +233,7 @@
                                 <rect key="frame" x="170" y="460" width="74" height="30"/>
                                 <state key="normal" title="Add Image"/>
                                 <connections>
+                                    <action selector="addImagePressed:" destination="P5h-h8-6kK" eventType="touchUpInside" id="CPV-PU-yxO"/>
                                     <segue destination="LwU-om-Uoa" kind="show" id="EnO-Jr-d1c"/>
                                 </connections>
                             </button>
@@ -251,6 +253,9 @@
                         <viewLayoutGuide key="safeArea" id="9Vg-WJ-FXM"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Picture" id="Pf8-BI-ewr"/>
+                    <connections>
+                        <outlet property="receiptPreviewImage" destination="Lyz-sO-iA7" id="CJw-aY-S6b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O8V-R2-Unc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
