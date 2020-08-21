@@ -21,6 +21,10 @@ class ReceiptsTableViewController: UITableViewController {
 
     }
 
+    @IBAction func unwindToReceiptTableView(_ sender: UIStoryboardSegue){
+        
+    }
+    
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
