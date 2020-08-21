@@ -10,8 +10,14 @@ import UIKit
 
 class ReceiptsTableViewController: UITableViewController {
 
+    let receiptController = ReceiptController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var testReceipt = Receipt(title: "Soil", totalCost: 25.69, category: "Outdoors", image: nil, date: NSDate.now as NSDate, placeOfPurchase: "Home Depot", latitude: 100, longitude: 100)
+        
+        receiptController.addReceipt(testReceipt)
 
     }
 

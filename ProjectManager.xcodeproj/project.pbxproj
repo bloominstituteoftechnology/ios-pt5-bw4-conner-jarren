@@ -19,6 +19,7 @@
 		13EFFFFB24ECB73C0039F232 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13EFFFF924ECB73C0039F232 /* LaunchScreen.storyboard */; };
 		C32D7D2124EE074A00073746 /* ProjectsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32D7D2024EE074A00073746 /* ProjectsTableViewController.swift */; };
 		C32D7D2324EF613C00073746 /* ReceiptsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32D7D2224EF613C00073746 /* ReceiptsTableViewController.swift */; };
+		C32D7D2524EF650100073746 /* ReceiptController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32D7D2424EF650100073746 /* ReceiptController.swift */; };
 		C392711124ECC1E80032202A /* Projects.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C392711024ECC1E80032202A /* Projects.storyboard */; };
 		C392711324ECC1F80032202A /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C392711224ECC1F80032202A /* Dashboard.storyboard */; };
 		C392711524ECC2060032202A /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C392711424ECC2060032202A /* Notes.storyboard */; };
@@ -46,6 +47,7 @@
 		13EFFFFC24ECB73C0039F232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C32D7D2024EE074A00073746 /* ProjectsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsTableViewController.swift; sourceTree = "<group>"; };
 		C32D7D2224EF613C00073746 /* ReceiptsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptsTableViewController.swift; sourceTree = "<group>"; };
+		C32D7D2424EF650100073746 /* ReceiptController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptController.swift; sourceTree = "<group>"; };
 		C392711024ECC1E80032202A /* Projects.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Projects.storyboard; sourceTree = "<group>"; };
 		C392711224ECC1F80032202A /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		C392711424ECC2060032202A /* Notes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notes.storyboard; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				13136A2024EE205800761CA1 /* ProjectController.swift */,
+				C32D7D2424EF650100073746 /* ReceiptController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C32D7D2524EF650100073746 /* ReceiptController.swift in Sources */,
 				13451D6E24ECD96E009C9313 /* Note.m in Sources */,
 				13EFFFEF24ECB73C0039F232 /* AppDelegate.swift in Sources */,
 				13136A2124EE205800761CA1 /* ProjectController.swift in Sources */,
