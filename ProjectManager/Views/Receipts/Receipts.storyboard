@@ -505,12 +505,16 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MnZ-9B-0Tu">
-                                        <rect key="frame" x="0.0" y="142.5" width="8" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="142.5" width="153" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="MnZ-9B-0Tu" secondAttribute="trailing" id="t5L-Ub-Srd"/>
+                                    <constraint firstItem="MnZ-9B-0Tu" firstAttribute="leading" secondItem="bO7-LQ-YDn" secondAttribute="leading" id="vcm-PR-qSa"/>
+                                </constraints>
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bkW-vx-U2c">
                                 <rect key="frame" x="20" y="628" width="374" height="127"/>
@@ -539,6 +543,15 @@
                         <viewLayoutGuide key="safeArea" id="cex-ZZ-Mtw"/>
                     </view>
                     <navigationItem key="navigationItem" title="Review Receipt" id="tYD-g0-ftN"/>
+                    <connections>
+                        <outlet property="categoryLabel" destination="kzm-h1-HLd" id="VgC-0c-D2D"/>
+                        <outlet property="dateLabel" destination="HIn-Uq-yfY" id="pen-YB-f6i"/>
+                        <outlet property="itemNameLabel" destination="KWo-pU-kd7" id="ts2-2l-rpt"/>
+                        <outlet property="placeOfPurchaseLabel" destination="bbg-6c-hB0" id="wNW-wo-gOn"/>
+                        <outlet property="priceLabel" destination="yOr-BC-5Jt" id="mdb-tR-xZl"/>
+                        <outlet property="quantityLabel" destination="MnZ-9B-0Tu" id="27R-K7-Afg"/>
+                        <outlet property="receiptPreviewPicture" destination="joC-S3-NLC" id="Lty-nt-H8f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LXH-2M-TLM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="j9f-9X-309" userLabel="Exit" sceneMemberID="exit"/>
