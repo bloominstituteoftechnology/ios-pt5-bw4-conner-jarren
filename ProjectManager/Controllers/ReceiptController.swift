@@ -11,6 +11,10 @@ import Foundation
 class ReceiptController {
     var receipts: [Receipt] = []
     
+    var count: Int {
+        receipts.count
+    }
+    
     func addReceipt(_ receipt: Receipt) {
         receipts.append(receipt)
     }
