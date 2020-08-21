@@ -119,6 +119,7 @@
                                 <rect key="frame" x="191" y="721" width="32" height="30"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
+                                    <action selector="nextButtonPressed:" destination="vyi-kX-Lnj" eventType="touchUpInside" id="Ilv-eb-zVH"/>
                                     <segue destination="JzO-Qj-LxR" kind="show" id="NoC-D3-kl5"/>
                                 </connections>
                             </button>
@@ -142,6 +143,10 @@
                         <viewLayoutGuide key="safeArea" id="W0Z-3p-Y5D"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Location" id="dSy-c3-Sqg"/>
+                    <connections>
+                        <outlet property="locationTextField" destination="2Ue-fF-S36" id="O9i-RS-V0X"/>
+                        <outlet property="mapKitView" destination="Eb2-zF-39K" id="dR1-6H-8MA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HOJ-OQ-VG6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
