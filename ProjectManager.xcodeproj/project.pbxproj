@@ -11,6 +11,7 @@
 		13451D6824ECD90B009C9313 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13451D6724ECD90B009C9313 /* Project.swift */; };
 		13451D6A24ECD953009C9313 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13451D6924ECD953009C9313 /* Product.swift */; };
 		13451D6E24ECD96E009C9313 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 13451D6D24ECD96E009C9313 /* Note.m */; };
+		13CE97B424EF59F300200CB9 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CE97B324EF59F300200CB9 /* Receipt.swift */; };
 		13EFFFEF24ECB73C0039F232 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EFFFEE24ECB73C0039F232 /* AppDelegate.swift */; };
 		13EFFFF124ECB73C0039F232 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EFFFF024ECB73C0039F232 /* SceneDelegate.swift */; };
 		13EFFFF624ECB73C0039F232 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13EFFFF424ECB73C0039F232 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 		13451D6B24ECD96D009C9313 /* ProjectManager-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ProjectManager-Bridging-Header.h"; sourceTree = "<group>"; };
 		13451D6C24ECD96E009C9313 /* Note.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
 		13451D6D24ECD96E009C9313 /* Note.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
+		13CE97B324EF59F300200CB9 /* Receipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
 		13EFFFEB24ECB73C0039F232 /* ProjectManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13EFFFEE24ECB73C0039F232 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13EFFFF024ECB73C0039F232 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				13451D6C24ECD96E009C9313 /* Note.h */,
 				13451D6D24ECD96E009C9313 /* Note.m */,
 				13451D6B24ECD96D009C9313 /* ProjectManager-Bridging-Header.h */,
+				13CE97B324EF59F300200CB9 /* Receipt.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				13EFFFEF24ECB73C0039F232 /* AppDelegate.swift in Sources */,
 				13136A2124EE205800761CA1 /* ProjectController.swift in Sources */,
 				13451D6A24ECD953009C9313 /* Product.swift in Sources */,
+				13CE97B424EF59F300200CB9 /* Receipt.swift in Sources */,
 				13EFFFF124ECB73C0039F232 /* SceneDelegate.swift in Sources */,
 				13451D6824ECD90B009C9313 /* Project.swift in Sources */,
 				C32D7D2124EE074A00073746 /* ProjectsTableViewController.swift in Sources */,
