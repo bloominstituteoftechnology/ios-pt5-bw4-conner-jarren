@@ -10,6 +10,7 @@ import UIKit
 
 class NoteDetailViewController: UIViewController {
     
+    var noteController: NoteController?
     var note: Note?
     
     // MARK: IBOutlets
@@ -31,8 +32,15 @@ class NoteDetailViewController: UIViewController {
     
     // MARK: IBActions
     @IBAction func saveButtonTapped(_ sender: UIBarButtonItem) {
-        if let title = titleTF.text, let content = contentTV.text {
-            note = Note(title: title, contents: content)
+        if let title = titleTF.text, let contents = contentTV.text {
+            // Editing Note
+            if let note = note {
+                note.title = title
+                note.contents = contents
+            } else {
+                // Add note
+                noteController?.addNote(Note(title: title, contents: contents))
+            }
             navigationController?.popViewController(animated: true)
         }
     }

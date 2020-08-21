@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		13136A2124EE205800761CA1 /* ProjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13136A2024EE205800761CA1 /* ProjectController.swift */; };
+		1323B25424EF774D00F9F4E1 /* NoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1323B25324EF774D00F9F4E1 /* NoteController.swift */; };
 		13451D6824ECD90B009C9313 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13451D6724ECD90B009C9313 /* Project.swift */; };
 		13451D6A24ECD953009C9313 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13451D6924ECD953009C9313 /* Product.swift */; };
 		13451D6E24ECD96E009C9313 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 13451D6D24ECD96E009C9313 /* Note.m */; };
@@ -15,7 +16,6 @@
 		13CE97BC24EF71B600200CB9 /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CE97BB24EF71B600200CB9 /* NotesTableViewController.swift */; };
 		13CE97BE24EF71CC00200CB9 /* NoteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CE97BD24EF71CC00200CB9 /* NoteDetailViewController.swift */; };
 		13CE97C024EF724B00200CB9 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CE97BF24EF724B00200CB9 /* NoteTableViewCell.swift */; };
-		13CE97C224EF726A00200CB9 /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13CE97C124EF726A00200CB9 /* Notes.storyboard */; };
 		13EFFFEF24ECB73C0039F232 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EFFFEE24ECB73C0039F232 /* AppDelegate.swift */; };
 		13EFFFF124ECB73C0039F232 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EFFFF024ECB73C0039F232 /* SceneDelegate.swift */; };
 		13EFFFF624ECB73C0039F232 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13EFFFF424ECB73C0039F232 /* Main.storyboard */; };
@@ -32,8 +32,6 @@
 		C32D7D3224EF6CE000073746 /* DetailReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32D7D3124EF6CE000073746 /* DetailReceiptViewController.swift */; };
 		C392711124ECC1E80032202A /* Projects.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C392711024ECC1E80032202A /* Projects.storyboard */; };
 		C392711324ECC1F80032202A /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C392711224ECC1F80032202A /* Dashboard.storyboard */; };
-		C392711724ECC20E0032202A /* Products.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C392711624ECC20E0032202A /* Products.storyboard */; };
-		C392711A24ECC24C0032202A /* Finances.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C392711924ECC24C0032202A /* Finances.storyboard */; };
 		C392711C24ECC2570032202A /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C392711B24ECC2570032202A /* Profile.storyboard */; };
 		C392711E24ECC2600032202A /* Receipts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C392711D24ECC2600032202A /* Receipts.storyboard */; };
 		C392712024ECC39A0032202A /* TabController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C392711F24ECC39A0032202A /* TabController.storyboard */; };
@@ -41,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		13136A2024EE205800761CA1 /* ProjectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectController.swift; sourceTree = "<group>"; };
+		1323B25324EF774D00F9F4E1 /* NoteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteController.swift; sourceTree = "<group>"; };
 		13451D6724ECD90B009C9313 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		13451D6924ECD953009C9313 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		13451D6B24ECD96D009C9313 /* ProjectManager-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ProjectManager-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -50,7 +49,6 @@
 		13CE97BB24EF71B600200CB9 /* NotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
 		13CE97BD24EF71CC00200CB9 /* NoteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailViewController.swift; sourceTree = "<group>"; };
 		13CE97BF24EF724B00200CB9 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
-		13CE97C124EF726A00200CB9 /* Notes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Notes.storyboard; sourceTree = "<group>"; };
 		13EFFFEB24ECB73C0039F232 /* ProjectManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13EFFFEE24ECB73C0039F232 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13EFFFF024ECB73C0039F232 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,8 +67,6 @@
 		C32D7D3124EF6CE000073746 /* DetailReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailReceiptViewController.swift; sourceTree = "<group>"; };
 		C392711024ECC1E80032202A /* Projects.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Projects.storyboard; sourceTree = "<group>"; };
 		C392711224ECC1F80032202A /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
-		C392711624ECC20E0032202A /* Products.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Products.storyboard; sourceTree = "<group>"; };
-		C392711924ECC24C0032202A /* Finances.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Finances.storyboard; sourceTree = "<group>"; };
 		C392711B24ECC2570032202A /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		C392711D24ECC2600032202A /* Receipts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Receipts.storyboard; sourceTree = "<group>"; };
 		C392711F24ECC39A0032202A /* TabController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabController.storyboard; sourceTree = "<group>"; };
@@ -134,6 +130,7 @@
 			children = (
 				13136A2024EE205800761CA1 /* ProjectController.swift */,
 				C32D7D2424EF650100073746 /* ReceiptController.swift */,
+				1323B25324EF774D00F9F4E1 /* NoteController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -204,7 +201,6 @@
 		C392710B24ECC13E0032202A /* Finances */ = {
 			isa = PBXGroup;
 			children = (
-				C392711924ECC24C0032202A /* Finances.storyboard */,
 			);
 			path = Finances;
 			sourceTree = "<group>";
@@ -212,7 +208,6 @@
 		C392710C24ECC1450032202A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C392711624ECC20E0032202A /* Products.storyboard */,
 			);
 			path = Products;
 			sourceTree = "<group>";
@@ -220,7 +215,6 @@
 		C392710D24ECC14C0032202A /* Notes */ = {
 			isa = PBXGroup;
 			children = (
-				13CE97C124EF726A00200CB9 /* Notes.storyboard */,
 				13CE97BF24EF724B00200CB9 /* NoteTableViewCell.swift */,
 			);
 			path = Notes;
@@ -370,7 +364,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C392711A24ECC24C0032202A /* Finances.storyboard in Resources */,
 				C392711124ECC1E80032202A /* Projects.storyboard in Resources */,
 				C392711324ECC1F80032202A /* Dashboard.storyboard in Resources */,
 				13EFFFFB24ECB73C0039F232 /* LaunchScreen.storyboard in Resources */,
@@ -378,8 +371,6 @@
 				C392711C24ECC2570032202A /* Profile.storyboard in Resources */,
 				C392712024ECC39A0032202A /* TabController.storyboard in Resources */,
 				13EFFFF624ECB73C0039F232 /* Main.storyboard in Resources */,
-				C392711724ECC20E0032202A /* Products.storyboard in Resources */,
-				13CE97C224EF726A00200CB9 /* Notes.storyboard in Resources */,
 				C392711E24ECC2600032202A /* Receipts.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,6 +391,7 @@
 				13EFFFEF24ECB73C0039F232 /* AppDelegate.swift in Sources */,
 				13CE97C024EF724B00200CB9 /* NoteTableViewCell.swift in Sources */,
 				13136A2124EE205800761CA1 /* ProjectController.swift in Sources */,
+				1323B25424EF774D00F9F4E1 /* NoteController.swift in Sources */,
 				13451D6A24ECD953009C9313 /* Product.swift in Sources */,
 				13CE97B424EF59F300200CB9 /* Receipt.swift in Sources */,
 				13CE97BC24EF71B600200CB9 /* NotesTableViewController.swift in Sources */,
