@@ -9,22 +9,21 @@
 import UIKit
 
 class AddDetailsReceiptViewController: UIViewController {
-
+    //TODO: Need ot implement swiftUI for a graph view that updated in real time
+    @IBOutlet var graphView: UIView!
+    
+    @IBOutlet var itemNameTextField: UITextField!
+    @IBOutlet var priceTextField: UITextField!
+    @IBOutlet var quantityTextField: UITextField!
+    @IBOutlet var categoryTextField: UITextField!
+    @IBOutlet var descriptionTextView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func reviewButtonPressed(_ sender: Any) {
+        
     }
-    */
-
 }

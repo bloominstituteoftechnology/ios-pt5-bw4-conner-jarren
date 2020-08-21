@@ -284,6 +284,7 @@
                                 <rect key="frame" x="182.5" y="721" width="49" height="30"/>
                                 <state key="normal" title="Review"/>
                                 <connections>
+                                    <action selector="reviewButtonPressed:" destination="aEA-j0-tF4" eventType="touchUpInside" id="Hah-r7-aEO"/>
                                     <segue destination="7R1-5f-KYp" kind="show" id="q65-YO-XS0"/>
                                 </connections>
                             </button>
@@ -393,6 +394,14 @@
                         <viewLayoutGuide key="safeArea" id="Zy2-vm-82y"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Details" id="3gK-4M-nWm"/>
+                    <connections>
+                        <outlet property="categoryTextField" destination="2wy-tj-Ova" id="wK2-4n-5Tn"/>
+                        <outlet property="descriptionTextView" destination="PBX-T8-70c" id="lrt-xX-wLZ"/>
+                        <outlet property="graphView" destination="ADN-dv-6gM" id="3hk-pa-jfY"/>
+                        <outlet property="itemNameTextField" destination="eLQ-Qy-c2Q" id="kDB-Me-Oyv"/>
+                        <outlet property="priceTextField" destination="h2U-9o-gD0" id="J4K-X8-gjn"/>
+                        <outlet property="quantityTextField" destination="qyg-z2-I4l" id="5os-Bq-Rne"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Am0-Dm-XUM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
