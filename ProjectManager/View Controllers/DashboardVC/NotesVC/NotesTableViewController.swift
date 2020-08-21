@@ -12,22 +12,29 @@ let reuseIdentifier = "NoteCell"
 
 class NotesTableViewController: UITableViewController {
     
-    var notes: [Note] = [Note(title: "Test Note", contents: "Here are the contents of my note.")]
+    var noteController = NoteController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let exampleNote = Note(title: "Todo-List", contents: "1) Need to purchase tools")
+        noteController.addNote(exampleNote)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        tableView.reloadData()
     }
     
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return notes.count
+        return noteController.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = UITableViewCell()
         if let noteCell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? NoteTableViewCell {
-            noteCell.configureViews(for: notes[indexPath.row])
+            noteCell.configureViews(for: noteController.noteAtIndex(indexPath.row))
             cell = noteCell
         }
         return cell
@@ -36,7 +43,7 @@ class NotesTableViewController: UITableViewController {
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            notes.remove(at: indexPath.row)
+            noteController.removeNoteAtIndex(indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
@@ -44,8 +51,12 @@ class NotesTableViewController: UITableViewController {
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let noteDetailVC = segue.destination as? NoteDetailViewController {
-            guard let indexPath = tableView.indexPathForSelectedRow else { return }
-            noteDetailVC.note = notes[indexPath.row]
+            if segue.identifier == "ViewNoteSegue", let indexPath = tableView.indexPathForSelectedRow {
+                noteDetailVC.note = noteController.noteAtIndex(indexPath.row)
+            }
+            else if segue.identifier == "AddNoteSegue" {
+                noteDetailVC.noteController = noteController
+            }
         }
     }
 
