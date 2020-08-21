@@ -89,7 +89,7 @@
         <!--Add Location-->
         <scene sceneID="KUV-pQ-5f7">
             <objects>
-                <viewController id="vyi-kX-Lnj" sceneMemberID="viewController">
+                <viewController id="vyi-kX-Lnj" customClass="AddLocationReceiptViewController" customModule="ProjectManager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ejQ-mK-Geb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -150,7 +150,7 @@
         <!--Add Date-->
         <scene sceneID="9ey-Ky-zA6">
             <objects>
-                <viewController id="JzO-Qj-LxR" sceneMemberID="viewController">
+                <viewController id="JzO-Qj-LxR" customClass="AddDateReceiptViewController" customModule="ProjectManager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="215-TV-reO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -196,7 +196,7 @@
         <!--Add Picture-->
         <scene sceneID="JuQ-rF-xha">
             <objects>
-                <viewController id="P5h-h8-6kK" sceneMemberID="viewController">
+                <viewController id="P5h-h8-6kK" customClass="AddPictureReceiptViewController" customModule="ProjectManager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Kr-Kp-uxo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -250,7 +250,7 @@
         <!--Add Details-->
         <scene sceneID="woL-8T-ta9">
             <objects>
-                <viewController id="aEA-j0-tF4" sceneMemberID="viewController">
+                <viewController id="aEA-j0-tF4" customClass="AddDetailsReceiptViewController" customModule="ProjectManager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dPP-Ez-YGu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -387,7 +387,7 @@
         <!--Review Receipt-->
         <scene sceneID="eNu-UK-JT3">
             <objects>
-                <viewController id="7R1-5f-KYp" sceneMemberID="viewController">
+                <viewController id="7R1-5f-KYp" customClass="ReviewReceiptViewController" customModule="ProjectManager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RRr-Nt-I0I">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -541,7 +541,7 @@
         <!--Review Receipt-->
         <scene sceneID="GJA-8e-Kbr">
             <objects>
-                <viewController id="b4M-IK-nPB" sceneMemberID="viewController">
+                <viewController id="b4M-IK-nPB" customClass="DetailReceiptViewController" customModule="ProjectManager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jGx-Wb-iee">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
