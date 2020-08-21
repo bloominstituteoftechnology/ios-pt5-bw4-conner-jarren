@@ -173,6 +173,7 @@
                                 <rect key="frame" x="191" y="721" width="32" height="30"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
+                                    <action selector="nextButtonPressed:" destination="JzO-Qj-LxR" eventType="touchUpInside" id="2YR-Xn-jvk"/>
                                     <segue destination="P5h-h8-6kK" kind="show" id="pKb-Dd-N8v"/>
                                 </connections>
                             </button>
@@ -193,6 +194,9 @@
                         <viewLayoutGuide key="safeArea" id="0cH-bD-7Ff"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Date" id="iK7-sE-ocb"/>
+                    <connections>
+                        <outlet property="datePickerView" destination="G0z-0r-kEu" id="KwT-bn-agk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XMe-9p-HD4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
