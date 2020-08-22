@@ -18,13 +18,39 @@ class AddDetailsReceiptViewController: UIViewController {
     @IBOutlet var categoryTextField: UITextField!
     @IBOutlet var descriptionTextView: UITextView!
     
+    var locationString: String = ""
+    var dateString: String = ""
+    var imageViewPreview: UIImage!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        descriptionTextView.text = ""
     }
 
     @IBAction func reviewButtonPressed(_ sender: Any) {
-        
+        #warning("Need to implement to protect seguing without data")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toReviewVC", let destination = segue.destination as? ReviewReceiptViewController {
+            destination.locationString = locationString
+            destination.dateString = dateString
+            
+            guard let name = itemNameTextField.text else {return}
+            destination.nameString = name
+            
+            guard let price = priceTextField.text else {return}
+            destination.priceString = price
+            
+            guard let quantity = quantityTextField.text else {return}
+            destination.quantityString = quantity
+            
+            guard let category = categoryTextField.text else {return}
+            destination.categoryString = category
+            
+            guard let description = descriptionTextView.text else {return}
+            destination.descriptionString = description
+        }
     }
 }
 

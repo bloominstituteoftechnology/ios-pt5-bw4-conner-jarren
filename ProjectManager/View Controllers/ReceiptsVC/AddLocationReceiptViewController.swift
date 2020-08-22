@@ -13,14 +13,21 @@ class AddLocationReceiptViewController: UIViewController {
 
     @IBOutlet var mapKitView: MKMapView!
     @IBOutlet var locationTextField: UITextField!
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
     
     @IBAction func nextButtonPressed(_ sender: Any) {
-        
+        #warning("Need to implement to protect seguing without data")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDateVC", let destination = segue.destination as? AddDateReceiptViewController {
+            guard let location = locationTextField.text else {return}
+            destination.locationString = location
+        }
     }
     
 }
