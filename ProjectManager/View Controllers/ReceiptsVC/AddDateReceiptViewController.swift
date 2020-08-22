@@ -14,9 +14,9 @@ class AddDateReceiptViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
-
+    
     @IBAction func nextButtonPressed(_ sender: Any) {
         
     }
