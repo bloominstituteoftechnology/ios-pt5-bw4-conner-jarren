@@ -237,7 +237,6 @@
                                 <state key="normal" title="Add Image"/>
                                 <connections>
                                     <action selector="addImagePressed:" destination="P5h-h8-6kK" eventType="touchUpInside" id="CPV-PU-yxO"/>
-                                    <segue destination="LwU-om-Uoa" kind="show" id="EnO-Jr-d1c"/>
                                 </connections>
                             </button>
                         </subviews>
