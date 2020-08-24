@@ -120,7 +120,6 @@
                                 <state key="normal" title="Next"/>
                                 <connections>
                                     <action selector="nextButtonPressed:" destination="vyi-kX-Lnj" eventType="touchUpInside" id="Ilv-eb-zVH"/>
-                                    <segue destination="JzO-Qj-LxR" kind="show" identifier="toDateVC" id="NoC-D3-kl5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -146,6 +145,7 @@
                     <connections>
                         <outlet property="locationTextField" destination="2Ue-fF-S36" id="O9i-RS-V0X"/>
                         <outlet property="mapKitView" destination="Eb2-zF-39K" id="dR1-6H-8MA"/>
+                        <segue destination="JzO-Qj-LxR" kind="show" identifier="toDateVC" id="kWj-3O-L6q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HOJ-OQ-VG6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -177,7 +177,6 @@
                                 <state key="normal" title="Next"/>
                                 <connections>
                                     <action selector="nextButtonPressed:" destination="JzO-Qj-LxR" eventType="touchUpInside" id="2YR-Xn-jvk"/>
-                                    <segue destination="P5h-h8-6kK" kind="show" identifier="toPictureVC" id="pKb-Dd-N8v"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -199,6 +198,7 @@
                     <navigationItem key="navigationItem" title="Add Date" id="iK7-sE-ocb"/>
                     <connections>
                         <outlet property="datePickerView" destination="G0z-0r-kEu" id="KwT-bn-agk"/>
+                        <segue destination="P5h-h8-6kK" kind="show" identifier="toPictureVC" id="9cI-xo-3Ye"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XMe-9p-HD4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -221,7 +221,6 @@
                                 <state key="normal" title="Next"/>
                                 <connections>
                                     <action selector="nextButtonPressed:" destination="P5h-h8-6kK" eventType="touchUpInside" id="2UA-je-DhO"/>
-                                    <segue destination="aEA-j0-tF4" kind="show" identifier="toDetailVC" id="kE1-za-tXX"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lyz-sO-iA7">
@@ -257,6 +256,7 @@
                     <navigationItem key="navigationItem" title="Add Picture" id="Pf8-BI-ewr"/>
                     <connections>
                         <outlet property="receiptPreviewImage" destination="Lyz-sO-iA7" id="CJw-aY-S6b"/>
+                        <segue destination="aEA-j0-tF4" kind="show" identifier="toDetailVC" id="y2w-ky-3ou"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O8V-R2-Unc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -287,7 +287,6 @@
                                 <state key="normal" title="Review"/>
                                 <connections>
                                     <action selector="reviewButtonPressed:" destination="aEA-j0-tF4" eventType="touchUpInside" id="Hah-r7-aEO"/>
-                                    <segue destination="7R1-5f-KYp" kind="show" identifier="toReviewVC" id="q65-YO-XS0"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aFV-1X-u7l">
@@ -403,6 +402,7 @@
                         <outlet property="itemNameTextField" destination="eLQ-Qy-c2Q" id="kDB-Me-Oyv"/>
                         <outlet property="priceTextField" destination="h2U-9o-gD0" id="J4K-X8-gjn"/>
                         <outlet property="quantityTextField" destination="qyg-z2-I4l" id="5os-Bq-Rne"/>
+                        <segue destination="7R1-5f-KYp" kind="show" identifier="toReviewVC" id="m0b-mw-UjZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Am0-Dm-XUM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
