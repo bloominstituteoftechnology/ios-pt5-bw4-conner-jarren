@@ -22,7 +22,8 @@ class AddDateReceiptViewController: UIViewController {
     }
     
     @IBAction func nextButtonPressed(_ sender: Any) {
-        #warning("Need to implement to protect seguing without data")
+        #warning("Need to add default value for the date to be the date the VC was called.")
+            performSegue(withIdentifier: "toPictureVC", sender: UIButton.self)
     }
     
     @IBAction func datePickerChanged(_ sender: Any) {

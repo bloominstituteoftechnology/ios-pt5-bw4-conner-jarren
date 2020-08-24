@@ -28,7 +28,21 @@ class AddDetailsReceiptViewController: UIViewController {
     }
 
     @IBAction func reviewButtonPressed(_ sender: Any) {
-        #warning("Need to implement to protect seguing without data")
+        #warning("need to implement custom alert controller")
+        if itemNameTextField.text == "" {
+            print("error")
+        } else if priceTextField.text == ""{
+            print("error")
+        } else if quantityTextField.text == ""{
+            print("error")
+        } else if categoryTextField.text == ""{
+            print("error")
+        } else if descriptionTextView.text == ""{
+            print("error")
+        }
+        else{
+            performSegue(withIdentifier: "toReviewVC", sender: UIButton.self)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
