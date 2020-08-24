@@ -35,6 +35,7 @@ class AddDetailsReceiptViewController: UIViewController {
         if segue.identifier == "toReviewVC", let destination = segue.destination as? ReviewReceiptViewController {
             destination.locationString = locationString
             destination.dateString = dateString
+            destination.receiptImage = imageViewPreview
             
             guard let name = itemNameTextField.text else {return}
             destination.nameString = name
@@ -50,6 +51,7 @@ class AddDetailsReceiptViewController: UIViewController {
             
             guard let description = descriptionTextView.text else {return}
             destination.descriptionString = description
+            
         }
     }
 }

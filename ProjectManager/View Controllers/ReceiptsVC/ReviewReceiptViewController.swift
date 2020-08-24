@@ -27,6 +27,9 @@ class ReviewReceiptViewController: UIViewController {
     var categoryString: String = ""
     var descriptionString: String = ""
     
+    var receiptImage: UIImage!
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateViews()
@@ -40,7 +43,7 @@ class ReviewReceiptViewController: UIViewController {
         quantityLabel.text = quantityString
         categoryLabel.text = categoryString
         descriptionTextView.text = descriptionString
-
+        receiptPreviewPicture.image = receiptImage
     }
 
 }

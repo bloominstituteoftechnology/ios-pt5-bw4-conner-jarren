@@ -58,6 +58,7 @@ class AddPictureReceiptViewController: UIViewController {
         if segue.identifier == "toDetailVC", let destination = segue.destination as? AddDetailsReceiptViewController {
             destination.locationString = locationString
             destination.dateString = dateString
+            destination.imageViewPreview = receiptPreviewImage.image
         }
     }
 }
