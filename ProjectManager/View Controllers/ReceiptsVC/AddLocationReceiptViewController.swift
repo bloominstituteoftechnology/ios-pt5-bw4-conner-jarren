@@ -20,7 +20,11 @@ class AddLocationReceiptViewController: UIViewController {
     }
     
     @IBAction func nextButtonPressed(_ sender: Any) {
-        #warning("Need to implement to protect seguing without data")
+        if locationTextField.text == "" {
+            print("error")
+        } else{
+            performSegue(withIdentifier: "toDateVC", sender: UIButton.self)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

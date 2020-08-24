@@ -51,8 +51,11 @@ class AddPictureReceiptViewController: UIViewController {
     }
     
     @IBAction func nextButtonPressed(_ sender: Any) {
-        #warning("Need to implement to protect seguing without data")
-    }
+        if receiptPreviewImage.image == nil {
+            print("error")
+        } else{
+            performSegue(withIdentifier: "toDetailVC", sender: UIButton.self)
+        }    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetailVC", let destination = segue.destination as? AddDetailsReceiptViewController {
