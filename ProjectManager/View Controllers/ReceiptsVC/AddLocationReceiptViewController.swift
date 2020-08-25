@@ -10,6 +10,7 @@ import UIKit
 import MapKit
 
 class AddLocationReceiptViewController: UIViewController {
+    #warning("Need to implement autocomplete addresses and custom annotation once location has been clicked")
     
     @IBOutlet var mapKitView: MKMapView!
     @IBOutlet var locationTextField: UITextField!
