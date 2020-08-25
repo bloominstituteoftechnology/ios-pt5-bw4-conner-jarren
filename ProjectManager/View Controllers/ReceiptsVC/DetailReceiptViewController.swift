@@ -20,7 +20,7 @@ class DetailReceiptViewController: UIViewController {
     @IBOutlet var quantityLabel: UILabel!
     @IBOutlet var descriptionTextView: UITextView!
     
-    lazy var detailReceipt = Receipt(title: "", totalCost: "", category: "", image: UIImage(), date: "", description: "", placeOfPurchase: "")
+    lazy var detailReceipt = Receipt(title: "", totalCost: "", category: "", image: UIImage(), date: "", description: "", quantity: "", placeOfPurchase: "")
         
     override func viewDidLoad() {
         super.viewDidLoad()

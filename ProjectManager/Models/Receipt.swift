@@ -17,6 +17,7 @@ struct Receipt {
     var image: UIImage?
     var date: String
     var description: String
+    var quantity: String
     
     // Array of products on receipt
     var productsPurchased: [Product]?
