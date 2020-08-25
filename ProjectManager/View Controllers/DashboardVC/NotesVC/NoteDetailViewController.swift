@@ -11,7 +11,6 @@ import UIKit
 class NoteDetailViewController: UIViewController {
     
     var noteController: NoteController?
-    var note: Note?
     
     // MARK: IBOutlets
     @IBOutlet var titleTF: UITextField!
@@ -23,8 +22,9 @@ class NoteDetailViewController: UIViewController {
         // No lorem ipsum
         contentTV.text = ""
         
-        if let note = note {
+        if let index = noteController?.selectedTableViewIndex {
             // Editing/Viewing, fill fields
+            let note = noteController!.notes[index]
             titleTF.text = note.title
             contentTV.text = note.contents
         }
@@ -34,9 +34,8 @@ class NoteDetailViewController: UIViewController {
     @IBAction func saveButtonTapped(_ sender: UIBarButtonItem) {
         if let title = titleTF.text, let contents = contentTV.text {
             // Editing Note
-            if let note = note {
-                note.title = title
-                note.contents = contents
+            if let index = noteController?.selectedTableViewIndex {
+                noteController?.replaceNote(at: index, with: Note(title: title, contents: contents))
             } else {
                 // Add note
                 noteController?.addNote(Note(title: title, contents: contents))

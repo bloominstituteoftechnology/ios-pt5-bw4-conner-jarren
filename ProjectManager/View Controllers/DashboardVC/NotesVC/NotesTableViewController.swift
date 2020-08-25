@@ -8,9 +8,9 @@
 
 import UIKit
 
-let reuseIdentifier = "NoteCell"
-
 class NotesTableViewController: UITableViewController {
+    
+    let reuseIdentifier = "NoteCell"
     
     var noteController = NoteController()
 
@@ -52,12 +52,12 @@ class NotesTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let noteDetailVC = segue.destination as? NoteDetailViewController {
             if segue.identifier == "ViewNoteSegue", let indexPath = tableView.indexPathForSelectedRow {
-                noteDetailVC.note = noteController.noteAtIndex(indexPath.row)
-            }
-            else if segue.identifier == "AddNoteSegue" {
                 noteDetailVC.noteController = noteController
+                noteDetailVC.noteController?.selectedTableViewIndex = indexPath.row
+            } else if segue.identifier == "AddNoteSegue" {
+                noteDetailVC.noteController = noteController
+                noteDetailVC.noteController?.selectedTableViewIndex = nil
             }
         }
     }
-
 }
