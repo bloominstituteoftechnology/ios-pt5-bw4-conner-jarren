@@ -25,6 +25,7 @@ class ReceiptsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        #warning("Reminder to remove test data")
         let testReceipt = Receipt(title: "Soil", totalCost: "25.69", category: "Outdoors", image: nil, date: receiptController.dateFormatterConfig(NSDate.now), placeOfPurchase: "Home Depot", latitude: 100, longitude: 100)
         
         receiptController.addReceipt(testReceipt)
@@ -33,6 +34,14 @@ class ReceiptsTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetailReceiptVC", let destination = segue.destination as? DetailReceiptViewController {
+            if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) {
+                destination.detailReceipt = receiptController.receipts[indexPath.row]
+            }
+        }
     }
 
     @IBAction func unwindToReceiptTableView(_ sender: UIStoryboardSegue){
@@ -48,7 +57,6 @@ class ReceiptsTableViewController: UITableViewController {
             receiptImage = senderVC.receiptImage
             
             receiptController.addReceipt(Receipt(title: locationString, totalCost: priceString, category: categoryString, image: receiptImage, date: dateString, placeOfPurchase: locationString))
-            
         }
     }
     

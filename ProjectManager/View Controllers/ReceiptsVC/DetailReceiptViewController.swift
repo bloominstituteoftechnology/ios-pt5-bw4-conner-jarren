@@ -9,6 +9,7 @@
 import UIKit
 
 class DetailReceiptViewController: UIViewController {
+    
     @IBOutlet var receiptPreviewImageView: UIImageView!
     
     @IBOutlet var dateLabel: UILabel!
@@ -19,9 +20,18 @@ class DetailReceiptViewController: UIViewController {
     @IBOutlet var quantityLabel: UILabel!
     @IBOutlet var descriptionTextView: UITextView!
     
+    lazy var detailReceipt = Receipt(title: "", totalCost: "", category: "", image: UIImage(), date: "", placeOfPurchase: "")
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        receiptPreviewImageView.image = detailReceipt.image
+        dateLabel.text = detailReceipt.date
+        placeOfPurchaseLabel.text = detailReceipt.placeOfPurchase
+        itemNameLabel.text = detailReceipt.title
+        priceLabel.text = detailReceipt.totalCost
+        #warning("need to change the receipt controller")
+//        quantityLabel.text = detailReceipt.quantity
+//        descriptionTextView.text = detailReceipt.description
     }
 
 }

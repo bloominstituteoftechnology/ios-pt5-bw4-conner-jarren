@@ -23,7 +23,12 @@ class AddDateReceiptViewController: UIViewController {
     
     @IBAction func nextButtonPressed(_ sender: Any) {
         #warning("Need to add default value for the date to be the date the VC was called.")
+        if dateString == "" {
+            dateString = receiptController.dateFormatterConfig(NSDate.now)
             performSegue(withIdentifier: "toPictureVC", sender: UIButton.self)
+        } else {
+            performSegue(withIdentifier: "toPictureVC", sender: UIButton.self)
+        }
     }
     
     @IBAction func datePickerChanged(_ sender: Any) {
