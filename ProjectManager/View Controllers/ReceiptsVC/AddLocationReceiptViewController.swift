@@ -20,9 +20,8 @@ class AddLocationReceiptViewController: UIViewController {
     }
     
     @IBAction func nextButtonPressed(_ sender: Any) {
-        #warning("need to implement custom alert controller")
         if locationTextField.text == "" {
-            print("error")
+            Alert.showIncompleteFormAlert(on: self)
         } else{
             performSegue(withIdentifier: "toDateVC", sender: UIButton.self)
         }

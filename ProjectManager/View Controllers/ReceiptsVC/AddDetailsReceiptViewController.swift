@@ -28,17 +28,16 @@ class AddDetailsReceiptViewController: UIViewController {
     }
 
     @IBAction func reviewButtonPressed(_ sender: Any) {
-        #warning("need to implement custom alert controller")
         if itemNameTextField.text == "" {
-            print("error")
+            Alert.showIncompleteFormAlert(on: self)
         } else if priceTextField.text == ""{
-            print("error")
+            Alert.showIncompleteFormAlert(on: self)
         } else if quantityTextField.text == ""{
-            print("error")
+            Alert.showIncompleteFormAlert(on: self)
         } else if categoryTextField.text == ""{
-            print("error")
+            Alert.showIncompleteFormAlert(on: self)
         } else if descriptionTextView.text == ""{
-            print("error")
+            Alert.showIncompleteFormAlert(on: self)
         }
         else{
             performSegue(withIdentifier: "toReviewVC", sender: UIButton.self)

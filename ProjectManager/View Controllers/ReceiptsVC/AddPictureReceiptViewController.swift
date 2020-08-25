@@ -51,12 +51,12 @@ class AddPictureReceiptViewController: UIViewController {
     }
     
     @IBAction func nextButtonPressed(_ sender: Any) {
-        #warning("need to implement custom alert controller")
         if receiptPreviewImage.image == nil {
-            print("error")
+            Alert.showBasicAlert(on: self, with: "Photo Missing", message: "Please add photo to continue.")
         } else{
             performSegue(withIdentifier: "toDetailVC", sender: UIButton.self)
-        }    }
+        }
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetailVC", let destination = segue.destination as? AddDetailsReceiptViewController {

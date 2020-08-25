@@ -15,4 +15,8 @@ struct Alert {
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         vc.present(alert, animated: true)
     }
+    
+    static func showIncompleteFormAlert(on vc: UIViewController) {
+        showBasicAlert(on: vc, with: "Incomplete Form", message: "Please fill out all fields")
+    }
 }
