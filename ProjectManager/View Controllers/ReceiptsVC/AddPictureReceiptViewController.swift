@@ -45,6 +45,13 @@ class AddPictureReceiptViewController: UIViewController {
         
         present(imagePicker, animated: true, completion: nil)
     }
+    
+    func presentCamera() {
+        let picker = UIImagePickerController()
+        picker.sourceType = .camera
+        picker.delegate = self
+        present(picker, animated: true)
+    }
 
     @IBAction func addImagePressed(_ sender: Any) {
         photoAlertChoice(on: self, with: "Add photo", message: "Choose from your library or take a photo now.", toCamera: "toCameraVC")
@@ -74,7 +81,7 @@ class AddPictureReceiptViewController: UIViewController {
         }))
         alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: {
             _ in
-            vc.performSegue(withIdentifier: toCamera, sender: nil)
+            self.presentCamera()
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         vc.present(alert, animated: true)
