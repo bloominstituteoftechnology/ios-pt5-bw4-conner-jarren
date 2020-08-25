@@ -254,6 +254,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Add Picture" id="Pf8-BI-ewr"/>
                     <connections>
+                        <outlet property="addImageButton" destination="KU2-Eu-Iz4" id="FfF-Ea-Vsa"/>
                         <outlet property="receiptPreviewImage" destination="Lyz-sO-iA7" id="CJw-aY-S6b"/>
                         <segue destination="aEA-j0-tF4" kind="show" identifier="toDetailVC" id="y2w-ky-3ou"/>
                     </connections>
