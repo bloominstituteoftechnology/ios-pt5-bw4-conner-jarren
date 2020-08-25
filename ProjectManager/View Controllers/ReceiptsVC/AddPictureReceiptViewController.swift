@@ -51,6 +51,7 @@ class AddPictureReceiptViewController: UIViewController {
     }
     
     @IBAction func nextButtonPressed(_ sender: Any) {
+        #warning("need to implement custom alert controller")
         if receiptPreviewImage.image == nil {
             print("error")
         } else{
