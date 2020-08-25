@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationUsageDescription</key>
+	<string>Allow app to pinpoint locations</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Allows the app to take pictures of the receipts.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Allows the app to add receipt photos.</string>
 	<key>CFBundleDevelopmentRegion</key>
