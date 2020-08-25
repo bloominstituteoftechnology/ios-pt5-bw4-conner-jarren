@@ -21,6 +21,7 @@
 		13EFFFF624ECB73C0039F232 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13EFFFF424ECB73C0039F232 /* Main.storyboard */; };
 		13EFFFF824ECB73C0039F232 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13EFFFF724ECB73C0039F232 /* Assets.xcassets */; };
 		13EFFFFB24ECB73C0039F232 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13EFFFF924ECB73C0039F232 /* LaunchScreen.storyboard */; };
+		C315607E24F4BF25003AC820 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C315607D24F4BF25003AC820 /* Alert.swift */; };
 		C3276C5624F42652001C4359 /* UIImage+Scaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3276C5524F42652001C4359 /* UIImage+Scaling.swift */; };
 		C32D7D2124EE074A00073746 /* ProjectsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32D7D2024EE074A00073746 /* ProjectsTableViewController.swift */; };
 		C32D7D2324EF613C00073746 /* ReceiptsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32D7D2224EF613C00073746 /* ReceiptsTableViewController.swift */; };
@@ -57,6 +58,7 @@
 		13EFFFF724ECB73C0039F232 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13EFFFFA24ECB73C0039F232 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13EFFFFC24ECB73C0039F232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C315607D24F4BF25003AC820 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		C3276C5524F42652001C4359 /* UIImage+Scaling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Scaling.swift"; sourceTree = "<group>"; };
 		C32D7D2024EE074A00073746 /* ProjectsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsTableViewController.swift; sourceTree = "<group>"; };
 		C32D7D2224EF613C00073746 /* ReceiptsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptsTableViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				13451D6D24ECD96E009C9313 /* Note.m */,
 				13451D6B24ECD96D009C9313 /* ProjectManager-Bridging-Header.h */,
 				13CE97B324EF59F300200CB9 /* Receipt.swift */,
+				C315607D24F4BF25003AC820 /* Alert.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 				C32D7D2924EF6B8600073746 /* AddDateReceiptViewController.swift in Sources */,
 				C3276C5624F42652001C4359 /* UIImage+Scaling.swift in Sources */,
 				13EFFFEF24ECB73C0039F232 /* AppDelegate.swift in Sources */,
+				C315607E24F4BF25003AC820 /* Alert.swift in Sources */,
 				13CE97C024EF724B00200CB9 /* NoteTableViewCell.swift in Sources */,
 				13136A2124EE205800761CA1 /* ProjectController.swift in Sources */,
 				1323B25424EF774D00F9F4E1 /* NoteController.swift in Sources */,
