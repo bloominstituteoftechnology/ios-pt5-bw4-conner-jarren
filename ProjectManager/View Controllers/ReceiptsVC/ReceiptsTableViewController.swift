@@ -12,17 +12,44 @@ class ReceiptsTableViewController: UITableViewController {
 
     let receiptController = ReceiptController()
     
+    var locationString: String = ""
+    var dateString: String = ""
+    var nameString: String = ""
+    var priceString: String = ""
+    var quantityString: String = ""
+    var categoryString: String = ""
+    var descriptionString: String = ""
+    
+    var receiptImage: UIImage!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let testReceipt = Receipt(title: "Soil", totalCost: 25.69, category: "Outdoors", image: nil, date: receiptController.dateFormatterConfig(NSDate.now), placeOfPurchase: "Home Depot", latitude: 100, longitude: 100)
+        let testReceipt = Receipt(title: "Soil", totalCost: "25.69", category: "Outdoors", image: nil, date: receiptController.dateFormatterConfig(NSDate.now), placeOfPurchase: "Home Depot", latitude: 100, longitude: 100)
         
         receiptController.addReceipt(testReceipt)
 
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
 
     @IBAction func unwindToReceiptTableView(_ sender: UIStoryboardSegue){
-        
+        if sender.source is ReviewReceiptViewController {
+            guard let senderVC = sender.source as? ReviewReceiptViewController else { return }
+            locationString = senderVC.locationString
+            dateString = senderVC.dateString
+            nameString = senderVC.nameString
+            priceString = senderVC.priceString
+            quantityString = senderVC.quantityString
+            categoryString = senderVC.categoryString
+            descriptionString = senderVC.descriptionString
+            receiptImage = senderVC.receiptImage
+            
+            receiptController.addReceipt(Receipt(title: locationString, totalCost: priceString, category: categoryString, image: receiptImage, date: dateString, placeOfPurchase: locationString))
+            
+        }
     }
     
     // MARK: - Table view data source

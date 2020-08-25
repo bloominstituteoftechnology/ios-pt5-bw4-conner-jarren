@@ -29,10 +29,11 @@ class ReviewReceiptViewController: UIViewController {
     
     var receiptImage: UIImage!
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateViews()
+    }
+    @IBAction func addReceiptButton(_ sender: Any) {
     }
     
     func updateViews() {

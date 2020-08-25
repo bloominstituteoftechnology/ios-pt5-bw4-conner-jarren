@@ -429,6 +429,7 @@
                                 <rect key="frame" x="165" y="763" width="84" height="30"/>
                                 <state key="normal" title="Add Receipt"/>
                                 <connections>
+                                    <action selector="addReceiptButton:" destination="7R1-5f-KYp" eventType="touchUpInside" id="YwX-h5-cLk"/>
                                     <segue destination="j9f-9X-309" kind="unwind" unwindAction="unwindToReceiptTableView:" id="CXq-nf-9o2"/>
                                 </connections>
                             </button>

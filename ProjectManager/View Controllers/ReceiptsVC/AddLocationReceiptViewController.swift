@@ -20,6 +20,7 @@ class AddLocationReceiptViewController: UIViewController {
     }
     
     @IBAction func nextButtonPressed(_ sender: Any) {
+        #warning("need to implement custom alert controller")
         if locationTextField.text == "" {
             print("error")
         } else{

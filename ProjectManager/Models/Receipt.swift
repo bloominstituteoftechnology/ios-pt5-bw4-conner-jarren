@@ -12,7 +12,7 @@ import UIKit
 struct Receipt {
     // Basic Receipt info
     var title: String
-    var totalCost: Float
+    var totalCost: String
     var category: String
     var image: UIImage?
     var date: String
