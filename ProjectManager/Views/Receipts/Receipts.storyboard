@@ -160,18 +160,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="G0z-0r-kEu">
-                                <rect key="frame" x="0.0" y="198" width="414" height="500"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="500" id="Flm-98-4zC"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="datePickerChanged:" destination="JzO-Qj-LxR" eventType="valueChanged" id="khQ-6I-odc"/>
-                                </connections>
-                            </datePicker>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="jsC-Eu-oka">
-                                <rect key="frame" x="40" y="791" width="334" height="2"/>
-                            </progressView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8P7-uZ-cgp">
                                 <rect key="frame" x="191" y="721" width="32" height="30"/>
                                 <state key="normal" title="Next"/>
@@ -179,10 +167,21 @@
                                     <action selector="nextButtonPressed:" destination="JzO-Qj-LxR" eventType="touchUpInside" id="2YR-Xn-jvk"/>
                                 </connections>
                             </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="jsC-Eu-oka">
+                                <rect key="frame" x="40" y="791" width="334" height="2"/>
+                            </progressView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="G0z-0r-kEu">
+                                <rect key="frame" x="0.0" y="241" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="G0z-0r-kEu" secondAttribute="height" multiplier="12:12" id="ZK5-YD-n8i"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="datePickerChanged:" destination="JzO-Qj-LxR" eventType="valueChanged" id="khQ-6I-odc"/>
+                                </connections>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="8P7-uZ-cgp" firstAttribute="top" secondItem="G0z-0r-kEu" secondAttribute="bottom" constant="23" id="2t4-IE-Zxq"/>
                             <constraint firstItem="jsC-Eu-oka" firstAttribute="top" secondItem="8P7-uZ-cgp" secondAttribute="bottom" constant="40" id="4aY-9h-73P"/>
                             <constraint firstItem="jsC-Eu-oka" firstAttribute="leading" secondItem="215-TV-reO" secondAttribute="leadingMargin" constant="20" id="NlN-IZ-eWD"/>
                             <constraint firstItem="8P7-uZ-cgp" firstAttribute="centerX" secondItem="215-TV-reO" secondAttribute="centerX" id="T4l-Gh-4gI"/>
