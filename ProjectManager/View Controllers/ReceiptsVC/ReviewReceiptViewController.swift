@@ -33,6 +33,7 @@ class ReviewReceiptViewController: UIViewController {
         super.viewDidLoad()
         updateViews()
     }
+    
     @IBAction func addReceiptButton(_ sender: Any) {
     }
     
