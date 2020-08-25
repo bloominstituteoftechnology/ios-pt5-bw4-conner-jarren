@@ -103,6 +103,9 @@
                                     <constraint firstAttribute="width" constant="250" id="MCa-Wx-9ZL"/>
                                     <constraint firstAttribute="height" constant="250" id="i9K-7z-ndB"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="vyi-kX-Lnj" id="Lb2-Pg-JN8"/>
+                                </connections>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place of Purchase:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GzJ-S0-9fx">
                                 <rect key="frame" x="20" y="460" width="374" height="21"/>
