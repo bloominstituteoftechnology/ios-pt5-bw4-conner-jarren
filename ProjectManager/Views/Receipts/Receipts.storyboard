@@ -256,7 +256,6 @@
                     <connections>
                         <outlet property="receiptPreviewImage" destination="Lyz-sO-iA7" id="CJw-aY-S6b"/>
                         <segue destination="aEA-j0-tF4" kind="show" identifier="toDetailVC" id="y2w-ky-3ou"/>
-                        <segue destination="LwU-om-Uoa" kind="show" identifier="toCameraVC" id="atx-pe-Wiw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O8V-R2-Unc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -561,22 +560,6 @@
                 <exit id="j9f-9X-309" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="5055" y="-285"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="wjQ-Xi-wB0">
-            <objects>
-                <viewController id="LwU-om-Uoa" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="i2o-H8-DDF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="Udt-pz-j9K"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Znt-VL-pVp"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="a8l-0a-Kqx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4296" y="-952"/>
         </scene>
         <!--Review Receipt-->
         <scene sceneID="GJA-8e-Kbr">
