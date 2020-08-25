@@ -26,7 +26,7 @@ class ReceiptsTableViewController: UITableViewController {
         super.viewDidLoad()
         
         #warning("Reminder to remove test data")
-        let testReceipt = Receipt(title: "Soil", totalCost: "25.69", category: "Outdoors", image: nil, date: receiptController.dateFormatterConfig(NSDate.now), description: "Fake text", placeOfPurchase: "Home Depot", latitude: 100, longitude: 100)
+        let testReceipt = Receipt(title: "Soil", totalCost: "25.69", category: "Outdoors", image: nil, date: receiptController.dateFormatterConfig(NSDate.now), description: "Fake text", quantity: "1", placeOfPurchase: "Home Depot", latitude: 100, longitude: 100)
         
         receiptController.addReceipt(testReceipt)
 
@@ -56,7 +56,7 @@ class ReceiptsTableViewController: UITableViewController {
             descriptionString = senderVC.descriptionString
             receiptImage = senderVC.receiptImage
             
-            receiptController.addReceipt(Receipt(title: locationString, totalCost: priceString, category: categoryString, image: receiptImage, date: dateString, description: descriptionString, placeOfPurchase: locationString))
+            receiptController.addReceipt(Receipt(title: locationString, totalCost: priceString, category: categoryString, image: receiptImage, date: dateString, description: descriptionString, quantity: quantityString, placeOfPurchase: locationString))
         }
     }
     
