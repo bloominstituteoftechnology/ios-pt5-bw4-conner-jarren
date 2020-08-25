@@ -29,8 +29,7 @@ class DetailReceiptViewController: UIViewController {
         placeOfPurchaseLabel.text = detailReceipt.placeOfPurchase
         itemNameLabel.text = detailReceipt.title
         priceLabel.text = detailReceipt.totalCost
-        #warning("need to change the receipt controller")
-//        quantityLabel.text = detailReceipt.quantity
+        quantityLabel.text = detailReceipt.quantity
         descriptionTextView.text = detailReceipt.description
     }
 
