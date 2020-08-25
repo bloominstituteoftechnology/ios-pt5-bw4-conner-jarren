@@ -20,7 +20,7 @@ class DetailReceiptViewController: UIViewController {
     @IBOutlet var quantityLabel: UILabel!
     @IBOutlet var descriptionTextView: UITextView!
     
-    lazy var detailReceipt = Receipt(title: "", totalCost: "", category: "", image: UIImage(), date: "", placeOfPurchase: "")
+    lazy var detailReceipt = Receipt(title: "", totalCost: "", category: "", image: UIImage(), date: "", description: "", placeOfPurchase: "")
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +31,7 @@ class DetailReceiptViewController: UIViewController {
         priceLabel.text = detailReceipt.totalCost
         #warning("need to change the receipt controller")
 //        quantityLabel.text = detailReceipt.quantity
-//        descriptionTextView.text = detailReceipt.description
+        descriptionTextView.text = detailReceipt.description
     }
 
 }
