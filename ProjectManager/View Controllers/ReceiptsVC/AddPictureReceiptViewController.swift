@@ -33,7 +33,7 @@ class AddPictureReceiptViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    private func presentImagePickerController() {
+    func presentImagePickerController() {
         guard UIImagePickerController.isSourceTypeAvailable(.photoLibrary) else {
             print("The photo library is not available.")
             return
@@ -47,7 +47,7 @@ class AddPictureReceiptViewController: UIViewController {
     }
 
     @IBAction func addImagePressed(_ sender: Any) {
-        presentImagePickerController()
+        photoAlertChoice(on: self, with: "Add photo", message: "Choose from your library or take a photo now.", toCamera: "toCameraVC")
     }
     
     @IBAction func nextButtonPressed(_ sender: Any) {
@@ -64,6 +64,20 @@ class AddPictureReceiptViewController: UIViewController {
             destination.dateString = dateString
             destination.imageViewPreview = receiptPreviewImage.image
         }
+    }
+    
+    func photoAlertChoice(on vc: UIViewController, with title: String, message: String, toCamera: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Library", style: .default, handler: {
+        _ in
+            self.presentImagePickerController()
+        }))
+        alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: {
+            _ in
+            vc.performSegue(withIdentifier: toCamera, sender: nil)
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        vc.present(alert, animated: true)
     }
 }
 

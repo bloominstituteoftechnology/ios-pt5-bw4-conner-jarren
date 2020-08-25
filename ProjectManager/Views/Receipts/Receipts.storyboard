@@ -257,6 +257,7 @@
                     <connections>
                         <outlet property="receiptPreviewImage" destination="Lyz-sO-iA7" id="CJw-aY-S6b"/>
                         <segue destination="aEA-j0-tF4" kind="show" identifier="toDetailVC" id="y2w-ky-3ou"/>
+                        <segue destination="LwU-om-Uoa" kind="show" identifier="toCameraVC" id="atx-pe-Wiw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O8V-R2-Unc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
