@@ -11,6 +11,7 @@ import UIKit
 class AddPictureReceiptViewController: UIViewController {
 
     @IBOutlet var receiptPreviewImage: UIImageView!
+    @IBOutlet var addImageButton: UIButton!
     
     var locationString: String = ""
     var dateString: String = ""
@@ -26,6 +27,7 @@ class AddPictureReceiptViewController: UIViewController {
             
             scaledSize = CGSize(width: scaledSize.width*scale,
                                 height: scaledSize.height*scale)
+            addImageButton.setTitle("Change Image", for: .normal)
         }
     }
     
@@ -54,7 +56,7 @@ class AddPictureReceiptViewController: UIViewController {
     }
 
     @IBAction func addImagePressed(_ sender: Any) {
-        photoAlertChoice(on: self, with: "Add photo", message: "Choose from your library or take a photo now.", toCamera: "toCameraVC")
+        photoAlertChoice(on: self, with: "Add photo", message: "Choose from your library or take a photo now.")
     }
     
     @IBAction func nextButtonPressed(_ sender: Any) {
@@ -73,7 +75,7 @@ class AddPictureReceiptViewController: UIViewController {
         }
     }
     
-    func photoAlertChoice(on vc: UIViewController, with title: String, message: String, toCamera: String) {
+    func photoAlertChoice(on vc: UIViewController, with title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Library", style: .default, handler: {
         _ in
