@@ -57,6 +57,9 @@ class ReceiptsTableViewController: UITableViewController {
             receiptImage = senderVC.receiptImage
             
             receiptController.addReceipt(Receipt(title: locationString, totalCost: priceString, category: categoryString, image: receiptImage, date: dateString, description: descriptionString, quantity: quantityString, placeOfPurchase: locationString))
+        } else if sender.source is DetailReceiptViewController {
+            #warning("Need to implement delete function to work correctly")
+            receiptController.removeReceiptAtIndex(0)
         }
     }
     
