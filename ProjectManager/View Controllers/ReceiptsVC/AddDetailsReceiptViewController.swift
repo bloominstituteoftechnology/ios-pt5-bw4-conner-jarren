@@ -104,7 +104,7 @@ class AddDetailsReceiptViewController: UIViewController {
         }
     }
     @IBAction func updatePriceLabel(_ sender: Any) {
-        priceAmount.text = priceTextField.text
+        priceAmount.text = "$\(priceTextField.text ?? "$0.00")"
         createGraph()
     }
 }
