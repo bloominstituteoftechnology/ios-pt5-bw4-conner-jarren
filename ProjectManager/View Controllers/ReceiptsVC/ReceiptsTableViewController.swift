@@ -21,14 +21,20 @@ class ReceiptsTableViewController: UITableViewController {
     var descriptionString: String = ""
     
     var receiptImage: UIImage!
+    var currentIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         #warning("Reminder to remove test data")
         let testReceipt = Receipt(title: "Soil", totalCost: "25.69", category: "Outdoors", image: nil, date: receiptController.dateFormatterConfig(NSDate.now), description: "Fake text", quantity: "1", placeOfPurchase: "Home Depot", latitude: 100, longitude: 100)
+        let testReceipt1 = Receipt(title: "Soil", totalCost: "50.69", category: "Outdoors", image: nil, date: receiptController.dateFormatterConfig(NSDate.now), description: "Fake text", quantity: "1", placeOfPurchase: "Home Depot", latitude: 100, longitude: 100)
+        let testReceipt2 = Receipt(title: "Soil", totalCost: "100.69", category: "Outdoors", image: nil, date: receiptController.dateFormatterConfig(NSDate.now), description: "Fake text", quantity: "1", placeOfPurchase: "Home Depot", latitude: 100, longitude: 100)
         
         receiptController.addReceipt(testReceipt)
+        receiptController.addReceipt(testReceipt1)
+        receiptController.addReceipt(testReceipt2)
+
 
     }
     
@@ -40,6 +46,7 @@ class ReceiptsTableViewController: UITableViewController {
         if segue.identifier == "toDetailReceiptVC", let destination = segue.destination as? DetailReceiptViewController {
             if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) {
                 destination.detailReceipt = receiptController.receipts[indexPath.row]
+                destination.currentIndex = indexPath.row
             }
         }
     }
@@ -58,8 +65,10 @@ class ReceiptsTableViewController: UITableViewController {
             
             receiptController.addReceipt(Receipt(title: locationString, totalCost: priceString, category: categoryString, image: receiptImage, date: dateString, description: descriptionString, quantity: quantityString, placeOfPurchase: locationString))
         } else if sender.source is DetailReceiptViewController {
-            #warning("Need to implement delete function to work correctly")
-            receiptController.removeReceiptAtIndex(0)
+            guard let senderVC = sender.source as? DetailReceiptViewController else { return }
+            currentIndex = senderVC.currentIndex
+            print(currentIndex)
+            receiptController.removeReceiptAtIndex(currentIndex)
         }
     }
     
