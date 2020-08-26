@@ -274,7 +274,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ADN-dv-6gM">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ADN-dv-6gM" customClass="PieChartView" customModule="ProjectManager" customModuleProvider="target">
                                 <rect key="frame" x="107" y="190" width="200" height="200"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -316,6 +316,9 @@
                                         <rect key="frame" x="0.0" y="99" width="150" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <connections>
+                                            <action selector="updatePriceLabel:" destination="aEA-j0-tF4" eventType="editingDidEnd" id="34B-6E-M7u"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -374,9 +377,16 @@
                                     <constraint firstAttribute="width" constant="150" id="siu-pW-5T0"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xG0-kZ-lDM">
+                                <rect key="frame" x="174" y="275.5" width="66" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="xG0-kZ-lDM" firstAttribute="centerY" secondItem="ADN-dv-6gM" secondAttribute="centerY" id="0Ft-lE-5Mh"/>
                             <constraint firstItem="aFV-1X-u7l" firstAttribute="leading" secondItem="Zy2-vm-82y" secondAttribute="leading" constant="20" id="3yy-Sp-p7m"/>
                             <constraint firstItem="8Vj-Rc-gAu" firstAttribute="leading" secondItem="dPP-Ez-YGu" secondAttribute="leadingMargin" constant="20" id="4qE-5d-Fzf"/>
                             <constraint firstItem="95I-20-y9e" firstAttribute="top" secondItem="aFV-1X-u7l" secondAttribute="bottom" constant="10" id="5m1-Wt-2gd"/>
@@ -385,6 +395,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="8Vj-Rc-gAu" secondAttribute="trailing" constant="20" id="9pV-tr-VNz"/>
                             <constraint firstItem="VxX-oh-1rJ" firstAttribute="top" secondItem="PBX-T8-70c" secondAttribute="bottom" constant="8" id="HLH-ds-Kp4"/>
                             <constraint firstItem="Zy2-vm-82y" firstAttribute="trailing" secondItem="PBX-T8-70c" secondAttribute="trailing" constant="20" id="HUN-Fx-j8f"/>
+                            <constraint firstItem="xG0-kZ-lDM" firstAttribute="centerX" secondItem="ADN-dv-6gM" secondAttribute="centerX" id="IRC-dt-r1o"/>
                             <constraint firstItem="aFV-1X-u7l" firstAttribute="top" secondItem="ADN-dv-6gM" secondAttribute="bottom" constant="10" id="Jze-WA-8r7"/>
                             <constraint firstItem="PBX-T8-70c" firstAttribute="top" secondItem="95I-20-y9e" secondAttribute="bottom" constant="20" id="K7Y-4n-ZQm"/>
                             <constraint firstItem="VxX-oh-1rJ" firstAttribute="centerX" secondItem="dPP-Ez-YGu" secondAttribute="centerX" id="d5c-ip-Wko"/>
@@ -403,6 +414,7 @@
                         <outlet property="descriptionTextView" destination="PBX-T8-70c" id="lrt-xX-wLZ"/>
                         <outlet property="graphView" destination="ADN-dv-6gM" id="3hk-pa-jfY"/>
                         <outlet property="itemNameTextField" destination="eLQ-Qy-c2Q" id="kDB-Me-Oyv"/>
+                        <outlet property="priceAmount" destination="xG0-kZ-lDM" id="amf-2D-OJc"/>
                         <outlet property="priceTextField" destination="h2U-9o-gD0" id="J4K-X8-gjn"/>
                         <outlet property="quantityTextField" destination="qyg-z2-I4l" id="5os-Bq-Rne"/>
                         <segue destination="7R1-5f-KYp" kind="show" identifier="toReviewVC" id="m0b-mw-UjZ"/>

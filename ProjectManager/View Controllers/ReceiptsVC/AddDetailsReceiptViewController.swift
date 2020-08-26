@@ -17,16 +17,52 @@ class AddDetailsReceiptViewController: UIViewController {
     @IBOutlet var quantityTextField: UITextField!
     @IBOutlet var categoryTextField: UITextField!
     @IBOutlet var descriptionTextView: UITextView!
+    @IBOutlet var priceAmount: UILabel!
     
     var locationString: String = ""
     var dateString: String = ""
     var imageViewPreview: UIImage!
+    var colorChooser: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         descriptionTextView.text = ""
+        graphView.backgroundColor = UIColor.clear
+        createGraph()
     }
-
+    
+    func createGraph() {
+        let shapeLayer = CAShapeLayer()
+        
+        let center = CGPoint(x: 100, y: 100)
+        let circularPath = UIBezierPath(arcCenter: center, radius: 75, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        shapeLayer.path = circularPath.cgPath
+        shapeLayer.fillColor = UIColor.clear.cgColor
+        
+        shapeLayer.strokeEnd = 0
+        if colorChooser == false{
+            shapeLayer.strokeColor = UIColor.systemBlue.cgColor
+        } else {
+            shapeLayer.strokeColor = UIColor.systemRed.cgColor
+        }
+        colorChooser.toggle()
+        shapeLayer.lineWidth = 30
+        shapeLayer.lineCap =  CAShapeLayerLineCap.round
+        shapeLayer.lineJoin = CAShapeLayerLineJoin.round
+        
+        graphView.layer.addSublayer(shapeLayer)
+        
+        let animcolor = CABasicAnimation(keyPath: "strokeEnd")
+        animcolor.fromValue = UIColor.green.cgColor
+        animcolor.toValue = UIColor.orange.cgColor
+        animcolor.duration = 1.0
+        animcolor.isRemovedOnCompletion = false
+        animcolor.fillMode = CAMediaTimingFillMode.forwards
+        
+        shapeLayer.add(animcolor, forKey: "strokeEnd")
+        
+    }
+    
     @IBAction func reviewButtonPressed(_ sender: Any) {
         if itemNameTextField.text == "" {
             Alert.showIncompleteFormAlert(on: self)
@@ -66,6 +102,10 @@ class AddDetailsReceiptViewController: UIViewController {
             destination.descriptionString = description
             
         }
+    }
+    @IBAction func updatePriceLabel(_ sender: Any) {
+        priceAmount.text = priceTextField.text
+        createGraph()
     }
 }
 
