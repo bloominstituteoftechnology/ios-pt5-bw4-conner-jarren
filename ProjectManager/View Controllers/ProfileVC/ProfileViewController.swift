@@ -33,6 +33,7 @@ class ProfileViewController: UIViewController {
     }
     
 }
+#warning("Need to add sections to catergorize the sections")
 extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return testArray.count
