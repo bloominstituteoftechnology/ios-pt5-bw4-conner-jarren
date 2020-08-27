@@ -57,7 +57,7 @@ class ReceiptsTableViewController: UITableViewController {
             locationString = senderVC.locationString
             dateString = senderVC.dateString
             nameString = senderVC.nameString
-//            priceFloat = senderVC.priceString
+            priceFloat = senderVC.priceFloat
             quantityString = senderVC.quantityString
             categoryString = senderVC.categoryString
             descriptionString = senderVC.descriptionString
@@ -81,7 +81,7 @@ class ReceiptsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "receiptCell", for: indexPath)
 
-        cell.textLabel?.text = "$\(receiptController.receipts[indexPath.row].totalCost)"
+        cell.textLabel?.text = receiptController.floatToStringConversion(receiptController.receipts[indexPath.row].totalCost)
         cell.detailTextLabel?.text = "\(receiptController.receipts[indexPath.row].date)"
         
         return cell
