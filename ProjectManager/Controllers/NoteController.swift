@@ -10,6 +10,8 @@ import Foundation
 
 class NoteController {
     var notes: [Note] = []
+    
+    var selectedTableViewIndex: Int? = nil
 
     var count: Int {
         notes.count
@@ -27,4 +29,8 @@ class NoteController {
         notes[index]
     }
     
+    func replaceNote(at index: Int, with note: Note) {
+        notes.remove(at: index)
+        notes.insert(note, at: index)
+    }
 }

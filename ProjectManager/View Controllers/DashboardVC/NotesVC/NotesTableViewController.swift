@@ -8,10 +8,10 @@
 
 import UIKit
 
-let reuseIdentifier = "NoteCell"
-
 class NotesTableViewController: UITableViewController {
     
+    let reuseIdentifier = "NoteCell"
+	
     var noteController = NoteController()
 
     override func viewDidLoad() {
@@ -47,17 +47,22 @@ class NotesTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
+    
+    // Set Cell height
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100.0
+    }
 
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let noteDetailVC = segue.destination as? NoteDetailViewController {
             if segue.identifier == "ViewNoteSegue", let indexPath = tableView.indexPathForSelectedRow {
-                noteDetailVC.note = noteController.noteAtIndex(indexPath.row)
-            }
-            else if segue.identifier == "AddNoteSegue" {
                 noteDetailVC.noteController = noteController
+                noteDetailVC.noteController?.selectedTableViewIndex = indexPath.row
+            } else if segue.identifier == "AddNoteSegue" {
+                noteDetailVC.noteController = noteController
+                noteDetailVC.noteController?.selectedTableViewIndex = nil
             }
         }
     }
-
 }
