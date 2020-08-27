@@ -67,7 +67,6 @@ class ReceiptsTableViewController: UITableViewController {
         } else if sender.source is DetailReceiptViewController {
             guard let senderVC = sender.source as? DetailReceiptViewController else { return }
             currentIndex = senderVC.currentIndex
-            print(currentIndex)
             receiptController.removeReceiptAtIndex(currentIndex)
         }
     }
