@@ -88,9 +88,9 @@
                         <outlet property="firtNameLabel" destination="AMJ-1B-83c" id="jU0-zI-hLd"/>
                         <outlet property="tableView" destination="GtW-6h-xwo" id="bpa-r4-VCf"/>
                         <segue destination="rVA-3F-76e" kind="show" identifier="toFeedbackVC" id="bFi-Rp-WXN"/>
-                        <segue destination="BEp-r3-Wom" kind="show" id="k3B-jy-8Ac"/>
-                        <segue destination="Xih-Ca-6Kw" kind="show" id="qAr-TV-6dq"/>
-                        <segue destination="Bpu-Rj-7Cu" kind="show" id="7ao-aC-Ndw"/>
+                        <segue destination="BEp-r3-Wom" kind="show" identifier="toHelpVC" id="k3B-jy-8Ac"/>
+                        <segue destination="Xih-Ca-6Kw" kind="show" identifier="toTermsVC" id="qAr-TV-6dq"/>
+                        <segue destination="Bpu-Rj-7Cu" kind="show" identifier="toInfoVC" id="7ao-aC-Ndw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mYr-v3-LGq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -182,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YIn-v4-F3V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1868" y="-1242"/>
+            <point key="canvasLocation" x="1868" y="-894"/>
         </scene>
         <!--Feedback-->
         <scene sceneID="iFF-Yp-kTM">
@@ -277,7 +277,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bgj-oP-Vjp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1868.1159420289857" y="121.875"/>
+            <point key="canvasLocation" x="1868" y="-167"/>
         </scene>
         <!--Terms of Service-->
         <scene sceneID="ZPS-iq-WIN">
@@ -290,7 +290,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jx-tt-FEc">
                                 <rect key="frame" x="0.0" y="140" width="414" height="673"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <mutableString key="text">Welcome to Blueprynt!
+                                <string key="text">Welcome to Blueprynt!
 
 These terms and conditions outline the rules and regulations for the use of Blueprynt's Application.
 
@@ -390,7 +390,7 @@ To the maximum extent permitted by applicable law, we exclude all representation
 
 The limitations and prohibitions of liability set in this Section and elsewhere in this disclaimer: (a) are subject to the preceding paragraph; and (b) govern all liabilities arising under the disclaimer, including liabilities arising in contract, in tort and for breach of statutory duty.
 
-As long as the website and the information and services on the website are provided free of charge, we will not be liable for any loss or damage of any nature.</mutableString>
+As long as the website and the information and services on the website are provided free of charge, we will not be liable for any loss or damage of any nature.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -409,7 +409,7 @@ As long as the website and the information and services on the website are provi
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ek1-WG-gcz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1868" y="1434"/>
+            <point key="canvasLocation" x="1867" y="1277"/>
         </scene>
         <!--Help Center-->
         <scene sceneID="n5N-rg-2jU">
@@ -466,7 +466,7 @@ As long as the website and the information and services on the website are provi
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9wD-kF-7RG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1868" y="775"/>
+            <point key="canvasLocation" x="1867" y="565"/>
         </scene>
         <!--Profile-->
         <scene sceneID="DK8-Oa-wxl">
