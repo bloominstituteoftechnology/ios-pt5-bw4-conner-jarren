@@ -9,7 +9,8 @@
 import UIKit
 
 class AddDetailsReceiptViewController: UIViewController {
-    //TODO: Need ot implement swiftUI for a graph view that updated in real time
+    var receiptController = ReceiptController()
+    
     @IBOutlet var graphView: UIView!
     
     @IBOutlet var itemNameTextField: UITextField!
@@ -104,7 +105,8 @@ class AddDetailsReceiptViewController: UIViewController {
         }
     }
     @IBAction func updatePriceLabel(_ sender: Any) {
-        priceAmount.text = "$\(priceTextField.text ?? "$0.00")"
+        let price = priceTextField.floatValue
+        priceAmount.text = receiptController.floatToStringConversion(price)
         createGraph()
     }
 }
