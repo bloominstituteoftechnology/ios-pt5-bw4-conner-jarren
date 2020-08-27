@@ -89,8 +89,8 @@ class AddDetailsReceiptViewController: UIViewController {
             guard let name = itemNameTextField.text else {return}
             destination.nameString = name
             
-            guard let price = priceTextField.text else {return}
-            destination.priceString = price
+            let price = priceTextField.floatValue
+            destination.priceFloat = price
             
             guard let quantity = quantityTextField.text else {return}
             destination.quantityString = quantity
@@ -106,6 +106,16 @@ class AddDetailsReceiptViewController: UIViewController {
     @IBAction func updatePriceLabel(_ sender: Any) {
         priceAmount.text = "$\(priceTextField.text ?? "$0.00")"
         createGraph()
+    }
+}
+
+extension UITextField {
+    var floatValue : Float {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+
+        let nsNumber = numberFormatter.number(from: text!)
+        return nsNumber == nil ? 0.0 : nsNumber!.floatValue
     }
 }
 
