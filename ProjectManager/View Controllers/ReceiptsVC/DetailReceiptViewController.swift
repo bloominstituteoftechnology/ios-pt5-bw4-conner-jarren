@@ -9,6 +9,7 @@
 import UIKit
 
 class DetailReceiptViewController: UIViewController {
+    var receiptController = ReceiptController()
     
     @IBOutlet var receiptPreviewImageView: UIImageView!
     
@@ -30,7 +31,7 @@ class DetailReceiptViewController: UIViewController {
         dateLabel.text = detailReceipt.date
         placeOfPurchaseLabel.text = detailReceipt.placeOfPurchase
         itemNameLabel.text = detailReceipt.title
-//        priceLabel.text = detailReceipt.totalCost
+        priceLabel.text = receiptController.floatToStringConversion(detailReceipt.totalCost)
         quantityLabel.text = detailReceipt.quantity
         descriptionTextView.text = detailReceipt.description
     }
