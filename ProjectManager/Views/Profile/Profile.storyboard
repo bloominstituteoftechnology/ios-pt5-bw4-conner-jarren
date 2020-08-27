@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bo7-HV-0S9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="965-CQ-x00">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -10,22 +10,111 @@
         <!--Profile-->
         <scene sceneID="rP5-RQ-khD">
             <objects>
-                <viewController id="bo7-HV-0S9" sceneMemberID="viewController">
+                <viewController id="bo7-HV-0S9" customClass="ProfileViewController" customModule="ProjectManager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P74-YH-suz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="sbo-HJ-evJ">
+                                <rect key="frame" x="20" y="108.5" width="100" height="99"/>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="9Xv-vb-H2b"/>
+                                    <constraint firstAttribute="height" constant="100" id="dyg-LT-h6k"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="2fA-I9-IQu">
+                                <rect key="frame" x="140" y="131" width="74" height="64.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMJ-1B-83c">
+                                        <rect key="frame" x="0.0" y="0.0" width="74" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOq-bW-DYG">
+                                        <rect key="frame" x="0.0" y="34.5" width="74" height="30"/>
+                                        <state key="normal" title="Edit profile"/>
+                                        <connections>
+                                            <action selector="editProfileTapped:" destination="bo7-HV-0S9" eventType="touchUpInside" id="FL7-ra-JsM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GtW-6h-xwo">
+                                <rect key="frame" x="0.0" y="228" width="414" height="585"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="profileCell" textLabel="8rL-Iz-wYY" style="IBUITableViewCellStyleDefault" id="nJg-Bw-Ecj">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nJg-Bw-Ecj" id="5Zl-pB-mtB">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8rL-Iz-wYY">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="bo7-HV-0S9" id="XWs-7J-Ou3"/>
+                                    <outlet property="delegate" destination="bo7-HV-0S9" id="Dah-hc-4Av"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="sbo-HJ-evJ" firstAttribute="leading" secondItem="Rdc-Ig-Orq" secondAttribute="leading" constant="20" id="AZL-67-APf"/>
+                            <constraint firstItem="2fA-I9-IQu" firstAttribute="leading" secondItem="sbo-HJ-evJ" secondAttribute="trailing" constant="20" id="Whl-o0-yrQ"/>
+                            <constraint firstItem="GtW-6h-xwo" firstAttribute="leading" secondItem="Rdc-Ig-Orq" secondAttribute="leading" id="Y0a-pT-RbN"/>
+                            <constraint firstItem="2fA-I9-IQu" firstAttribute="top" secondItem="Rdc-Ig-Orq" secondAttribute="top" constant="43" id="bvc-ks-uYx"/>
+                            <constraint firstItem="GtW-6h-xwo" firstAttribute="trailing" secondItem="Rdc-Ig-Orq" secondAttribute="trailing" id="fFf-cY-ntX"/>
+                            <constraint firstItem="sbo-HJ-evJ" firstAttribute="top" secondItem="Rdc-Ig-Orq" secondAttribute="top" constant="20" id="jEy-Rd-eDv"/>
+                            <constraint firstItem="GtW-6h-xwo" firstAttribute="bottom" secondItem="Rdc-Ig-Orq" secondAttribute="bottom" id="pnD-OO-4cx"/>
+                            <constraint firstItem="GtW-6h-xwo" firstAttribute="top" secondItem="sbo-HJ-evJ" secondAttribute="bottom" constant="20" id="vix-ix-HGx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Rdc-Ig-Orq"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="ejh-fD-zK7"/>
+                    <navigationItem key="navigationItem" title="Profile" id="ph0-5Q-Qj3"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="firtNameLabel" destination="AMJ-1B-83c" id="jU0-zI-hLd"/>
+                        <outlet property="tableView" destination="GtW-6h-xwo" id="bpa-r4-VCf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mYr-v3-LGq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="141" y="122"/>
+            <point key="canvasLocation" x="1050.7246376811595" y="121.875"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="DK8-Oa-wxl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="965-CQ-x00" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="ejh-fD-zK7"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="PQ6-Rn-wET">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bo7-HV-0S9" kind="relationship" relationship="rootViewController" id="3gp-hz-r99"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fNf-VJ-Mes" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="121.875"/>
         </scene>
     </scenes>
     <resources>
+        <image name="person.crop.circle.fill" catalog="system" width="128" height="121"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
     </resources>
 </document>

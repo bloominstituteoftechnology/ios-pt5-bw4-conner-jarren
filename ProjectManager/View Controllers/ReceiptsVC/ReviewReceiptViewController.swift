@@ -9,22 +9,43 @@
 import UIKit
 
 class ReviewReceiptViewController: UIViewController {
+    @IBOutlet var receiptPreviewPicture: UIImageView!
+    
+    @IBOutlet var dateLabel: UILabel!
+    @IBOutlet var placeOfPurchaseLabel: UILabel!
+    @IBOutlet var itemNameLabel: UILabel!
+    @IBOutlet var priceLabel: UILabel!
+    @IBOutlet var categoryLabel: UILabel!
+    @IBOutlet var quantityLabel: UILabel!
+    @IBOutlet var descriptionTextView: UITextView!
+    
+    var locationString: String = ""
+    var dateString: String = ""
+    var nameString: String = ""
+    var priceString: String = ""
+    var quantityString: String = ""
+    var categoryString: String = ""
+    var descriptionString: String = ""
+    
+    var receiptImage: UIImage!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        updateViews()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func addReceiptButton(_ sender: Any) {
     }
-    */
+    
+    func updateViews() {
+        placeOfPurchaseLabel.text = locationString
+        dateLabel.text = dateString
+        itemNameLabel.text = nameString
+        priceLabel.text = priceString
+        quantityLabel.text = quantityString
+        categoryLabel.text = categoryString
+        descriptionTextView.text = descriptionString
+        receiptPreviewPicture.image = receiptImage
+    }
 
 }

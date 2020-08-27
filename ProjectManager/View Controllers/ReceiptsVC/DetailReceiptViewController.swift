@@ -9,22 +9,30 @@
 import UIKit
 
 class DetailReceiptViewController: UIViewController {
-
+    
+    @IBOutlet var receiptPreviewImageView: UIImageView!
+    
+    @IBOutlet var dateLabel: UILabel!
+    @IBOutlet var placeOfPurchaseLabel: UILabel!
+    @IBOutlet var itemNameLabel: UILabel!
+    @IBOutlet var priceLabel: UILabel!
+    @IBOutlet var categoryLabel: UILabel!
+    @IBOutlet var quantityLabel: UILabel!
+    @IBOutlet var descriptionTextView: UITextView!
+    
+    var currentIndex = 0
+    
+    lazy var detailReceipt = Receipt(title: "", totalCost: "", category: "", image: UIImage(), date: "", description: "", quantity: "", placeOfPurchase: "")
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        receiptPreviewImageView.image = detailReceipt.image
+        dateLabel.text = detailReceipt.date
+        placeOfPurchaseLabel.text = detailReceipt.placeOfPurchase
+        itemNameLabel.text = detailReceipt.title
+        priceLabel.text = detailReceipt.totalCost
+        quantityLabel.text = detailReceipt.quantity
+        descriptionTextView.text = detailReceipt.description
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

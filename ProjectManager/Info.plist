@@ -17,6 +17,18 @@
 		<string>Roboto-Light.ttf</string>
 		<string>Roboto-LightItalic.ttf</string>
 	</array>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Allows the app to always know where the user is when in use.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Allows app to always know where the user is.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Allows the app to show where you currenlty are.</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Allow app to pinpoint locations</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Allows the app to take pictures of the receipts.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Allows the app to add receipt photos.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

@@ -46,6 +46,9 @@
 		13EFFFF624ECB73C0039F232 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13EFFFF424ECB73C0039F232 /* Main.storyboard */; };
 		13EFFFF824ECB73C0039F232 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13EFFFF724ECB73C0039F232 /* Assets.xcassets */; };
 		13EFFFFB24ECB73C0039F232 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13EFFFF924ECB73C0039F232 /* LaunchScreen.storyboard */; };
+		C315607E24F4BF25003AC820 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C315607D24F4BF25003AC820 /* Alert.swift */; };
+		C315608E24F60319003AC820 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C315608D24F60319003AC820 /* ProfileViewController.swift */; };
+		C3276C5624F42652001C4359 /* UIImage+Scaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3276C5524F42652001C4359 /* UIImage+Scaling.swift */; };
 		C32D7D2124EE074A00073746 /* ProjectsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32D7D2024EE074A00073746 /* ProjectsTableViewController.swift */; };
 		C32D7D2324EF613C00073746 /* ReceiptsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32D7D2224EF613C00073746 /* ReceiptsTableViewController.swift */; };
 		C32D7D2524EF650100073746 /* ReceiptController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32D7D2424EF650100073746 /* ReceiptController.swift */; };
@@ -106,6 +109,9 @@
 		13EFFFF724ECB73C0039F232 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13EFFFFA24ECB73C0039F232 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13EFFFFC24ECB73C0039F232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C315607D24F4BF25003AC820 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		C315608D24F60319003AC820 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C3276C5524F42652001C4359 /* UIImage+Scaling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Scaling.swift"; sourceTree = "<group>"; };
 		C32D7D2024EE074A00073746 /* ProjectsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsTableViewController.swift; sourceTree = "<group>"; };
 		C32D7D2224EF613C00073746 /* ReceiptsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptsTableViewController.swift; sourceTree = "<group>"; };
 		C32D7D2424EF650100073746 /* ReceiptController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptController.swift; sourceTree = "<group>"; };
@@ -161,6 +167,7 @@
 				13451D6D24ECD96E009C9313 /* Note.m */,
 				13451D6B24ECD96D009C9313 /* ProjectManager-Bridging-Header.h */,
 				13CE97B324EF59F300200CB9 /* Receipt.swift */,
+				C315607D24F4BF25003AC820 /* Alert.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -226,6 +233,7 @@
 				13EFFFEE24ECB73C0039F232 /* AppDelegate.swift */,
 				13EFFFF024ECB73C0039F232 /* SceneDelegate.swift */,
 				13EFFFF724ECB73C0039F232 /* Assets.xcassets */,
+				C3276C5524F42652001C4359 /* UIImage+Scaling.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -348,6 +356,7 @@
 		C392712324ECC9430032202A /* ProfileVC */ = {
 			isa = PBXGroup;
 			children = (
+				C315608D24F60319003AC820 /* ProfileViewController.swift */,
 			);
 			path = ProfileVC;
 			sourceTree = "<group>";
@@ -493,7 +502,9 @@
 				13CE97BE24EF71CC00200CB9 /* NoteDetailViewController.swift in Sources */,
 				1320460624F0BA20008B38D7 /* ProductDetailViewController.swift in Sources */,
 				C32D7D2924EF6B8600073746 /* AddDateReceiptViewController.swift in Sources */,
+				C3276C5624F42652001C4359 /* UIImage+Scaling.swift in Sources */,
 				13EFFFEF24ECB73C0039F232 /* AppDelegate.swift in Sources */,
+				C315607E24F4BF25003AC820 /* Alert.swift in Sources */,
 				13CE97C024EF724B00200CB9 /* NoteTableViewCell.swift in Sources */,
 				13136A2124EE205800761CA1 /* ProjectController.swift in Sources */,
 				1323B25424EF774D00F9F4E1 /* NoteController.swift in Sources */,
@@ -503,6 +514,7 @@
 				13CE97B424EF59F300200CB9 /* Receipt.swift in Sources */,
 				136C662124F63C1700146689 /* PMTextField.swift in Sources */,
 				13CE97BC24EF71B600200CB9 /* NotesTableViewController.swift in Sources */,
+				C315608E24F60319003AC820 /* ProfileViewController.swift in Sources */,
 				C32D7D2B24EF6BA200073746 /* AddPictureReceiptViewController.swift in Sources */,
 				C32D7D3024EF6BD700073746 /* ReviewReceiptViewController.swift in Sources */,
 				13D9675224F4B09000A31DB3 /* FinancialPieChart.swift in Sources */,
@@ -549,6 +561,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 39WA4QS927;
 				INFOPLIST_FILE = ProjectManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -569,6 +582,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 39WA4QS927;
 				INFOPLIST_FILE = ProjectManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

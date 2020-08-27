@@ -33,5 +33,4 @@ class NoteController {
         notes.remove(at: index)
         notes.insert(note, at: index)
     }
-    
 }

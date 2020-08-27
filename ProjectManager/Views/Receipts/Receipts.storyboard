@@ -40,7 +40,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="b4M-IK-nPB" kind="show" id="cQ8-Lf-qT7"/>
+                                    <segue destination="b4M-IK-nPB" kind="show" identifier="toDetailReceiptVC" id="cQ8-Lf-qT7"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -56,7 +56,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="plus" catalog="system"/>
                                 <connections>
-                                    <segue destination="vyi-kX-Lnj" kind="show" id="OsE-1S-89M"/>
+                                    <segue destination="vyi-kX-Lnj" kind="show" identifier="" id="OsE-1S-89M"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -103,6 +103,9 @@
                                     <constraint firstAttribute="width" constant="250" id="MCa-Wx-9ZL"/>
                                     <constraint firstAttribute="height" constant="250" id="i9K-7z-ndB"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="vyi-kX-Lnj" id="Lb2-Pg-JN8"/>
+                                </connections>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place of Purchase:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GzJ-S0-9fx">
                                 <rect key="frame" x="20" y="460" width="374" height="21"/>
@@ -119,7 +122,7 @@
                                 <rect key="frame" x="191" y="721" width="32" height="30"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
-                                    <segue destination="JzO-Qj-LxR" kind="show" id="NoC-D3-kl5"/>
+                                    <action selector="nextButtonPressed:" destination="vyi-kX-Lnj" eventType="touchUpInside" id="Ilv-eb-zVH"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -142,6 +145,11 @@
                         <viewLayoutGuide key="safeArea" id="W0Z-3p-Y5D"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Location" id="dSy-c3-Sqg"/>
+                    <connections>
+                        <outlet property="locationTextField" destination="2Ue-fF-S36" id="O9i-RS-V0X"/>
+                        <outlet property="mapKitView" destination="Eb2-zF-39K" id="dR1-6H-8MA"/>
+                        <segue destination="JzO-Qj-LxR" kind="show" identifier="toDateVC" id="kWj-3O-L6q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HOJ-OQ-VG6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -155,26 +163,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="G0z-0r-kEu">
-                                <rect key="frame" x="0.0" y="198" width="414" height="500"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="500" id="Flm-98-4zC"/>
-                                </constraints>
-                            </datePicker>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="jsC-Eu-oka">
-                                <rect key="frame" x="40" y="791" width="334" height="2"/>
-                            </progressView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8P7-uZ-cgp">
                                 <rect key="frame" x="191" y="721" width="32" height="30"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
-                                    <segue destination="P5h-h8-6kK" kind="show" id="pKb-Dd-N8v"/>
+                                    <action selector="nextButtonPressed:" destination="JzO-Qj-LxR" eventType="touchUpInside" id="2YR-Xn-jvk"/>
                                 </connections>
                             </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="jsC-Eu-oka">
+                                <rect key="frame" x="40" y="791" width="334" height="2"/>
+                            </progressView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="G0z-0r-kEu">
+                                <rect key="frame" x="0.0" y="241" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="G0z-0r-kEu" secondAttribute="height" multiplier="12:12" id="ZK5-YD-n8i"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="datePickerChanged:" destination="JzO-Qj-LxR" eventType="valueChanged" id="khQ-6I-odc"/>
+                                </connections>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="8P7-uZ-cgp" firstAttribute="top" secondItem="G0z-0r-kEu" secondAttribute="bottom" constant="23" id="2t4-IE-Zxq"/>
                             <constraint firstItem="jsC-Eu-oka" firstAttribute="top" secondItem="8P7-uZ-cgp" secondAttribute="bottom" constant="40" id="4aY-9h-73P"/>
                             <constraint firstItem="jsC-Eu-oka" firstAttribute="leading" secondItem="215-TV-reO" secondAttribute="leadingMargin" constant="20" id="NlN-IZ-eWD"/>
                             <constraint firstItem="8P7-uZ-cgp" firstAttribute="centerX" secondItem="215-TV-reO" secondAttribute="centerX" id="T4l-Gh-4gI"/>
@@ -188,6 +198,10 @@
                         <viewLayoutGuide key="safeArea" id="0cH-bD-7Ff"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Date" id="iK7-sE-ocb"/>
+                    <connections>
+                        <outlet property="datePickerView" destination="G0z-0r-kEu" id="KwT-bn-agk"/>
+                        <segue destination="P5h-h8-6kK" kind="show" identifier="toPictureVC" id="9cI-xo-3Ye"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XMe-9p-HD4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -208,10 +222,10 @@
                                 <rect key="frame" x="191" y="721" width="32" height="30"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
-                                    <segue destination="aEA-j0-tF4" kind="show" id="kE1-za-tXX"/>
+                                    <action selector="nextButtonPressed:" destination="P5h-h8-6kK" eventType="touchUpInside" id="2UA-je-DhO"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lyz-sO-iA7">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lyz-sO-iA7">
                                 <rect key="frame" x="82" y="190" width="250" height="250"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -223,7 +237,7 @@
                                 <rect key="frame" x="170" y="460" width="74" height="30"/>
                                 <state key="normal" title="Add Image"/>
                                 <connections>
-                                    <segue destination="LwU-om-Uoa" kind="show" id="EnO-Jr-d1c"/>
+                                    <action selector="addImagePressed:" destination="P5h-h8-6kK" eventType="touchUpInside" id="CPV-PU-yxO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -242,6 +256,11 @@
                         <viewLayoutGuide key="safeArea" id="9Vg-WJ-FXM"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Picture" id="Pf8-BI-ewr"/>
+                    <connections>
+                        <outlet property="addImageButton" destination="KU2-Eu-Iz4" id="FfF-Ea-Vsa"/>
+                        <outlet property="receiptPreviewImage" destination="Lyz-sO-iA7" id="CJw-aY-S6b"/>
+                        <segue destination="aEA-j0-tF4" kind="show" identifier="toDetailVC" id="y2w-ky-3ou"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O8V-R2-Unc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -255,7 +274,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ADN-dv-6gM">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ADN-dv-6gM" customClass="PieChartView" customModule="ProjectManager" customModuleProvider="target">
                                 <rect key="frame" x="107" y="190" width="200" height="200"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -270,7 +289,7 @@
                                 <rect key="frame" x="182.5" y="721" width="49" height="30"/>
                                 <state key="normal" title="Review"/>
                                 <connections>
-                                    <segue destination="7R1-5f-KYp" kind="show" id="q65-YO-XS0"/>
+                                    <action selector="reviewButtonPressed:" destination="aEA-j0-tF4" eventType="touchUpInside" id="Hah-r7-aEO"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aFV-1X-u7l">
@@ -296,7 +315,10 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h2U-9o-gD0">
                                         <rect key="frame" x="0.0" y="99" width="150" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <connections>
+                                            <action selector="updatePriceLabel:" destination="aEA-j0-tF4" eventType="editingDidEnd" id="34B-6E-M7u"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -333,7 +355,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qyg-z2-I4l">
                                         <rect key="frame" x="0.0" y="28.5" width="150" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hm2-n6-kh6">
                                         <rect key="frame" x="0.0" y="70.5" width="75" height="20.5"/>
@@ -355,9 +377,16 @@
                                     <constraint firstAttribute="width" constant="150" id="siu-pW-5T0"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xG0-kZ-lDM">
+                                <rect key="frame" x="174" y="275.5" width="66" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="xG0-kZ-lDM" firstAttribute="centerY" secondItem="ADN-dv-6gM" secondAttribute="centerY" id="0Ft-lE-5Mh"/>
                             <constraint firstItem="aFV-1X-u7l" firstAttribute="leading" secondItem="Zy2-vm-82y" secondAttribute="leading" constant="20" id="3yy-Sp-p7m"/>
                             <constraint firstItem="8Vj-Rc-gAu" firstAttribute="leading" secondItem="dPP-Ez-YGu" secondAttribute="leadingMargin" constant="20" id="4qE-5d-Fzf"/>
                             <constraint firstItem="95I-20-y9e" firstAttribute="top" secondItem="aFV-1X-u7l" secondAttribute="bottom" constant="10" id="5m1-Wt-2gd"/>
@@ -366,6 +395,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="8Vj-Rc-gAu" secondAttribute="trailing" constant="20" id="9pV-tr-VNz"/>
                             <constraint firstItem="VxX-oh-1rJ" firstAttribute="top" secondItem="PBX-T8-70c" secondAttribute="bottom" constant="8" id="HLH-ds-Kp4"/>
                             <constraint firstItem="Zy2-vm-82y" firstAttribute="trailing" secondItem="PBX-T8-70c" secondAttribute="trailing" constant="20" id="HUN-Fx-j8f"/>
+                            <constraint firstItem="xG0-kZ-lDM" firstAttribute="centerX" secondItem="ADN-dv-6gM" secondAttribute="centerX" id="IRC-dt-r1o"/>
                             <constraint firstItem="aFV-1X-u7l" firstAttribute="top" secondItem="ADN-dv-6gM" secondAttribute="bottom" constant="10" id="Jze-WA-8r7"/>
                             <constraint firstItem="PBX-T8-70c" firstAttribute="top" secondItem="95I-20-y9e" secondAttribute="bottom" constant="20" id="K7Y-4n-ZQm"/>
                             <constraint firstItem="VxX-oh-1rJ" firstAttribute="centerX" secondItem="dPP-Ez-YGu" secondAttribute="centerX" id="d5c-ip-Wko"/>
@@ -379,6 +409,16 @@
                         <viewLayoutGuide key="safeArea" id="Zy2-vm-82y"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Details" id="3gK-4M-nWm"/>
+                    <connections>
+                        <outlet property="categoryTextField" destination="2wy-tj-Ova" id="wK2-4n-5Tn"/>
+                        <outlet property="descriptionTextView" destination="PBX-T8-70c" id="lrt-xX-wLZ"/>
+                        <outlet property="graphView" destination="ADN-dv-6gM" id="3hk-pa-jfY"/>
+                        <outlet property="itemNameTextField" destination="eLQ-Qy-c2Q" id="kDB-Me-Oyv"/>
+                        <outlet property="priceAmount" destination="xG0-kZ-lDM" id="amf-2D-OJc"/>
+                        <outlet property="priceTextField" destination="h2U-9o-gD0" id="J4K-X8-gjn"/>
+                        <outlet property="quantityTextField" destination="qyg-z2-I4l" id="5os-Bq-Rne"/>
+                        <segue destination="7R1-5f-KYp" kind="show" identifier="toReviewVC" id="m0b-mw-UjZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Am0-Dm-XUM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -392,7 +432,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="joC-S3-NLC">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="joC-S3-NLC">
                                 <rect key="frame" x="82" y="190" width="250" height="250"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -404,6 +444,7 @@
                                 <rect key="frame" x="165" y="763" width="84" height="30"/>
                                 <state key="normal" title="Add Receipt"/>
                                 <connections>
+                                    <action selector="addReceiptButton:" destination="7R1-5f-KYp" eventType="touchUpInside" id="YwX-h5-cLk"/>
                                     <segue destination="j9f-9X-309" kind="unwind" unwindAction="unwindToReceiptTableView:" id="CXq-nf-9o2"/>
                                 </connections>
                             </button>
@@ -482,14 +523,18 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MnZ-9B-0Tu">
-                                        <rect key="frame" x="0.0" y="142.5" width="8" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="142.5" width="153" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="MnZ-9B-0Tu" secondAttribute="trailing" id="t5L-Ub-Srd"/>
+                                    <constraint firstItem="MnZ-9B-0Tu" firstAttribute="leading" secondItem="bO7-LQ-YDn" secondAttribute="leading" id="vcm-PR-qSa"/>
+                                </constraints>
                             </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bkW-vx-U2c">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkW-vx-U2c">
                                 <rect key="frame" x="20" y="628" width="374" height="127"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -516,27 +561,21 @@
                         <viewLayoutGuide key="safeArea" id="cex-ZZ-Mtw"/>
                     </view>
                     <navigationItem key="navigationItem" title="Review Receipt" id="tYD-g0-ftN"/>
+                    <connections>
+                        <outlet property="categoryLabel" destination="kzm-h1-HLd" id="VgC-0c-D2D"/>
+                        <outlet property="dateLabel" destination="HIn-Uq-yfY" id="pen-YB-f6i"/>
+                        <outlet property="descriptionTextView" destination="bkW-vx-U2c" id="Yic-bN-zxX"/>
+                        <outlet property="itemNameLabel" destination="KWo-pU-kd7" id="ts2-2l-rpt"/>
+                        <outlet property="placeOfPurchaseLabel" destination="bbg-6c-hB0" id="wNW-wo-gOn"/>
+                        <outlet property="priceLabel" destination="yOr-BC-5Jt" id="mdb-tR-xZl"/>
+                        <outlet property="quantityLabel" destination="MnZ-9B-0Tu" id="27R-K7-Afg"/>
+                        <outlet property="receiptPreviewPicture" destination="joC-S3-NLC" id="Lty-nt-H8f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LXH-2M-TLM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="j9f-9X-309" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="5055" y="-285"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="wjQ-Xi-wB0">
-            <objects>
-                <viewController id="LwU-om-Uoa" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="i2o-H8-DDF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="Udt-pz-j9K"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Znt-VL-pVp"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="a8l-0a-Kqx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4296" y="-952"/>
         </scene>
         <!--Review Receipt-->
         <scene sceneID="GJA-8e-Kbr">
@@ -546,7 +585,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aO9-Ns-0qn">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aO9-Ns-0qn">
                                 <rect key="frame" x="82" y="190" width="250" height="250"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -629,14 +668,18 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLB-gL-oDJ">
-                                        <rect key="frame" x="0.0" y="142.5" width="8" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="142.5" width="153" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="pLB-gL-oDJ" secondAttribute="trailing" id="DFO-Sg-ZmF"/>
+                                    <constraint firstItem="pLB-gL-oDJ" firstAttribute="leading" secondItem="Qax-2c-ZPC" secondAttribute="leading" id="lCD-2D-rLt"/>
+                                </constraints>
                             </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CbA-AO-TTs">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CbA-AO-TTs">
                                 <rect key="frame" x="20" y="628" width="374" height="165"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -667,11 +710,25 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="trash.fill" catalog="system"/>
+                                <connections>
+                                    <segue destination="177-S7-SwJ" kind="unwind" unwindAction="unwindToReceiptTableView:" id="6KE-Lz-k4I"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="categoryLabel" destination="4ay-sa-unW" id="aFn-D0-yZp"/>
+                        <outlet property="dateLabel" destination="UI8-XJ-Cjk" id="ad7-Tm-BCd"/>
+                        <outlet property="descriptionTextView" destination="CbA-AO-TTs" id="r0M-Op-ke1"/>
+                        <outlet property="itemNameLabel" destination="snC-la-gpT" id="vca-nh-2Bc"/>
+                        <outlet property="placeOfPurchaseLabel" destination="42L-EF-HKq" id="TIe-W4-M1S"/>
+                        <outlet property="priceLabel" destination="irK-8p-Nk5" id="Mev-Va-V0K"/>
+                        <outlet property="quantityLabel" destination="pLB-gL-oDJ" id="Wjb-5b-CNo"/>
+                        <outlet property="receiptPreviewImageView" destination="aO9-Ns-0qn" id="nrX-La-kx6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g0z-Ie-spC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="177-S7-SwJ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2022" y="388"/>
         </scene>
