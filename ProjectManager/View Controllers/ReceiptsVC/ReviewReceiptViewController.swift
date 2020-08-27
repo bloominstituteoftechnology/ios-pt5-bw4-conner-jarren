@@ -9,6 +9,8 @@
 import UIKit
 
 class ReviewReceiptViewController: UIViewController {
+    var receiptController = ReceiptController()
+    
     @IBOutlet var receiptPreviewPicture: UIImageView!
     
     @IBOutlet var dateLabel: UILabel!
@@ -34,12 +36,6 @@ class ReviewReceiptViewController: UIViewController {
         updateViews()
     }
     
-    func floatToStringConversion(_ float: Float) -> String {
-        var string = String(format: "%.2f", float)
-        string = "$\(string)"
-        return string
-    }
-    
     @IBAction func addReceiptButton(_ sender: Any) {
     }
     
@@ -47,7 +43,7 @@ class ReviewReceiptViewController: UIViewController {
         placeOfPurchaseLabel.text = locationString
         dateLabel.text = dateString
         itemNameLabel.text = nameString
-        priceLabel.text = floatToStringConversion(priceFloat)
+        priceLabel.text = receiptController.floatToStringConversion(priceFloat)
         quantityLabel.text = quantityString
         categoryLabel.text = categoryString
         descriptionTextView.text = descriptionString
