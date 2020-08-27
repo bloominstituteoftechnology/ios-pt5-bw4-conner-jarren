@@ -19,7 +19,9 @@ class ProductsTableViewController: UITableViewController {
         self.navigationController?.navigationBar.backgroundColor = .black
         self.navigationController?.navigationBar.tintColor = .white
         let exampleProduct = Product(name: "2x4", purchaseDate: NSDate.now, price: 2.99, quantity: 12)
+        let exampleProduct2 = Product(name: "TopSoil", price: 5.25, quantity: 8)
         productController.addProduct(exampleProduct)
+        productController.addProduct(exampleProduct2)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -28,15 +30,31 @@ class ProductsTableViewController: UITableViewController {
     }
     
     // MARK: - Table view data source
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return productController.count
+    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return productController.count
+        return 1
+    }
+    
+    // Set the spacing between sections
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 5
+    }
+    
+    // Make the background color show through spacing
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor.clear
+        return headerView
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = UITableViewCell()
         if let productCell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? ProductTableViewCell {
-            productCell.configureViews(for: productController.productAtIndex(indexPath.row))
+            productCell.configureViews(for: productController.productAtIndex(indexPath.section))
             cell = productCell
         }
         return cell
@@ -45,8 +63,8 @@ class ProductsTableViewController: UITableViewController {
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            productController.removeProductAtIndex(indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            productController.removeProductAtIndex(indexPath.section)
+            tableView.deleteSections([indexPath.section], with: .fade)
         }
     }
     
@@ -60,7 +78,7 @@ class ProductsTableViewController: UITableViewController {
         if let productDetailVC = segue.destination as? ProductDetailViewController {
             if segue.identifier == "ViewProductSegue", let indexPath = tableView.indexPathForSelectedRow {
                 productDetailVC.productController = productController
-                productDetailVC.productController?.selectedTableViewIndex = indexPath.row
+                productDetailVC.productController?.selectedTableViewIndex = indexPath.section
             }
             else if segue.identifier == "AddProductSegue" {
                 productDetailVC.productController = productController

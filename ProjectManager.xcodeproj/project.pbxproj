@@ -35,6 +35,7 @@
 		13451D6A24ECD953009C9313 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13451D6924ECD953009C9313 /* Product.swift */; };
 		13451D6E24ECD96E009C9313 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 13451D6D24ECD96E009C9313 /* Note.m */; };
 		136C662124F63C1700146689 /* PMTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136C662024F63C1700146689 /* PMTextField.swift */; };
+		13CB3C8A24F8532800FA14FD /* PMTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CB3C8924F8532800FA14FD /* PMTableViewCell.swift */; };
 		13CE97B424EF59F300200CB9 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CE97B324EF59F300200CB9 /* Receipt.swift */; };
 		13CE97BC24EF71B600200CB9 /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CE97BB24EF71B600200CB9 /* NotesTableViewController.swift */; };
 		13CE97BE24EF71CC00200CB9 /* NoteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CE97BD24EF71CC00200CB9 /* NoteDetailViewController.swift */; };
@@ -96,6 +97,7 @@
 		13451D6C24ECD96E009C9313 /* Note.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
 		13451D6D24ECD96E009C9313 /* Note.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
 		136C662024F63C1700146689 /* PMTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMTextField.swift; sourceTree = "<group>"; };
+		13CB3C8924F8532800FA14FD /* PMTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMTableViewCell.swift; sourceTree = "<group>"; };
 		13CE97B324EF59F300200CB9 /* Receipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
 		13CE97BB24EF71B600200CB9 /* NotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
 		13CE97BD24EF71CC00200CB9 /* NoteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				131FA92C24F66145007FA9B5 /* PMDatePicker.swift */,
 				131FA92E24F6632B007FA9B5 /* PMBarButtonItem.swift */,
 				1306184624F7436700CB53EE /* PMTextView.swift */,
+				13CB3C8924F8532800FA14FD /* PMTableViewCell.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -517,6 +520,7 @@
 				C315608E24F60319003AC820 /* ProfileViewController.swift in Sources */,
 				C32D7D2B24EF6BA200073746 /* AddPictureReceiptViewController.swift in Sources */,
 				C32D7D3024EF6BD700073746 /* ReviewReceiptViewController.swift in Sources */,
+				13CB3C8A24F8532800FA14FD /* PMTableViewCell.swift in Sources */,
 				13D9675224F4B09000A31DB3 /* FinancialPieChart.swift in Sources */,
 				131FA92D24F66145007FA9B5 /* PMDatePicker.swift in Sources */,
 				1320460824F0BB20008B38D7 /* ProductTableViewCell.swift in Sources */,
