@@ -26,6 +26,7 @@ class ProductDetailViewController: UIViewController {
         super.viewDidLoad()
         datePicker.datePickerMode = .date
         datePicker.maximumDate = NSDate.now
+        totalCostLabel.text = ""
         
         // Editing Existing Product, populate fields
         if let index = productController?.selectedTableViewIndex {
