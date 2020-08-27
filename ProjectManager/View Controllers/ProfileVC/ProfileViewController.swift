@@ -12,6 +12,12 @@ class ProfileViewController: UIViewController {
 
     @IBOutlet var firtNameLabel: UILabel!
     @IBOutlet var tableView: UITableView!
+    
+    var testCategories: [String] = [
+    "Account settings",
+    "Support",
+    "Legal"
+    ]
 
     #warning("Need to add a second array of icons to match up")
     #warning("Need to create a profile struct and controller")
@@ -33,8 +39,22 @@ class ProfileViewController: UIViewController {
     }
     
 }
-#warning("Need to add sections to catergorize the sections")
 extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "Account details"
+        } else if section == 1 {
+            return "Support"
+        } else {
+            return "Legal"
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return testArray.count
     }
