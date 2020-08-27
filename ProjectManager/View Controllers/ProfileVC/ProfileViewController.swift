@@ -23,8 +23,7 @@ class ProfileViewController: UIViewController {
     #warning("Need to create a profile struct and controller")
     
     var accountDetailsArray: [String] = [
-    "Personal Information",
-    "Notifications"
+    "Personal Information"
     ]
     
     var supportArray: [String] = [
