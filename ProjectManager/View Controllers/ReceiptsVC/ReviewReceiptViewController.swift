@@ -22,7 +22,7 @@ class ReviewReceiptViewController: UIViewController {
     var locationString: String = ""
     var dateString: String = ""
     var nameString: String = ""
-    var priceString: String = ""
+    var priceFloat: Float = 0.00
     var quantityString: String = ""
     var categoryString: String = ""
     var descriptionString: String = ""
@@ -41,7 +41,7 @@ class ReviewReceiptViewController: UIViewController {
         placeOfPurchaseLabel.text = locationString
         dateLabel.text = dateString
         itemNameLabel.text = nameString
-        priceLabel.text = priceString
+//        priceLabel.text = priceFloat
         quantityLabel.text = quantityString
         categoryLabel.text = categoryString
         descriptionTextView.text = descriptionString

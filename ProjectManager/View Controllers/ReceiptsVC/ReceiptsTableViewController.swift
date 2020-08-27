@@ -15,7 +15,7 @@ class ReceiptsTableViewController: UITableViewController {
     var locationString: String = ""
     var dateString: String = ""
     var nameString: String = ""
-    var priceString: String = ""
+    var priceFloat: Float = 0.00
     var quantityString: String = ""
     var categoryString: String = ""
     var descriptionString: String = ""
@@ -27,9 +27,9 @@ class ReceiptsTableViewController: UITableViewController {
         super.viewDidLoad()
         
         #warning("Reminder to remove test data")
-        let testReceipt = Receipt(title: "Soil", totalCost: "25.69", category: "Outdoors", image: nil, date: receiptController.dateFormatterConfig(NSDate.now), description: "Fake text", quantity: "1", placeOfPurchase: "Home Depot", latitude: 100, longitude: 100)
-        let testReceipt1 = Receipt(title: "Soil", totalCost: "50.69", category: "Outdoors", image: nil, date: receiptController.dateFormatterConfig(NSDate.now), description: "Fake text", quantity: "1", placeOfPurchase: "Home Depot", latitude: 100, longitude: 100)
-        let testReceipt2 = Receipt(title: "Soil", totalCost: "100.69", category: "Outdoors", image: nil, date: receiptController.dateFormatterConfig(NSDate.now), description: "Fake text", quantity: "1", placeOfPurchase: "Home Depot", latitude: 100, longitude: 100)
+        let testReceipt = Receipt(title: "Soil", totalCost: 25.69, category: "Outdoors", image: nil, date: receiptController.dateFormatterConfig(NSDate.now), description: "Fake text", quantity: "1", placeOfPurchase: "Home Depot", latitude: 100, longitude: 100)
+        let testReceipt1 = Receipt(title: "Soil", totalCost: 50.69, category: "Outdoors", image: nil, date: receiptController.dateFormatterConfig(NSDate.now), description: "Fake text", quantity: "1", placeOfPurchase: "Home Depot", latitude: 100, longitude: 100)
+        let testReceipt2 = Receipt(title: "Soil", totalCost: 100.69, category: "Outdoors", image: nil, date: receiptController.dateFormatterConfig(NSDate.now), description: "Fake text", quantity: "1", placeOfPurchase: "Home Depot", latitude: 100, longitude: 100)
         
         receiptController.addReceipt(testReceipt)
         receiptController.addReceipt(testReceipt1)
@@ -57,13 +57,13 @@ class ReceiptsTableViewController: UITableViewController {
             locationString = senderVC.locationString
             dateString = senderVC.dateString
             nameString = senderVC.nameString
-            priceString = senderVC.priceString
+//            priceFloat = senderVC.priceString
             quantityString = senderVC.quantityString
             categoryString = senderVC.categoryString
             descriptionString = senderVC.descriptionString
             receiptImage = senderVC.receiptImage
             
-            receiptController.addReceipt(Receipt(title: locationString, totalCost: priceString, category: categoryString, image: receiptImage, date: dateString, description: descriptionString, quantity: quantityString, placeOfPurchase: locationString))
+            receiptController.addReceipt(Receipt(title: locationString, totalCost: priceFloat, category: categoryString, image: receiptImage, date: dateString, description: descriptionString, quantity: quantityString, placeOfPurchase: locationString))
         } else if sender.source is DetailReceiptViewController {
             guard let senderVC = sender.source as? DetailReceiptViewController else { return }
             currentIndex = senderVC.currentIndex

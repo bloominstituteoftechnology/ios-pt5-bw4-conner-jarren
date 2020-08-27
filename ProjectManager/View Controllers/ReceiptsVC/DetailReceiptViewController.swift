@@ -22,7 +22,7 @@ class DetailReceiptViewController: UIViewController {
     
     var currentIndex = 0
     
-    lazy var detailReceipt = Receipt(title: "", totalCost: "", category: "", image: UIImage(), date: "", description: "", quantity: "", placeOfPurchase: "")
+    lazy var detailReceipt = Receipt(title: "", totalCost: 0.00, category: "", image: UIImage(), date: "", description: "", quantity: "", placeOfPurchase: "")
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,7 @@ class DetailReceiptViewController: UIViewController {
         dateLabel.text = detailReceipt.date
         placeOfPurchaseLabel.text = detailReceipt.placeOfPurchase
         itemNameLabel.text = detailReceipt.title
-        priceLabel.text = detailReceipt.totalCost
+//        priceLabel.text = detailReceipt.totalCost
         quantityLabel.text = detailReceipt.quantity
         descriptionTextView.text = detailReceipt.description
     }
