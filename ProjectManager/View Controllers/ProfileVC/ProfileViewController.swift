@@ -21,11 +21,18 @@ class ProfileViewController: UIViewController {
 
     #warning("Need to add a second array of icons to match up")
     #warning("Need to create a profile struct and controller")
-    var testArray: [String] = [
+    
+    var accountDetailsArray: [String] = [
     "Personal Information",
-    "Notifications",
+    "Notifications"
+    ]
+    
+    var supportArray: [String] = [
     "Get help",
-    "Give us feedback",
+    "Give us feedback"
+    ]
+    
+    var legalArray: [String] = [
     "Terms of Service",
     "Log out"
     ]
@@ -40,6 +47,13 @@ class ProfileViewController: UIViewController {
     
 }
 extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        if let header = view as? UITableViewHeaderFooterView {
+//            header.tintColor = UIColor.lightGray
+            header.textLabel?.textColor = UIColor.black
+        }
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 3
@@ -56,13 +70,25 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return testArray.count
+        if section == 0 {
+            return accountDetailsArray.count
+        } else if section == 1 {
+            return supportArray.count
+        } else {
+            return legalArray.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "profileCell", for: indexPath)
         #warning("Change this in the future to hold a title on the left and a matching icon on the right")
-        cell.textLabel?.text = testArray[indexPath.row]
+        if indexPath.section == 0 {
+            cell.textLabel?.text = accountDetailsArray[indexPath.row]
+        } else if indexPath.section == 1 {
+            cell.textLabel?.text = supportArray[indexPath.row]
+        } else {
+            cell.textLabel?.text = legalArray[indexPath.row]
+        }
         
         return cell
     }
