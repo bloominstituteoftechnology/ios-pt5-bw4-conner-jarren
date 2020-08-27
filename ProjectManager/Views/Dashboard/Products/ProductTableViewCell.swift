@@ -22,6 +22,8 @@ class ProductTableViewCell: UITableViewCell {
         costLabel.text = "Total: \(String(format: "$%.2f", product.totalCost))"
         if let purchaseDate = product.purchaseDate {
             dateLabel.text = "Purchased: " + dateFormatter.string(from: purchaseDate)
+        } else {
+            dateLabel.text = ""
         }
     }
     
