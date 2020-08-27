@@ -36,4 +36,10 @@ class ReceiptController {
         return dateFormatter.string(from: date)
     }
     
+    func floatToStringConversion(_ float: Float) -> String {
+        var string = String(format: "%.2f", float)
+        string = "$\(string)"
+        return string
+    }
+    
 }
