@@ -147,10 +147,9 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Of2-qb-PqG">
-                                <rect key="frame" x="57" y="216" width="116" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Of2-qb-PqG">
+                                <rect key="frame" x="35" y="227" width="160" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -183,12 +182,15 @@
                             <constraint firstItem="Vdg-4z-fA1" firstAttribute="leading" secondItem="8v9-l7-DWk" secondAttribute="leading" constant="35" id="7Zd-eP-fha"/>
                             <constraint firstItem="8v9-l7-DWk" firstAttribute="trailing" secondItem="9CQ-oV-mVa" secondAttribute="trailing" constant="101" id="APm-nY-Jer"/>
                             <constraint firstItem="t82-pB-mQI" firstAttribute="top" secondItem="jDd-0K-voC" secondAttribute="bottom" constant="55" id="C2V-Ss-Vtw"/>
+                            <constraint firstItem="Of2-qb-PqG" firstAttribute="top" secondItem="jG5-FY-sXp" secondAttribute="bottom" constant="30" id="Eeh-A4-CG6"/>
                             <constraint firstItem="8v9-l7-DWk" firstAttribute="trailing" secondItem="jdA-z0-rcK" secondAttribute="trailing" constant="35" id="FRu-Ik-Neo"/>
                             <constraint firstItem="jdA-z0-rcK" firstAttribute="top" secondItem="OFp-uQ-gH1" secondAttribute="bottom" constant="20" id="Htg-la-dzx"/>
+                            <constraint firstItem="Of2-qb-PqG" firstAttribute="leading" secondItem="8v9-l7-DWk" secondAttribute="leading" constant="35" id="ISf-Ab-zGc"/>
                             <constraint firstItem="t82-pB-mQI" firstAttribute="leading" secondItem="8v9-l7-DWk" secondAttribute="leading" id="LDD-aj-zIf"/>
                             <constraint firstItem="8v9-l7-DWk" firstAttribute="trailing" secondItem="zGo-Bt-eVe" secondAttribute="trailing" constant="134" id="OkK-Ep-cE8"/>
                             <constraint firstItem="jG5-FY-sXp" firstAttribute="top" secondItem="8v9-l7-DWk" secondAttribute="top" constant="36" id="Qiw-6q-XF1"/>
                             <constraint firstItem="8v9-l7-DWk" firstAttribute="trailing" secondItem="OFp-uQ-gH1" secondAttribute="trailing" constant="35" id="Qrz-5G-63H"/>
+                            <constraint firstItem="OFp-uQ-gH1" firstAttribute="leading" secondItem="Of2-qb-PqG" secondAttribute="trailing" constant="24" id="REl-L5-2c4"/>
                             <constraint firstItem="9CQ-oV-mVa" firstAttribute="top" secondItem="8v9-l7-DWk" secondAttribute="top" constant="35" id="ZaU-rY-XfP"/>
                             <constraint firstItem="t82-pB-mQI" firstAttribute="trailing" secondItem="8v9-l7-DWk" secondAttribute="trailing" id="dTi-jc-HPY"/>
                             <constraint firstItem="xW7-ZS-LVF" firstAttribute="top" secondItem="Vdg-4z-fA1" secondAttribute="bottom" constant="36" id="fHc-wX-Dcq"/>
