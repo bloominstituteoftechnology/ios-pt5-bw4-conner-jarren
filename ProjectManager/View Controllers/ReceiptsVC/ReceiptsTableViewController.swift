@@ -10,8 +10,8 @@ import UIKit
 
 class ReceiptsTableViewController: UITableViewController {
 
-    let receiptController = ReceiptController()
-    
+    static var receiptController = ReceiptController()
+        
     var locationString: String = ""
     var dateString: String = ""
     var nameString: String = ""
@@ -27,15 +27,13 @@ class ReceiptsTableViewController: UITableViewController {
         super.viewDidLoad()
         
         #warning("Reminder to remove test data")
-        let testReceipt = Receipt(title: "Soil", totalCost: 25.69, category: "Outdoors", image: nil, date: receiptController.dateFormatterConfig(NSDate.now), description: "Fake text", quantity: "1", placeOfPurchase: "Home Depot", latitude: 100, longitude: 100)
-        let testReceipt1 = Receipt(title: "Soil", totalCost: 50.69, category: "Outdoors", image: nil, date: receiptController.dateFormatterConfig(NSDate.now), description: "Fake text", quantity: "1", placeOfPurchase: "Home Depot", latitude: 100, longitude: 100)
-        let testReceipt2 = Receipt(title: "Soil", totalCost: 100.69, category: "Outdoors", image: nil, date: receiptController.dateFormatterConfig(NSDate.now), description: "Fake text", quantity: "1", placeOfPurchase: "Home Depot", latitude: 100, longitude: 100)
+        let testReceipt = Receipt(title: "Soil", totalCost: 25.69, category: "Outdoors", image: nil, date: ReceiptsTableViewController.receiptController.dateFormatterConfig(NSDate.now), description: "Fake text", quantity: "1", placeOfPurchase: "Home Depot", latitude: 100, longitude: 100)
+        let testReceipt1 = Receipt(title: "Soil", totalCost: 50.69, category: "Outdoors", image: nil, date: ReceiptsTableViewController.receiptController.dateFormatterConfig(NSDate.now), description: "Fake text", quantity: "1", placeOfPurchase: "Home Depot", latitude: 100, longitude: 100)
+        let testReceipt2 = Receipt(title: "Soil", totalCost: 100.69, category: "Outdoors", image: nil, date: ReceiptsTableViewController.receiptController.dateFormatterConfig(NSDate.now), description: "Fake text", quantity: "1", placeOfPurchase: "Home Depot", latitude: 100, longitude: 100)
         
-        receiptController.addReceipt(testReceipt)
-        receiptController.addReceipt(testReceipt1)
-        receiptController.addReceipt(testReceipt2)
-
-
+        ReceiptsTableViewController.receiptController.addReceipt(testReceipt)
+        ReceiptsTableViewController.receiptController.addReceipt(testReceipt1)
+        ReceiptsTableViewController.receiptController.addReceipt(testReceipt2)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -45,7 +43,7 @@ class ReceiptsTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetailReceiptVC", let destination = segue.destination as? DetailReceiptViewController {
             if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) {
-                destination.detailReceipt = receiptController.receipts[indexPath.row]
+                destination.detailReceipt = ReceiptsTableViewController.receiptController.receipts[indexPath.row]
                 destination.currentIndex = indexPath.row
             }
         }
@@ -63,25 +61,25 @@ class ReceiptsTableViewController: UITableViewController {
             descriptionString = senderVC.descriptionString
             receiptImage = senderVC.receiptImage
             
-            receiptController.addReceipt(Receipt(title: locationString, totalCost: priceFloat, category: categoryString, image: receiptImage, date: dateString, description: descriptionString, quantity: quantityString, placeOfPurchase: locationString))
+            ReceiptsTableViewController.receiptController.addReceipt(Receipt(title: locationString, totalCost: priceFloat, category: categoryString, image: receiptImage, date: dateString, description: descriptionString, quantity: quantityString, placeOfPurchase: locationString))
         } else if sender.source is DetailReceiptViewController {
             guard let senderVC = sender.source as? DetailReceiptViewController else { return }
             currentIndex = senderVC.currentIndex
-            receiptController.removeReceiptAtIndex(currentIndex)
+            ReceiptsTableViewController.receiptController.removeReceiptAtIndex(currentIndex)
         }
     }
     
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return receiptController.count
+        return ReceiptsTableViewController.receiptController.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "receiptCell", for: indexPath)
 
-        cell.textLabel?.text = receiptController.floatToStringConversion(receiptController.receipts[indexPath.row].totalCost)
-        cell.detailTextLabel?.text = "\(receiptController.receipts[indexPath.row].date)"
+        cell.textLabel?.text = ReceiptsTableViewController.receiptController.floatToStringConversion(ReceiptsTableViewController.receiptController.receipts[indexPath.row].totalCost)
+        cell.detailTextLabel?.text = "\(ReceiptsTableViewController.receiptController.receipts[indexPath.row].date)"
         
         return cell
     }

@@ -45,7 +45,7 @@
         <!--Project Dashboard-->
         <scene sceneID="3tZ-3H-VQ3">
             <objects>
-                <viewController id="d1U-S9-juF" sceneMemberID="viewController">
+                <viewController id="d1U-S9-juF" customClass="DashboardMainViewController" customModule="ProjectManager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3op-L3-kc4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -214,6 +214,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="notesTotalLabel" destination="WwP-6U-ef1" id="mxR-Qt-Uc4"/>
+                        <outlet property="numberOfSavedProductsLabel" destination="TY6-rk-jfx" id="ktb-TI-PsU"/>
+                        <outlet property="percentageToBudgetLabel" destination="bf2-cm-ZY6" id="g3v-ZU-C5J"/>
+                        <outlet property="totalAmountSpent" destination="Of2-qb-PqG" id="WTB-RZ-PNk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6re-MX-zky" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="eFG-Yy-thg" userLabel="Exit" sceneMemberID="exit"/>
