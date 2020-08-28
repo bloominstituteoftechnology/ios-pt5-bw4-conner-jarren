@@ -18,9 +18,4 @@ class DashboardMainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        print("We are in the dashboard!!!\(ReceiptsTableViewController.receiptController.receipts)")
-    }
-    
 }
