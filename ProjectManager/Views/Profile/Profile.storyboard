@@ -91,9 +91,11 @@
                         <segue destination="BEp-r3-Wom" kind="show" identifier="toHelpVC" id="k3B-jy-8Ac"/>
                         <segue destination="Xih-Ca-6Kw" kind="show" identifier="toTermsVC" id="qAr-TV-6dq"/>
                         <segue destination="Bpu-Rj-7Cu" kind="show" identifier="toInfoVC" id="7ao-aC-Ndw"/>
+                        <segue destination="7yc-Ib-uXc" kind="unwind" identifier="undwindToLoginScreen" unwindAction="unwindToLoginScreen:" id="7zF-oa-jAF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mYr-v3-LGq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="7yc-Ib-uXc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1050.7246376811595" y="121.875"/>
         </scene>

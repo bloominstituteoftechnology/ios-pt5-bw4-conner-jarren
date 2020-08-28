@@ -91,6 +91,9 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
         
         return cell
     }
-    
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 2 && indexPath.row == 1{
+            performSegue(withIdentifier: "undwindToLoginScreen", sender: Any?.self)
+        }
+    }
 }
