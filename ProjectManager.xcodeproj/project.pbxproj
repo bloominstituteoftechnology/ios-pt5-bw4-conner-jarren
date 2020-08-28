@@ -50,6 +50,7 @@
 		C315607E24F4BF25003AC820 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C315607D24F4BF25003AC820 /* Alert.swift */; };
 		C315608E24F60319003AC820 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C315608D24F60319003AC820 /* ProfileViewController.swift */; };
 		C3276C5624F42652001C4359 /* UIImage+Scaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3276C5524F42652001C4359 /* UIImage+Scaling.swift */; };
+		C328EB4324F89DFF004BA789 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328EB4224F89DFF004BA789 /* MainViewController.swift */; };
 		C32D7D2124EE074A00073746 /* ProjectsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32D7D2024EE074A00073746 /* ProjectsTableViewController.swift */; };
 		C32D7D2324EF613C00073746 /* ReceiptsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32D7D2224EF613C00073746 /* ReceiptsTableViewController.swift */; };
 		C32D7D2524EF650100073746 /* ReceiptController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32D7D2424EF650100073746 /* ReceiptController.swift */; };
@@ -114,6 +115,7 @@
 		C315607D24F4BF25003AC820 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		C315608D24F60319003AC820 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C3276C5524F42652001C4359 /* UIImage+Scaling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Scaling.swift"; sourceTree = "<group>"; };
+		C328EB4224F89DFF004BA789 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = "ProjectManager/View Controllers/ProfileVC/MainViewController.swift"; sourceTree = SOURCE_ROOT; };
 		C32D7D2024EE074A00073746 /* ProjectsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsTableViewController.swift; sourceTree = "<group>"; };
 		C32D7D2224EF613C00073746 /* ReceiptsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptsTableViewController.swift; sourceTree = "<group>"; };
 		C32D7D2424EF650100073746 /* ReceiptController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptController.swift; sourceTree = "<group>"; };
@@ -338,6 +340,7 @@
 		C392712124ECC91B0032202A /* MainVC */ = {
 			isa = PBXGroup;
 			children = (
+				C328EB4224F89DFF004BA789 /* MainViewController.swift */,
 			);
 			path = MainVC;
 			sourceTree = "<group>";
@@ -502,6 +505,7 @@
 				C32D7D2724EF6B7500073746 /* AddLocationReceiptViewController.swift in Sources */,
 				C32D7D2E24EF6BC000073746 /* AddDetailsReceiptViewController.swift in Sources */,
 				13451D6E24ECD96E009C9313 /* Note.m in Sources */,
+				C328EB4324F89DFF004BA789 /* MainViewController.swift in Sources */,
 				13CE97BE24EF71CC00200CB9 /* NoteDetailViewController.swift in Sources */,
 				1320460624F0BA20008B38D7 /* ProductDetailViewController.swift in Sources */,
 				C32D7D2924EF6B8600073746 /* AddDateReceiptViewController.swift in Sources */,
