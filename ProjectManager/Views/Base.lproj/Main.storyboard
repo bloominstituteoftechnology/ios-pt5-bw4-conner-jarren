@@ -49,36 +49,52 @@
                                     <constraint firstAttribute="height" constant="50" id="Udr-nK-Zb8"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.right.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ecx-fx-b91">
-                                <rect key="frame" x="314" y="762.5" width="50" height="49"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsb-1b-5oH">
+                                <rect key="frame" x="50" y="568" width="314" height="40"/>
+                                <color key="backgroundColor" red="0.1434192359" green="0.2053488195" blue="0.39952546360000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Ndh-zf-Kge"/>
-                                    <constraint firstAttribute="width" constant="50" id="kls-Pl-5jU"/>
+                                    <constraint firstAttribute="height" constant="40" id="pTs-LE-nvP"/>
                                 </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ms-78-40i">
-                                <rect key="frame" x="314" y="762" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="0xl-Ah-OQS"/>
-                                    <constraint firstAttribute="height" constant="50" id="Kea-Ue-Yeg"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="AJ2-8d-E9b" kind="presentation" modalPresentationStyle="fullScreen" id="Wwx-Rd-wXs"/>
+                                    <segue destination="AJ2-8d-E9b" kind="presentation" modalPresentationStyle="fullScreen" id="aV6-Iu-HTh"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqj-gs-fhi">
+                                <rect key="frame" x="50" y="628" width="314" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="k9x-t2-LfQ"/>
+                                </constraints>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" red="0.1434192359" green="0.2053488195" blue="0.39952546360000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.3984654891253176" green="0.59242593809799471" blue="0.96620899438858032" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="T0d-0F-hqJ" firstAttribute="top" secondItem="8xP-83-fxN" secondAttribute="bottom" constant="20" id="4wP-cd-jcK"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4Ms-78-40i" secondAttribute="bottom" constant="50" id="9Df-pB-ktW"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ecx-fx-b91" secondAttribute="trailing" constant="50" id="IJK-oI-Sdm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zsb-1b-5oH" secondAttribute="trailing" constant="50" id="9ND-Gb-DST"/>
+                            <constraint firstItem="pqj-gs-fhi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Btb-hV-adn"/>
                             <constraint firstItem="8xP-83-fxN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="IVV-7g-rEe"/>
+                            <constraint firstItem="zsb-1b-5oH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="R7L-eN-V5f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pqj-gs-fhi" secondAttribute="trailing" constant="50" id="bb2-7U-Sbp"/>
                             <constraint firstItem="T0d-0F-hqJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kOO-zR-q7b"/>
                             <constraint firstItem="8xP-83-fxN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="mXr-TK-rHk"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4Ms-78-40i" secondAttribute="trailing" constant="50" id="tUH-cB-dqc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ecx-fx-b91" secondAttribute="bottom" constant="50" id="wFL-la-U55"/>
+                            <constraint firstItem="zsb-1b-5oH" firstAttribute="top" secondItem="T0d-0F-hqJ" secondAttribute="bottom" constant="160" id="oIf-H4-8YG"/>
+                            <constraint firstItem="pqj-gs-fhi" firstAttribute="top" secondItem="zsb-1b-5oH" secondAttribute="bottom" constant="20" id="y0x-wO-BaY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -90,14 +106,15 @@
         <!--Projects-->
         <scene sceneID="5v6-Md-QSA">
             <objects>
-                <viewControllerPlaceholder storyboardName="Projects" id="AJ2-8d-E9b" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Projects" id="AJ2-8d-E9b" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Njz-OB-pfp"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TgR-P8-yoo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="763" y="139"/>
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.right.circle.fill" catalog="system" width="128" height="121"/>
         <image name="doc.text.fill" catalog="system" width="115" height="128"/>
     </resources>
 </document>
