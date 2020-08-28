@@ -207,12 +207,16 @@
                                 <rect key="frame" x="373" y="11" width="21" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="square.stack.3d.down.right.fill" catalog="system"/>
+                                <connections>
+                                    <segue destination="eFG-Yy-thg" kind="unwind" unwindAction="unwindToProjectsVC:" id="wnf-iF-8Zb"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6re-MX-zky" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="eFG-Yy-thg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3753.6231884057975" y="-93.080357142857139"/>
         </scene>
