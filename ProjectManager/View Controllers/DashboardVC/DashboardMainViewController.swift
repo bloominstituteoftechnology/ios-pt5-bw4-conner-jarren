@@ -20,6 +20,10 @@ class DashboardMainViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        totalAmountSpent.text = ReceiptsTableViewController.totalAmount
+        if ReceiptsTableViewController.totalAmount == "" {
+            totalAmountSpent.text = "$0.00"
+        } else {
+            totalAmountSpent.text = ReceiptsTableViewController.totalAmount
+        }
     }
 }
