@@ -24,6 +24,7 @@ class ReceiptsTableViewController: UITableViewController {
     
     var receiptImage: UIImage!
     var currentIndex = 0
+    var totalAmountHolder: Float = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,10 +42,15 @@ class ReceiptsTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
-        for receipts in receiptController.receipts{
-            ReceiptsTableViewController.totalAmount = receiptController.floatToStringConversion(receipts.totalCost)
-            print(ReceiptsTableViewController.totalAmount)
+        addReceiptTotal()
+    }
+    
+    func addReceiptTotal(){
+        totalAmountHolder = 0.0
+        for receipts in receiptController.receipts {
+            totalAmountHolder += receipts.totalCost
         }
+        ReceiptsTableViewController.totalAmount = receiptController.floatToStringConversion(totalAmountHolder)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
