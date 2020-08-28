@@ -51,6 +51,7 @@
 		C315608E24F60319003AC820 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C315608D24F60319003AC820 /* ProfileViewController.swift */; };
 		C3276C5624F42652001C4359 /* UIImage+Scaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3276C5524F42652001C4359 /* UIImage+Scaling.swift */; };
 		C328EB4324F89DFF004BA789 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328EB4224F89DFF004BA789 /* MainViewController.swift */; };
+		C328EB4524F8AC44004BA789 /* DashboardMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328EB4424F8AC44004BA789 /* DashboardMainViewController.swift */; };
 		C32D7D2124EE074A00073746 /* ProjectsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32D7D2024EE074A00073746 /* ProjectsTableViewController.swift */; };
 		C32D7D2324EF613C00073746 /* ReceiptsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32D7D2224EF613C00073746 /* ReceiptsTableViewController.swift */; };
 		C32D7D2524EF650100073746 /* ReceiptController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32D7D2424EF650100073746 /* ReceiptController.swift */; };
@@ -116,6 +117,7 @@
 		C315608D24F60319003AC820 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C3276C5524F42652001C4359 /* UIImage+Scaling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Scaling.swift"; sourceTree = "<group>"; };
 		C328EB4224F89DFF004BA789 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = "ProjectManager/View Controllers/ProfileVC/MainViewController.swift"; sourceTree = SOURCE_ROOT; };
+		C328EB4424F8AC44004BA789 /* DashboardMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardMainViewController.swift; sourceTree = "<group>"; };
 		C32D7D2024EE074A00073746 /* ProjectsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsTableViewController.swift; sourceTree = "<group>"; };
 		C32D7D2224EF613C00073746 /* ReceiptsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptsTableViewController.swift; sourceTree = "<group>"; };
 		C32D7D2424EF650100073746 /* ReceiptController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptController.swift; sourceTree = "<group>"; };
@@ -399,6 +401,7 @@
 				C392712624ECC9630032202A /* NotesVC */,
 				C392712524ECC9590032202A /* ProductsVC */,
 				C392712424ECC94C0032202A /* FinancesVC */,
+				C328EB4424F8AC44004BA789 /* DashboardMainViewController.swift */,
 			);
 			path = DashboardVC;
 			sourceTree = "<group>";
@@ -530,6 +533,7 @@
 				1320460824F0BB20008B38D7 /* ProductTableViewCell.swift in Sources */,
 				131FA92924F64A2A007FA9B5 /* PMView.swift in Sources */,
 				131FA92724F64676007FA9B5 /* PMLabel.swift in Sources */,
+				C328EB4524F8AC44004BA789 /* DashboardMainViewController.swift in Sources */,
 				C32D7D2324EF613C00073746 /* ReceiptsTableViewController.swift in Sources */,
 				1320460024F0AE6C008B38D7 /* ProductController.swift in Sources */,
 				13EFFFF124ECB73C0039F232 /* SceneDelegate.swift in Sources */,
