@@ -9,9 +9,11 @@
 import UIKit
 
 class ReceiptsTableViewController: UITableViewController {
+    
+    static var totalAmount: String = ""
 
     let receiptController = ReceiptController()
-    
+        
     var locationString: String = ""
     var dateString: String = ""
     var nameString: String = ""
@@ -39,6 +41,10 @@ class ReceiptsTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
+        for receipts in receiptController.receipts{
+            ReceiptsTableViewController.totalAmount = receiptController.floatToStringConversion(receipts.totalCost)
+            print(ReceiptsTableViewController.totalAmount)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

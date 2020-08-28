@@ -18,4 +18,8 @@ class DashboardMainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        totalAmountSpent.text = ReceiptsTableViewController.totalAmount
+    }
 }
