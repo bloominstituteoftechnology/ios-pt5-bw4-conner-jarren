@@ -8,12 +8,12 @@
 
 import UIKit
 
-class ProductTableViewCell: PMTableViewCell {
+class ProductTableViewCell: UITableViewCell {
     @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var dateLabel: PMLabel!
-    @IBOutlet var priceLabel: PMLabel!
-    @IBOutlet var quantityLabel: PMLabel!
-    @IBOutlet var costLabel: PMLabel!
+    @IBOutlet var dateLabel: UILabel!
+    @IBOutlet var priceLabel: UILabel!
+    @IBOutlet var quantityLabel: UILabel!
+    @IBOutlet var costLabel: UILabel!
     
     func configureViews(for product: Product) {
         nameLabel.text = product.name

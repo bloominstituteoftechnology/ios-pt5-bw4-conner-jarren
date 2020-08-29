@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1306184724F7436700CB53EE /* PMTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1306184624F7436700CB53EE /* PMTextView.swift */; };
 		13136A2124EE205800761CA1 /* ProjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13136A2024EE205800761CA1 /* ProjectController.swift */; };
 		131FA91824F6417F007FA9B5 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 131FA90C24F6416F007FA9B5 /* Roboto-Light.ttf */; };
 		131FA91924F64183007FA9B5 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 131FA91324F64170007FA9B5 /* Roboto-Black.ttf */; };
@@ -21,11 +20,6 @@
 		131FA92124F6419A007FA9B5 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 131FA91124F64170007FA9B5 /* Roboto-Regular.ttf */; };
 		131FA92224F6419D007FA9B5 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 131FA91224F64170007FA9B5 /* Roboto-Thin.ttf */; };
 		131FA92324F6419F007FA9B5 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 131FA91624F64170007FA9B5 /* Roboto-ThinItalic.ttf */; };
-		131FA92724F64676007FA9B5 /* PMLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FA92624F64676007FA9B5 /* PMLabel.swift */; };
-		131FA92924F64A2A007FA9B5 /* PMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FA92824F64A2A007FA9B5 /* PMView.swift */; };
-		131FA92B24F65A63007FA9B5 /* PMButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FA92A24F65A63007FA9B5 /* PMButton.swift */; };
-		131FA92D24F66145007FA9B5 /* PMDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FA92C24F66145007FA9B5 /* PMDatePicker.swift */; };
-		131FA92F24F6632B007FA9B5 /* PMBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FA92E24F6632B007FA9B5 /* PMBarButtonItem.swift */; };
 		1320460024F0AE6C008B38D7 /* ProductController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132045FF24F0AE6C008B38D7 /* ProductController.swift */; };
 		1320460424F0B42E008B38D7 /* ProductsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320460324F0B42E008B38D7 /* ProductsTableViewController.swift */; };
 		1320460624F0BA20008B38D7 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320460524F0BA20008B38D7 /* ProductDetailViewController.swift */; };
@@ -34,8 +28,6 @@
 		13451D6824ECD90B009C9313 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13451D6724ECD90B009C9313 /* Project.swift */; };
 		13451D6A24ECD953009C9313 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13451D6924ECD953009C9313 /* Product.swift */; };
 		13451D6E24ECD96E009C9313 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 13451D6D24ECD96E009C9313 /* Note.m */; };
-		136C662124F63C1700146689 /* PMTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136C662024F63C1700146689 /* PMTextField.swift */; };
-		13CB3C8A24F8532800FA14FD /* PMTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CB3C8924F8532800FA14FD /* PMTableViewCell.swift */; };
 		13CE97B424EF59F300200CB9 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CE97B324EF59F300200CB9 /* Receipt.swift */; };
 		13CE97BC24EF71B600200CB9 /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CE97BB24EF71B600200CB9 /* NotesTableViewController.swift */; };
 		13CE97BE24EF71CC00200CB9 /* NoteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CE97BD24EF71CC00200CB9 /* NoteDetailViewController.swift */; };
@@ -69,7 +61,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1306184624F7436700CB53EE /* PMTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMTextView.swift; sourceTree = "<group>"; };
 		13136A2024EE205800761CA1 /* ProjectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectController.swift; sourceTree = "<group>"; };
 		131FA90C24F6416F007FA9B5 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		131FA90D24F6416F007FA9B5 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
@@ -83,11 +74,6 @@
 		131FA91524F64170007FA9B5 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
 		131FA91624F64170007FA9B5 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
 		131FA91724F64170007FA9B5 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
-		131FA92624F64676007FA9B5 /* PMLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMLabel.swift; sourceTree = "<group>"; };
-		131FA92824F64A2A007FA9B5 /* PMView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMView.swift; sourceTree = "<group>"; };
-		131FA92A24F65A63007FA9B5 /* PMButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMButton.swift; sourceTree = "<group>"; };
-		131FA92C24F66145007FA9B5 /* PMDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMDatePicker.swift; sourceTree = "<group>"; };
-		131FA92E24F6632B007FA9B5 /* PMBarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMBarButtonItem.swift; sourceTree = "<group>"; };
 		132045FF24F0AE6C008B38D7 /* ProductController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductController.swift; sourceTree = "<group>"; };
 		1320460324F0B42E008B38D7 /* ProductsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductsTableViewController.swift; path = ProjectManager/Views/Dashboard/Products/ProductsTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		1320460524F0BA20008B38D7 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductDetailViewController.swift; path = ProjectManager/Views/Dashboard/Products/ProductDetailViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -98,8 +84,6 @@
 		13451D6B24ECD96D009C9313 /* ProjectManager-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ProjectManager-Bridging-Header.h"; sourceTree = "<group>"; };
 		13451D6C24ECD96E009C9313 /* Note.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
 		13451D6D24ECD96E009C9313 /* Note.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
-		136C662024F63C1700146689 /* PMTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMTextField.swift; sourceTree = "<group>"; };
-		13CB3C8924F8532800FA14FD /* PMTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMTableViewCell.swift; sourceTree = "<group>"; };
 		13CE97B324EF59F300200CB9 /* Receipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
 		13CE97BB24EF71B600200CB9 /* NotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
 		13CE97BD24EF71CC00200CB9 /* NoteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailViewController.swift; sourceTree = "<group>"; };
@@ -178,21 +162,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		136C661F24F63AF900146689 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				136C662024F63C1700146689 /* PMTextField.swift */,
-				131FA92624F64676007FA9B5 /* PMLabel.swift */,
-				131FA92824F64A2A007FA9B5 /* PMView.swift */,
-				131FA92A24F65A63007FA9B5 /* PMButton.swift */,
-				131FA92C24F66145007FA9B5 /* PMDatePicker.swift */,
-				131FA92E24F6632B007FA9B5 /* PMBarButtonItem.swift */,
-				1306184624F7436700CB53EE /* PMTextView.swift */,
-				13CB3C8924F8532800FA14FD /* PMTableViewCell.swift */,
-			);
-			path = UI;
-			sourceTree = "<group>";
-		};
 		13EFFFE224ECB73C0039F232 = {
 			isa = PBXGroup;
 			children = (
@@ -260,7 +229,6 @@
 		C392710724ECC0FA0032202A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				136C661F24F63AF900146689 /* UI */,
 				C392710824ECC11A0032202A /* Main */,
 				13EFFFF424ECB73C0039F232 /* Main.storyboard */,
 				C392711F24ECC39A0032202A /* TabController.storyboard */,
@@ -503,7 +471,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				131FA92B24F65A63007FA9B5 /* PMButton.swift in Sources */,
 				C32D7D2524EF650100073746 /* ReceiptController.swift in Sources */,
 				C32D7D2724EF6B7500073746 /* AddLocationReceiptViewController.swift in Sources */,
 				C32D7D2E24EF6BC000073746 /* AddDetailsReceiptViewController.swift in Sources */,
@@ -519,20 +486,14 @@
 				13136A2124EE205800761CA1 /* ProjectController.swift in Sources */,
 				1323B25424EF774D00F9F4E1 /* NoteController.swift in Sources */,
 				13451D6A24ECD953009C9313 /* Product.swift in Sources */,
-				131FA92F24F6632B007FA9B5 /* PMBarButtonItem.swift in Sources */,
 				1320460424F0B42E008B38D7 /* ProductsTableViewController.swift in Sources */,
 				13CE97B424EF59F300200CB9 /* Receipt.swift in Sources */,
-				136C662124F63C1700146689 /* PMTextField.swift in Sources */,
 				13CE97BC24EF71B600200CB9 /* NotesTableViewController.swift in Sources */,
 				C315608E24F60319003AC820 /* ProfileViewController.swift in Sources */,
 				C32D7D2B24EF6BA200073746 /* AddPictureReceiptViewController.swift in Sources */,
 				C32D7D3024EF6BD700073746 /* ReviewReceiptViewController.swift in Sources */,
-				13CB3C8A24F8532800FA14FD /* PMTableViewCell.swift in Sources */,
 				13D9675224F4B09000A31DB3 /* FinancialPieChart.swift in Sources */,
-				131FA92D24F66145007FA9B5 /* PMDatePicker.swift in Sources */,
 				1320460824F0BB20008B38D7 /* ProductTableViewCell.swift in Sources */,
-				131FA92924F64A2A007FA9B5 /* PMView.swift in Sources */,
-				131FA92724F64676007FA9B5 /* PMLabel.swift in Sources */,
 				C328EB4524F8AC44004BA789 /* DashboardMainViewController.swift in Sources */,
 				C32D7D2324EF613C00073746 /* ReceiptsTableViewController.swift in Sources */,
 				1320460024F0AE6C008B38D7 /* ProductController.swift in Sources */,
@@ -541,7 +502,6 @@
 				13D9675024F4AEC900A31DB3 /* FinanciesViewController.swift in Sources */,
 				C32D7D3224EF6CE000073746 /* DetailReceiptViewController.swift in Sources */,
 				C32D7D2124EE074A00073746 /* ProjectsTableViewController.swift in Sources */,
-				1306184724F7436700CB53EE /* PMTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
