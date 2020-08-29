@@ -20,27 +20,95 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Yd-e3-oPE" customClass="FinancialPieChart" customModule="ProjectManager" customModuleProvider="target">
-                                <rect key="frame" x="87" y="328" width="240" height="240"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Zzd-9k-fZM">
+                                <rect key="frame" x="0.0" y="388" width="414" height="425"/>
+                                <color key="backgroundColor" red="0.17842397093772888" green="0.23529335856437683" blue="0.45347577333450317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" id="Fhr-58-0NK" customClass="FinancialTableViewCell" customModule="ProjectManager" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Fhr-58-0NK" id="Klo-gc-v4o">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="eML-Bw-BUL">
+                                                    <rect key="frame" x="12" y="12.5" width="20" height="19.5"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cC-j1-8jQ">
+                                                    <rect key="frame" x="40" y="11" width="233" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$500.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykc-Ea-yQB">
+                                                    <rect key="frame" x="281" y="12" width="125" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="eML-Bw-BUL" firstAttribute="top" secondItem="Klo-gc-v4o" secondAttribute="top" constant="12" id="dGa-3e-uIa"/>
+                                                <constraint firstItem="eML-Bw-BUL" firstAttribute="leading" secondItem="Klo-gc-v4o" secondAttribute="leading" constant="12" id="lft-2L-WLZ"/>
+                                                <constraint firstAttribute="bottom" secondItem="eML-Bw-BUL" secondAttribute="bottom" constant="12" id="mkd-r8-t2j"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.17842397090000001" green="0.2352933586" blue="0.4534757733" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="categoryLabel" destination="8cC-j1-8jQ" id="78V-b7-CgZ"/>
+                                            <outlet property="colorCircle" destination="eML-Bw-BUL" id="OtI-jS-xwl"/>
+                                            <outlet property="spendingLabel" destination="ykc-Ea-yQB" id="7Ls-0h-aR1"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="AgV-GI-IaF" id="0UP-H5-RU7"/>
+                                    <outlet property="delegate" destination="AgV-GI-IaF" id="WzZ-SS-sYG"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ul-Vi-9tu" customClass="FinancialPieChart" customModule="ProjectManager" customModuleProvider="target">
+                                <rect key="frame" x="87" y="116" width="240" height="240"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4O-8G-hVR">
+                                        <rect key="frame" x="91.5" y="108" width="57.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <color key="textColor" red="0.1434192359" green="0.2053488195" blue="0.39952546360000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="240" id="0ju-nr-gfP"/>
-                                    <constraint firstAttribute="width" constant="240" id="Y5b-cF-EHw"/>
+                                    <constraint firstItem="s4O-8G-hVR" firstAttribute="centerY" secondItem="3ul-Vi-9tu" secondAttribute="centerY" id="FXl-SN-AG1"/>
+                                    <constraint firstAttribute="height" constant="240" id="sSJ-j4-Wk0"/>
+                                    <constraint firstItem="s4O-8G-hVR" firstAttribute="centerX" secondItem="3ul-Vi-9tu" secondAttribute="centerX" id="t5F-x8-32i"/>
+                                    <constraint firstAttribute="width" constant="240" id="v3Q-97-bdp"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.89387452602386475" green="0.93935316801071167" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="9Yd-e3-oPE" firstAttribute="centerX" secondItem="RpU-6Z-5jk" secondAttribute="centerX" id="3VS-Yl-V0v"/>
-                            <constraint firstItem="9Yd-e3-oPE" firstAttribute="centerY" secondItem="RpU-6Z-5jk" secondAttribute="centerY" id="5gr-o8-VmH"/>
+                            <constraint firstItem="Zzd-9k-fZM" firstAttribute="leading" secondItem="Pkc-mn-qZO" secondAttribute="leading" id="KZ8-hA-YKL"/>
+                            <constraint firstItem="3ul-Vi-9tu" firstAttribute="top" secondItem="Pkc-mn-qZO" secondAttribute="top" constant="28" id="QTe-rB-Jgn"/>
+                            <constraint firstItem="Zzd-9k-fZM" firstAttribute="bottom" secondItem="Pkc-mn-qZO" secondAttribute="bottom" id="S7n-Uh-10u"/>
+                            <constraint firstItem="Zzd-9k-fZM" firstAttribute="top" secondItem="3ul-Vi-9tu" secondAttribute="bottom" constant="32" id="Yyj-D9-kt0"/>
+                            <constraint firstItem="Pkc-mn-qZO" firstAttribute="trailing" secondItem="3ul-Vi-9tu" secondAttribute="trailing" constant="87" id="aCe-P2-G76"/>
+                            <constraint firstItem="3ul-Vi-9tu" firstAttribute="leading" secondItem="Pkc-mn-qZO" secondAttribute="leading" constant="87" id="hOh-vg-aKr"/>
+                            <constraint firstItem="Zzd-9k-fZM" firstAttribute="trailing" secondItem="Pkc-mn-qZO" secondAttribute="trailing" id="nVZ-rp-pfE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Pkc-mn-qZO"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Qpx-K0-dLo"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="Qpx-K0-dLo"/>
+                    <connections>
+                        <outlet property="pieChart" destination="3ul-Vi-9tu" id="QiE-Ct-AS7"/>
+                        <outlet property="tableView" destination="Zzd-9k-fZM" id="nx9-qS-mNz"/>
+                        <outlet property="totalLabel" destination="s4O-8G-hVR" id="OgY-12-aIK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PZn-2N-c34" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3754" y="681"/>
+            <point key="canvasLocation" x="3753.6231884057975" y="679.6875"/>
         </scene>
         <!--Project Dashboard-->
         <scene sceneID="3tZ-3H-VQ3">
