@@ -13,21 +13,26 @@ class ProductDetailViewController: UIViewController {
     var productController: ProductController?
     
     // MARK: - IBOutlets
-    @IBOutlet weak var totalCostLabel: UILabel!
+    @IBOutlet var totalCostLabel: UILabel!
     @IBOutlet var nameTF: UITextField!
     @IBOutlet var priceTF: UITextField!
     @IBOutlet var quantityTF: UITextField!
     @IBOutlet var datePicker: UIDatePicker!
     @IBOutlet var dateToggleButton: UIButton!
     
+    @IBOutlet var leftView: UIView!
+    @IBOutlet var rightView: UIView!
+    
     
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        leftView.layer.cornerRadius = 15
+        rightView.layer.cornerRadius = 15
         datePicker.datePickerMode = .date
         datePicker.maximumDate = NSDate.now
         totalCostLabel.text = ""
-        
+        self.title = "Add Product"
         // Editing Existing Product, populate fields
         if let index = productController?.selectedTableViewIndex {
             let product = productController!.products[index]
@@ -42,6 +47,7 @@ class ProductDetailViewController: UIViewController {
                 datePicker.isEnabled = false
                 dateToggleButton.setTitle("Enable Date", for: .normal)
             }
+            self.title = "Edit Product"
         }
     }
     
