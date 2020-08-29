@@ -14,6 +14,7 @@ class ProjectsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //self.tableView.separatorStyle = .none
         
         // Project created, haven't decided on [Product]s needed and haven't added any [Note]s
         var testProject = Project(title: "Garden", description: "Building a wooden box for a raised garden bed")

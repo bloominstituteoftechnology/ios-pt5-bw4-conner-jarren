@@ -23,9 +23,9 @@ class FinancialPieChart: UIView {
         self.backgroundColor = .clear
     }
     
-    func drawPieChart(with data: [String:Float]) {
+    func drawPieChart(with data: [String:Float], lineWidth: CGFloat = 30.00, radius: CGFloat = 75.00) {
         let center = CGPoint(x: self.bounds.maxX/2, y: self.bounds.maxY/2)
-        let circularPath = UIBezierPath(arcCenter: center, radius: 75, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        let circularPath = UIBezierPath(arcCenter: center, radius: radius, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
         
         // Calculate total of all spending in dictionary
         var total: Float = 0
@@ -34,7 +34,7 @@ class FinancialPieChart: UIView {
         }
         
         // Sort keys of dictionary in ascending order
-        var sortedKeys: [String] = sortData(data)
+        let sortedKeys: [String] = sortData(data)
         
         var rainbowIndex = 0
         var start: CGFloat = 0
@@ -48,7 +48,7 @@ class FinancialPieChart: UIView {
             layer.path = circularPath.cgPath
             layer.fillColor = UIColor.clear.cgColor
             layer.strokeColor = rainbow[rainbowIndex].cgColor
-            layer.lineWidth = 30
+            layer.lineWidth = lineWidth
             
             layer.strokeStart = start
             layer.strokeEnd = end
@@ -60,7 +60,7 @@ class FinancialPieChart: UIView {
         }
     }
     
-    // Sort keys of data
+    // Helper func, Sort keys of data in ascending order
     func sortData(_ data: [String:Float]) -> [String] {
         var sortedKeys: [String] = []
         var keys = Set(data.keys)
