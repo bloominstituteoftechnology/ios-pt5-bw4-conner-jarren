@@ -16,8 +16,11 @@ class NotesTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.separatorStyle = .none
         let exampleNote = Note(title: "Todo-List", contents: "1) Need to purchase tools")
+        let exampleNote2 = Note(title: "Hello", contents: "Lorem ipsum Aut saepe officiis eaque unde autem aut aut. Voluptatum modi voluptas eos consequatur voluptate dolore modi. Qui fugiat rerum culpa. Suscipit recusandae et sint")
         noteController.addNote(exampleNote)
+        noteController.addNote(exampleNote2)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -27,14 +30,30 @@ class NotesTableViewController: UITableViewController {
     
     // MARK: - Table view data source
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return noteController.count
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    // Set the spacing between sections
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 5
+    }
+    
+    // Make the background color show through spacing
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor.clear
+        return headerView
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = UITableViewCell()
         if let noteCell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? NoteTableViewCell {
-            noteCell.configureViews(for: noteController.noteAtIndex(indexPath.row))
+            noteCell.configureViews(for: noteController.noteAtIndex(indexPath.section))
             cell = noteCell
         }
         return cell
@@ -44,7 +63,7 @@ class NotesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             noteController.removeNoteAtIndex(indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.deleteSections([indexPath.section], with: .fade)
         }
     }
     
@@ -58,7 +77,7 @@ class NotesTableViewController: UITableViewController {
         if let noteDetailVC = segue.destination as? NoteDetailViewController {
             if segue.identifier == "ViewNoteSegue", let indexPath = tableView.indexPathForSelectedRow {
                 noteDetailVC.noteController = noteController
-                noteDetailVC.noteController?.selectedTableViewIndex = indexPath.row
+                noteDetailVC.noteController?.selectedTableViewIndex = indexPath.section
             } else if segue.identifier == "AddNoteSegue" {
                 noteDetailVC.noteController = noteController
                 noteDetailVC.noteController?.selectedTableViewIndex = nil
@@ -66,3 +85,4 @@ class NotesTableViewController: UITableViewController {
         }
     }
 }
+

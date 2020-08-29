@@ -16,6 +16,10 @@ class ProductTableViewCell: UITableViewCell {
     @IBOutlet var costLabel: UILabel!
     
     func configureViews(for product: Product) {
+        // Custom UI changes
+        self.layer.cornerRadius = 15
+        
+        // Set fields
         nameLabel.text = product.name
         priceLabel.text = "Price: \(String(format: "$%.2f", product.price))"
         quantityLabel.text = "Quantity: \(product.quantity)"

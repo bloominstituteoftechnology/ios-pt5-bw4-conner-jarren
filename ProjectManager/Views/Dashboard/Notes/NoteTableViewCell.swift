@@ -15,6 +15,10 @@ class NoteTableViewCell: UITableViewCell {
     @IBOutlet var previewTF: UITextView!
     
     func configureViews(for note: Note) {
+        // Custom UI changes
+        self.layer.cornerRadius = 15
+        
+        // Populate fields
         titleLabel.text = note.title
         dateLabel.text = dateFormatter.string(from: note.date)
         previewTF.text = note.contents ?? ""
