@@ -11,6 +11,7 @@ import UIKit
 class ReceiptsTableViewController: UITableViewController {
     
     static var totalAmount: String = ""
+    static var lastReceipt: Receipt!
 
     let receiptController = ReceiptController()
         
@@ -43,6 +44,7 @@ class ReceiptsTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
         addReceiptTotal()
+        ReceiptsTableViewController.lastReceipt = receiptController.receipts.last
     }
     
     func addReceiptTotal(){
