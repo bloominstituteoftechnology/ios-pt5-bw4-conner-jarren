@@ -15,9 +15,6 @@ class ProductsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.isTranslucent = false
-        self.navigationController?.navigationBar.backgroundColor = .black
-        self.navigationController?.navigationBar.tintColor = .white
         let exampleProduct = Product(name: "2x4", purchaseDate: NSDate.now, price: 2.99, quantity: 12)
         let exampleProduct2 = Product(name: "TopSoil", price: 5.25, quantity: 8)
         productController.addProduct(exampleProduct)
