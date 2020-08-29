@@ -606,11 +606,11 @@
             </objects>
             <point key="canvasLocation" x="5559.420289855073" y="-516.29464285714289"/>
         </scene>
-        <!--Home-->
+        <!--Dashboard-->
         <scene sceneID="rcP-QG-naj">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xhz-9e-rvL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="0gC-lw-kiq"/>
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="speedometer" catalog="system" id="0gC-lw-kiq"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="sDy-b0-EKu">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -634,7 +634,7 @@
     <resources>
         <image name="arrow.right" catalog="system" width="128" height="98"/>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
-        <image name="house" catalog="system" width="128" height="110"/>
+        <image name="speedometer" catalog="system" width="128" height="121"/>
         <image name="square.stack.3d.down.right.fill" catalog="system" width="124" height="128"/>
     </resources>
 </document>
