@@ -33,14 +33,13 @@ class DashboardMainViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         notesTotalLabel.text = String(NotesTableViewController.totalNotes)
-        print(NotesTableViewController.totalNotes)
+        numberOfSavedProductsLabel.text = String(ProductsTableViewController.totalProduct)
         if ReceiptsTableViewController.totalAmount == "" {
             totalAmountSpent.text = "$0.00"
         } else {
             totalAmountSpent.text = ReceiptsTableViewController.totalAmount
         }
         percentageToBudgetLabel.text = "50%"
-        numberOfSavedProductsLabel.text = "0"
         createGraph(UIColor.white.cgColor, 2 * CGFloat.pi, 1.0)
         createGraph(UIColor.systemBlue.cgColor, 1 * CGFloat.pi, 1.0)
         if ReceiptsTableViewController.lastReceipt == nil{

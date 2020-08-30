@@ -9,6 +9,8 @@
 import UIKit
 
 class ProductsTableViewController: UITableViewController {
+    static var totalProduct: Int = 0
+    
     let reuseIdentifier = "ProductCell"
     
     var productController = ProductController()
@@ -25,6 +27,14 @@ class ProductsTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         tableView.reloadData()
+        addProductTotal()
+    }
+    
+    func addProductTotal() {
+        ProductsTableViewController.totalProduct = 0
+        for _ in productController.products {
+            ProductsTableViewController.totalProduct += 1
+        }
     }
     
     // MARK: - Table view data source
