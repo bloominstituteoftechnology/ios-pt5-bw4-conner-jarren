@@ -47,11 +47,15 @@ class DashboardMainViewController: UIViewController {
         } else {
             totalAmountSpent.text = ReceiptsTableViewController.totalAmount
         }
-        percentageToBudgetLabel.text = "50%"
+        percentageToBudgetLabel.text = "..."
         createGraph(toBudgetButton.backgroundColor!.cgColor, 2 * CGFloat.pi, 1.0)
         run(after: 1) {
             self.createGraph(UIColor.white.cgColor, 2 * CGFloat.pi, 1.0)
             self.createGraph(UIColor.systemBlue.cgColor, 1 * CGFloat.pi, 1.0)
+        }
+        run(after: 2) {
+            self.percentageToBudgetLabel.text = "50%"
+
         }
         if ReceiptsTableViewController.lastReceipt == nil{
             firstActivityStatement.text = "You have not added a receipt yet"
