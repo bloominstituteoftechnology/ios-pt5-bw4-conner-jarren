@@ -113,7 +113,7 @@
         <!--Add Project-->
         <scene sceneID="NQt-t2-gie">
             <objects>
-                <viewController id="JLY-0B-2nw" sceneMemberID="viewController">
+                <viewController id="JLY-0B-2nw" customClass="AddProjectViewController" customModule="ProjectManager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O1H-pn-y8a">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -123,8 +123,8 @@
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a short description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U68-QD-mA3">
-                                <rect key="frame" x="20" y="169" width="174" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a short description below:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U68-QD-mA3">
+                                <rect key="frame" x="20" y="169" width="218.5" height="18"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                 <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -149,15 +149,22 @@
                             <constraint firstItem="ONt-EE-z7K" firstAttribute="leading" secondItem="Vem-6h-rEH" secondAttribute="leading" constant="20" id="SEK-j5-WjT"/>
                             <constraint firstItem="U68-QD-mA3" firstAttribute="top" secondItem="ONt-EE-z7K" secondAttribute="bottom" constant="5" id="aNP-CN-urB"/>
                             <constraint firstItem="U68-QD-mA3" firstAttribute="leading" secondItem="Vem-6h-rEH" secondAttribute="leading" constant="20" id="fcI-Cm-SQO"/>
-                            <constraint firstItem="Vem-6h-rEH" firstAttribute="trailing" secondItem="U68-QD-mA3" secondAttribute="trailing" constant="220" id="oAW-ci-47Y"/>
                             <constraint firstItem="ONt-EE-z7K" firstAttribute="top" secondItem="Vem-6h-rEH" secondAttribute="top" id="rxE-bh-4dz"/>
                             <constraint firstItem="8iS-sc-wtX" firstAttribute="top" secondItem="U68-QD-mA3" secondAttribute="bottom" constant="7" id="v6q-ya-7v0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Vem-6h-rEH"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Project" id="cEa-7C-FcA">
-                        <barButtonItem key="rightBarButtonItem" title="Save" style="done" id="Ti8-or-hKC"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" style="done" id="Ti8-or-hKC">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="JLY-0B-2nw" id="Ghl-ty-PFV"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="descriptionTV" destination="8iS-sc-wtX" id="mvR-Ce-P0H"/>
+                        <outlet property="titleTF" destination="ONt-EE-z7K" id="Cda-X3-Ypy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SVK-ho-UdJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -192,7 +199,7 @@
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Project Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpQ-My-hBH">
-                                            <rect key="frame" x="20" y="11" width="97" height="21"/>
+                                            <rect key="frame" x="20" y="11" width="374" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -215,7 +222,7 @@
                     <navigationItem key="navigationItem" title="Projects" id="chj-3P-xqJ">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="1QT-AN-H2i">
                             <connections>
-                                <segue destination="JLY-0B-2nw" kind="show" identifier="AddProductSegue" id="8cR-Xa-a6L"/>
+                                <segue destination="JLY-0B-2nw" kind="show" identifier="AddProjectSegue" id="8cR-Xa-a6L"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

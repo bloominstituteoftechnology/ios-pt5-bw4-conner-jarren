@@ -27,6 +27,11 @@ class ProjectsTableViewController: UITableViewController {
         projectController.projects[0].noteController.addNote(Note(title: "Buy-list", contents: "I need to purchase a shovel"))
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        tableView.reloadData()
+    }
+    
     @IBAction func unwindToProjectsVC(_ sender: UIStoryboardSegue){}
 
     // MARK: - Table view data source
@@ -62,6 +67,10 @@ class ProjectsTableViewController: UITableViewController {
             if let dashboardVC = segue.destination as? DashboardMainViewController {
                 guard let indexPath = tableView.indexPathForSelectedRow else { return }
                 dashboardVC.project = projectController.projects[indexPath.row]
+            }
+        } else if (segue.identifier == "AddProjectSegue") {
+            if let addProjectVC = segue.destination as? AddProjectViewController {
+                addProjectVC.projectController = projectController
             }
         }
     }
