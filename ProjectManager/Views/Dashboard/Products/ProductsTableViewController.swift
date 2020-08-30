@@ -9,38 +9,25 @@
 import UIKit
 
 class ProductsTableViewController: UITableViewController {
-    static var totalProduct: Int = 0
     
     let reuseIdentifier = "ProductCell"
     
-    var productController = ProductController()
+    var productController: ProductController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.separatorStyle = .none
-        let exampleProduct = Product(name: "2x4", purchaseDate: NSDate.now, price: 2.99, quantity: 12)
-        let exampleProduct2 = Product(name: "TopSoil", price: 5.25, quantity: 8)
-        productController.addProduct(exampleProduct)
-        productController.addProduct(exampleProduct2)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         tableView.reloadData()
-        addProductTotal()
-    }
-    
-    func addProductTotal() {
-        ProductsTableViewController.totalProduct = 0
-        for _ in productController.products {
-            ProductsTableViewController.totalProduct += 1
-        }
     }
     
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return productController.count
+        return productController!.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -62,7 +49,7 @@ class ProductsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = UITableViewCell()
         if let productCell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? ProductTableViewCell {
-            productCell.configureViews(for: productController.productAtIndex(indexPath.section))
+            productCell.configureViews(for: productController!.productAtIndex(indexPath.section))
             cell = productCell
         }
         return cell
@@ -71,7 +58,7 @@ class ProductsTableViewController: UITableViewController {
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            productController.removeProductAtIndex(indexPath.section)
+            productController!.removeProductAtIndex(indexPath.section)
             tableView.deleteSections([indexPath.section], with: .fade)
         }
     }

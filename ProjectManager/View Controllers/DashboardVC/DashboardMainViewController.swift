@@ -10,12 +10,13 @@ import UIKit
 
 class DashboardMainViewController: UIViewController {
     
+    var project: Project?
     var receiptController = ReceiptController()
     
-    @IBOutlet var totalAmountSpent: UILabel!
+    @IBOutlet var totalReceiptSpendingLabel: UILabel!
     @IBOutlet var percentageToBudgetLabel: UILabel!
-    @IBOutlet var numberOfSavedProductsLabel: UILabel!
-    @IBOutlet var notesTotalLabel: UILabel!
+    @IBOutlet var totalProductsLabel: UILabel!
+    @IBOutlet var totalNotesLabel: UILabel!
     
     @IBOutlet var lastAddedReceipt: UILabel!
     @IBOutlet var dateLastAddedReceipt: UILabel!
@@ -24,6 +25,7 @@ class DashboardMainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard let project = project else { return }
         firstActivityStatement.text = ""
         lastAddedReceipt.text = ""
         secondActivityStatement.text = ""
@@ -31,28 +33,31 @@ class DashboardMainViewController: UIViewController {
         
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        notesTotalLabel.text = String(NotesTableViewController.totalNotes)
-        numberOfSavedProductsLabel.text = String(ProductsTableViewController.totalProduct)
-        if ReceiptsTableViewController.totalAmount == "" {
-            totalAmountSpent.text = "$0.00"
+    
+    override func viewWillAppear(_ animated: Bool) {
+        guard let project = project else { return }
+        // Set all 3 Views besides budget
+        totalNotesLabel.text = String(project.noteController.count)
+        totalProductsLabel.text = String(project.productController.count)
+        totalReceiptSpendingLabel.text = String(format: "$%.2f", project.receiptController.totalCost)
+        
+        // Activity View
+        if let lastReceipt = project.receiptController.lastReceipt {
+            firstActivityStatement.text = "You last added a receipt for"
+            secondActivityStatement.text = "that amounted to"
+            lastAddedReceipt.text = lastReceipt.date
+            dateLastAddedReceipt.text = receiptController.floatToStringConversion(lastReceipt.totalCost)
         } else {
-            totalAmountSpent.text = ReceiptsTableViewController.totalAmount
-        }
-        percentageToBudgetLabel.text = "50%"
-        createGraph(UIColor.white.cgColor, 2 * CGFloat.pi, 1.0)
-        createGraph(UIColor.systemBlue.cgColor, 1 * CGFloat.pi, 1.0)
-        if ReceiptsTableViewController.lastReceipt == nil{
             firstActivityStatement.text = "You have not added a receipt yet"
             lastAddedReceipt.text = ""
             secondActivityStatement.text = "add one so you can track your expenses."
             dateLastAddedReceipt.text = ""
-        } else {
-            firstActivityStatement.text = "You last added a receipt for"
-            secondActivityStatement.text = "that amounted to"
-            lastAddedReceipt.text = ReceiptsTableViewController.lastReceipt.date
-            dateLastAddedReceipt.text = receiptController.floatToStringConversion(ReceiptsTableViewController.lastReceipt.totalCost)
         }
+        
+        // Budget View
+        percentageToBudgetLabel.text = "50%"
+        createGraph(UIColor.white.cgColor, 2 * CGFloat.pi, 1.0)
+        createGraph(UIColor.systemBlue.cgColor, 1 * CGFloat.pi, 1.0)
     }
     
     func createGraph(_ color: CGColor, _ endAngle: CGFloat, _ animated: CFTimeInterval) {
@@ -80,5 +85,21 @@ class DashboardMainViewController: UIViewController {
         
         shapeLayer.add(animcolor, forKey: "strokeEnd")
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let project = project else { return }
+        if segue.identifier == "NotesSegue" {
+            if let notesVC = segue.destination as? NotesTableViewController {
+                notesVC.noteController = project.noteController
+            }
+        } else if segue.identifier == "ProductsSegue" {
+            if let productsVC = segue.destination as? ProductsTableViewController {
+                productsVC.productController = project.productController
+            }
+            
+        } else if segue.identifier == "FinanceSegue" {
+            
+        }
     }
 }
