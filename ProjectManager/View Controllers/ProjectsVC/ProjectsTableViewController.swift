@@ -55,8 +55,6 @@ class ProjectsTableViewController: UITableViewController {
             if let dashboardVC = segue.destination as? DashboardMainViewController {
                 guard let indexPath = tableView.indexPathForSelectedRow else { return }
                 dashboardVC.project = projectController.projects[indexPath.row]
-                print(dashboardVC.project)
-                
             }
         }
     }

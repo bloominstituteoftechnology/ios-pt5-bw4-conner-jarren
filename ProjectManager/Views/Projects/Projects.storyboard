@@ -46,10 +46,10 @@
             </objects>
             <point key="canvasLocation" x="1281.1594202898552" y="-192.1875"/>
         </scene>
-        <!--TabController-->
+        <!--Dashboard-->
         <scene sceneID="rsX-PL-bTh">
             <objects>
-                <viewControllerPlaceholder storyboardName="TabController" id="Moq-o4-CNn" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Dashboard" referencedIdentifier="Dashboard" id="Moq-o4-CNn" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rLs-rc-THP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1850.0000000000002" y="-192.1875"/>

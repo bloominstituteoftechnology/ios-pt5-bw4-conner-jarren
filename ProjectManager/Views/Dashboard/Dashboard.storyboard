@@ -113,7 +113,7 @@
         <!--Project Dashboard-->
         <scene sceneID="3tZ-3H-VQ3">
             <objects>
-                <viewController id="d1U-S9-juF" customClass="DashboardMainViewController" customModule="ProjectManager" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Dashboard" id="d1U-S9-juF" customClass="DashboardMainViewController" customModule="ProjectManager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3op-L3-kc4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
