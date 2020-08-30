@@ -350,11 +350,11 @@
                         <outlet property="dateLastAddedReceipt" destination="ugP-kM-4Uu" id="OXo-tm-a1e"/>
                         <outlet property="firstActivityStatement" destination="Gor-rC-nlI" id="nZe-YL-y1U"/>
                         <outlet property="lastAddedReceipt" destination="o5P-lf-WTM" id="WWZ-sc-2Cq"/>
-                        <outlet property="notesTotalLabel" destination="WwP-6U-ef1" id="mxR-Qt-Uc4"/>
-                        <outlet property="numberOfSavedProductsLabel" destination="TY6-rk-jfx" id="ktb-TI-PsU"/>
                         <outlet property="percentageToBudgetLabel" destination="bf2-cm-ZY6" id="g3v-ZU-C5J"/>
                         <outlet property="secondActivityStatement" destination="K7r-Tk-v52" id="Oep-OI-fcM"/>
-                        <outlet property="totalAmountSpent" destination="Of2-qb-PqG" id="WTB-RZ-PNk"/>
+                        <outlet property="totalNotesLabel" destination="WwP-6U-ef1" id="mxR-Qt-Uc4"/>
+                        <outlet property="totalProductsLabel" destination="TY6-rk-jfx" id="ktb-TI-PsU"/>
+                        <outlet property="totalReceiptSpendingLabel" destination="Of2-qb-PqG" id="WTB-RZ-PNk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6re-MX-zky" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

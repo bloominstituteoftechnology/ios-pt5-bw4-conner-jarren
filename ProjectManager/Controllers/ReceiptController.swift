@@ -42,4 +42,12 @@ class ReceiptController {
         return string
     }
     
+    var totalCost: Float {
+        var total: Float = 0
+        for receipt in receipts {
+            total += receipt.totalCost
+        }
+        return total
+    }
+    
 }

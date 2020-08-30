@@ -10,12 +10,13 @@ import UIKit
 
 class DashboardMainViewController: UIViewController {
     
+    var project: Project?
     var receiptController = ReceiptController()
     
-    @IBOutlet var totalAmountSpent: UILabel!
+    @IBOutlet var totalReceiptSpendingLabel: UILabel!
     @IBOutlet var percentageToBudgetLabel: UILabel!
-    @IBOutlet var numberOfSavedProductsLabel: UILabel!
-    @IBOutlet var notesTotalLabel: UILabel!
+    @IBOutlet var totalProductsLabel: UILabel!
+    @IBOutlet var totalNotesLabel: UILabel!
     
     @IBOutlet var lastAddedReceipt: UILabel!
     @IBOutlet var dateLastAddedReceipt: UILabel!
@@ -24,6 +25,8 @@ class DashboardMainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard let project = project else { print("VC Got no project passed")
+            return }
         firstActivityStatement.text = ""
         lastAddedReceipt.text = ""
         secondActivityStatement.text = ""
@@ -31,7 +34,13 @@ class DashboardMainViewController: UIViewController {
         
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    
+    override func viewWillAppear(_ animated: Bool) {
+        guard let project = project else { return }
+        totalNotesLabel.text = String(project.noteController.count)
+        totalProductsLabel.text = String(project.productController.count)
+        totalReceiptSpendingLabel.text = String(format: "$%.2f", project.receiptController.totalCost)
+        /*
         notesTotalLabel.text = String(NotesTableViewController.totalNotes)
         numberOfSavedProductsLabel.text = String(ProductsTableViewController.totalProduct)
         if ReceiptsTableViewController.totalAmount == "" {
@@ -53,6 +62,7 @@ class DashboardMainViewController: UIViewController {
             lastAddedReceipt.text = ReceiptsTableViewController.lastReceipt.date
             dateLastAddedReceipt.text = receiptController.floatToStringConversion(ReceiptsTableViewController.lastReceipt.totalCost)
         }
+        */
     }
     
     func createGraph(_ color: CGColor, _ endAngle: CGFloat, _ animated: CFTimeInterval) {
