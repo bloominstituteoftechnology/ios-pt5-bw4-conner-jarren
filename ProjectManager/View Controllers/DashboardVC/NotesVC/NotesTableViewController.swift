@@ -35,7 +35,6 @@ class NotesTableViewController: UITableViewController {
         for _ in noteController.notes {
             NotesTableViewController.totalNotes += 1
         }
-        print(NotesTableViewController.totalNotes)
     }
     // MARK: - Table view data source
 
