@@ -21,6 +21,7 @@ class DashboardMainViewController: UIViewController {
     @IBOutlet var dateLastAddedReceipt: UILabel!
     @IBOutlet var firstActivityStatement: UILabel!
     @IBOutlet var secondActivityStatement: UILabel!
+    @IBOutlet var toBudgetButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,13 @@ class DashboardMainViewController: UIViewController {
         secondActivityStatement.text = ""
         dateLastAddedReceipt.text = ""
         
+    }
+    
+    func run(after seconds: Int, completion: @escaping () -> Void) {
+        let deadline = DispatchTime.now() + .seconds(seconds)
+        DispatchQueue.main.asyncAfter(deadline: deadline) {
+            completion()
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -40,8 +48,11 @@ class DashboardMainViewController: UIViewController {
             totalAmountSpent.text = ReceiptsTableViewController.totalAmount
         }
         percentageToBudgetLabel.text = "50%"
-        createGraph(UIColor.white.cgColor, 2 * CGFloat.pi, 1.0)
-        createGraph(UIColor.systemBlue.cgColor, 1 * CGFloat.pi, 1.0)
+        createGraph(toBudgetButton.backgroundColor!.cgColor, 2 * CGFloat.pi, 1.0)
+        run(after: 1) {
+            self.createGraph(UIColor.white.cgColor, 2 * CGFloat.pi, 1.0)
+            self.createGraph(UIColor.systemBlue.cgColor, 1 * CGFloat.pi, 1.0)
+        }
         if ReceiptsTableViewController.lastReceipt == nil{
             firstActivityStatement.text = "You have not added a receipt yet"
             lastAddedReceipt.text = ""

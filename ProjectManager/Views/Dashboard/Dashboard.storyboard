@@ -354,6 +354,7 @@
                         <outlet property="numberOfSavedProductsLabel" destination="TY6-rk-jfx" id="ktb-TI-PsU"/>
                         <outlet property="percentageToBudgetLabel" destination="bf2-cm-ZY6" id="g3v-ZU-C5J"/>
                         <outlet property="secondActivityStatement" destination="K7r-Tk-v52" id="Oep-OI-fcM"/>
+                        <outlet property="toBudgetButton" destination="OFp-uQ-gH1" id="9hi-Ae-LBB"/>
                         <outlet property="totalAmountSpent" destination="Of2-qb-PqG" id="WTB-RZ-PNk"/>
                     </connections>
                 </viewController>
@@ -523,6 +524,7 @@
                     <connections>
                         <outlet property="budgetTotal" destination="zmi-nF-CDJ" id="HTl-8e-LtM"/>
                         <outlet property="sliderOutlet" destination="Peg-ov-1z5" id="1CF-1z-DQ4"/>
+                        <outlet property="widgetView" destination="jHe-c9-JWu" id="oF0-Wf-4IM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0EW-7h-GzC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

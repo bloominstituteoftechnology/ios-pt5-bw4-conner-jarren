@@ -11,17 +11,33 @@ import UIKit
 class BudgetViewController: UIViewController {
     
     var receiptController = ReceiptController()
-
+    
     @IBOutlet var sliderOutlet: UISlider!
     @IBOutlet var budgetTotal: UILabel!
+    @IBOutlet var widgetView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         budgetTotal.text = receiptController.floatToStringConversion(sliderOutlet.value)
         createGraph(UIColor.white.cgColor, 2 * CGFloat.pi, 1.0)
         createGraph(UIColor.systemBlue.cgColor, 1 * CGFloat.pi, 1.0)
-
+        
     }
+    func run(after seconds: Int, completion: @escaping () -> Void) {
+        let deadline = DispatchTime.now() + .seconds(seconds)
+        DispatchQueue.main.asyncAfter(deadline: deadline) {
+            completion()
+        }
+    }
+    
+    func createGraphReset() {
+        run(after: 1) {
+            self.createGraph(UIColor.white.cgColor, 2 * CGFloat.pi, 1.0)
+            self.createGraph(UIColor.systemBlue.cgColor, 1 * CGFloat.pi, 1.0)
+        }
+        createGraph(widgetView.backgroundColor!.cgColor, 2 * CGFloat.pi, 1.0)
+    }
+    
     func createGraph(_ color: CGColor, _ endAngle: CGFloat, _ animated: CFTimeInterval) {
         let shapeLayer = CAShapeLayer()
         
@@ -51,6 +67,9 @@ class BudgetViewController: UIViewController {
     
     @IBAction func sliderChanged(_ sender: Any) {
         budgetTotal.text = receiptController.floatToStringConversion(sliderOutlet.value)
+        run(after: 1) {
+            self.createGraphReset()
+        }
     }
     
 }
