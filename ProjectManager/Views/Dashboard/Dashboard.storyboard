@@ -195,7 +195,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="xXL-Tq-PqR" kind="show" id="jLy-J9-kjR"/>
+                                    <segue destination="xXL-Tq-PqR" kind="show" identifier="ProductsSegue" id="jLy-J9-kjR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdA-z0-rcK">
@@ -795,7 +795,7 @@
         <image name="square.stack.3d.down.right.fill" catalog="system" width="62" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2YD-zQ-mbL"/>
+        <segue reference="yJE-dR-RL1"/>
         <segue reference="Lm9-zt-vnf"/>
         <segue reference="1Vz-qL-VZ3"/>
     </inferredMetricsTieBreakers>

@@ -94,6 +94,9 @@ class DashboardMainViewController: UIViewController {
                 notesVC.noteController = project.noteController
             }
         } else if segue.identifier == "ProductsSegue" {
+            if let productsVC = segue.destination as? ProductsTableViewController {
+                productsVC.productController = project.productController
+            }
             
         } else if segue.identifier == "FinanceSegue" {
             

@@ -225,7 +225,6 @@
 		C392710724ECC0FA0032202A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C392710824ECC11A0032202A /* Main */,
 				13EFFFF424ECB73C0039F232 /* Main.storyboard */,
 				C392710F24ECC19D0032202A /* Projects */,
 				C392710A24ECC1300032202A /* Dashboard */,
@@ -233,13 +232,6 @@
 				C392710924ECC1240032202A /* Receipts */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		C392710824ECC11A0032202A /* Main */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Main;
 			sourceTree = "<group>";
 		};
 		C392710924ECC1240032202A /* Receipts */ = {
