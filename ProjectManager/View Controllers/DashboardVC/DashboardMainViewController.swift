@@ -63,7 +63,7 @@ class DashboardMainViewController: UIViewController {
     func createGraph(_ color: CGColor, _ endAngle: CGFloat, _ animated: CFTimeInterval) {
         let shapeLayer = CAShapeLayer()
         
-        let center = CGPoint(x: 300, y: 155)
+        let center = CGPoint(x: 300, y: 250)
         let circularPath = UIBezierPath(arcCenter: center, radius: 47, startAngle: 0, endAngle: endAngle, clockwise: false)
         shapeLayer.path = circularPath.cgPath
         shapeLayer.fillColor = UIColor.clear.cgColor
@@ -85,5 +85,18 @@ class DashboardMainViewController: UIViewController {
         
         shapeLayer.add(animcolor, forKey: "strokeEnd")
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let project = project else { return }
+        if segue.identifier == "NotesSegue" {
+            if let notesVC = segue.destination as? NotesTableViewController {
+                notesVC.noteController = project.noteController
+            }
+        } else if segue.identifier == "ProductsSegue" {
+            
+        } else if segue.identifier == "FinanceSegue" {
+            
+        }
     }
 }

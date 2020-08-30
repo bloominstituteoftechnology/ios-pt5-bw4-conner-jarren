@@ -9,37 +9,22 @@
 import UIKit
 
 class NotesTableViewController: UITableViewController {
-    
-    static var totalNotes: Int = 0
-    
     let reuseIdentifier = "NoteCell"
-    
-    var noteController = NoteController()
+    var noteController: NoteController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.separatorStyle = .none
-        let exampleNote = Note(title: "Todo-List", contents: "1) Need to purchase tools")
-        let exampleNote2 = Note(title: "Hello", contents: "Lorem ipsum Aut saepe officiis eaque unde autem aut aut. Voluptatum modi voluptas eos consequatur voluptate dolore modi. Qui fugiat rerum culpa. Suscipit recusandae et sint")
-        noteController.addNote(exampleNote)
-        noteController.addNote(exampleNote2)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         tableView.reloadData()
-        addNoteTotal()
-    }
-    func addNoteTotal() {
-        NotesTableViewController.totalNotes = 0
-        for _ in noteController.notes {
-            NotesTableViewController.totalNotes += 1
-        }
     }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return noteController.count
+        return noteController!.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -61,7 +46,7 @@ class NotesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = UITableViewCell()
         if let noteCell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? NoteTableViewCell {
-            noteCell.configureViews(for: noteController.noteAtIndex(indexPath.section))
+            noteCell.configureViews(for: noteController!.noteAtIndex(indexPath.section))
             cell = noteCell
         }
         return cell
@@ -70,7 +55,7 @@ class NotesTableViewController: UITableViewController {
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            noteController.removeNoteAtIndex(indexPath.row)
+            noteController!.removeNoteAtIndex(indexPath.row)
             tableView.deleteSections([indexPath.section], with: .fade)
         }
     }
