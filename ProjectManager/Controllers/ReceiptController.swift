@@ -50,4 +50,10 @@ class ReceiptController {
         return total
     }
     
+    var lastReceipt: Receipt? {
+        if(count > 0) {
+            return receipts[count-1]
+        }
+        return nil
+    }
 }
