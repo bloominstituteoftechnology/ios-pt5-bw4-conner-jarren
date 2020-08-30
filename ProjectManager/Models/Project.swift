@@ -11,22 +11,13 @@ import Foundation
 struct Project {
     var title: String
     var description: String?
-    var products: [Product]?
-    var notes: [Note]?
-    var receipts: [Receipt]?
-    var spendingDictionary: [String:Float]
+    let productController = ProductController()
+    let noteController = NoteController()
+    let receiptController = ReceiptController()
+    var financialDictionary: [String:Float] = [:]   // [Category:Spending]
     
-    init(title: String,
-         description: String? = nil,
-         products: [Product]? = nil,
-         notes: [Note]? = nil,
-         receipts: [Receipt]? = nil,
-         spendingDictionary: [String:Float] = [:])
-    {
+    init(title: String, description: String? = nil) {
         self.title = title
         self.description = description
-        self.products = products
-        self.notes = notes
-        self.spendingDictionary = spendingDictionary
     }
 }
