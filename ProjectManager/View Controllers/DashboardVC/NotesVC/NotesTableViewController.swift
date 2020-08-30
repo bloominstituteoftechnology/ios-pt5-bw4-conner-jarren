@@ -10,6 +10,8 @@ import UIKit
 
 class NotesTableViewController: UITableViewController {
     
+    static var totalNotes: Int = 0
+    
     let reuseIdentifier = "NoteCell"
     
     var noteController = NoteController()
@@ -26,8 +28,15 @@ class NotesTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         tableView.reloadData()
+        addNoteTotal()
     }
-    
+    func addNoteTotal() {
+        NotesTableViewController.totalNotes = 0
+        for _ in noteController.notes {
+            NotesTableViewController.totalNotes += 1
+        }
+        print(NotesTableViewController.totalNotes)
+    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
