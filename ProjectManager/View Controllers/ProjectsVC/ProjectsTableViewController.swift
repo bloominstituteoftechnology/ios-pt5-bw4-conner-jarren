@@ -36,9 +36,16 @@ class ProjectsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "projectCell", for: indexPath)
-        cell.textLabel?.text = projectController.projects[indexPath.row].title
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "projectCell", for: indexPath) as? ProjectTableViewCell {
+            cell.configureViews(with: projectController.projects[indexPath.row])
+            return cell
+        }
+        return UITableViewCell()
+    }
+    
+    // Set Cell height
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100.0
     }
 
     // Override to support editing the table view.

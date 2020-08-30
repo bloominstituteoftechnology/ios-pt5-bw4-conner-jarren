@@ -39,6 +39,7 @@
 		13EFFFF124ECB73C0039F232 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EFFFF024ECB73C0039F232 /* SceneDelegate.swift */; };
 		13EFFFF624ECB73C0039F232 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13EFFFF424ECB73C0039F232 /* Main.storyboard */; };
 		13EFFFF824ECB73C0039F232 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13EFFFF724ECB73C0039F232 /* Assets.xcassets */; };
+		13F4C04624FBFD4B004C3351 /* ProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F4C04524FBFD4B004C3351 /* ProjectTableViewCell.swift */; };
 		C315607E24F4BF25003AC820 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C315607D24F4BF25003AC820 /* Alert.swift */; };
 		C315608E24F60319003AC820 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C315608D24F60319003AC820 /* ProfileViewController.swift */; };
 		C3276C5624F42652001C4359 /* UIImage+Scaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3276C5524F42652001C4359 /* UIImage+Scaling.swift */; };
@@ -95,6 +96,7 @@
 		13EFFFF524ECB73C0039F232 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		13EFFFF724ECB73C0039F232 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13EFFFFC24ECB73C0039F232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13F4C04524FBFD4B004C3351 /* ProjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTableViewCell.swift; sourceTree = "<group>"; };
 		C315607D24F4BF25003AC820 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		C315608D24F60319003AC820 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C3276C5524F42652001C4359 /* UIImage+Scaling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Scaling.swift"; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 		C392710F24ECC19D0032202A /* Projects */ = {
 			isa = PBXGroup;
 			children = (
+				13F4C04524FBFD4B004C3351 /* ProjectTableViewCell.swift */,
 			);
 			path = Projects;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 				13CE97B424EF59F300200CB9 /* Receipt.swift in Sources */,
 				13CE97BC24EF71B600200CB9 /* NotesTableViewController.swift in Sources */,
 				C315608E24F60319003AC820 /* ProfileViewController.swift in Sources */,
+				13F4C04624FBFD4B004C3351 /* ProjectTableViewCell.swift in Sources */,
 				C32D7D2B24EF6BA200073746 /* AddPictureReceiptViewController.swift in Sources */,
 				C32D7D3024EF6BD700073746 /* ReviewReceiptViewController.swift in Sources */,
 				13D9675224F4B09000A31DB3 /* FinancialPieChart.swift in Sources */,
