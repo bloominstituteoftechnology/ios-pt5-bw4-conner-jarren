@@ -108,7 +108,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PZn-2N-c34" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6482.608695652174" y="689.73214285714278"/>
+            <point key="canvasLocation" x="6483" y="643"/>
         </scene>
         <!--Projects-->
         <scene sceneID="g5S-su-BNz">
@@ -140,7 +140,23 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0nc-lc-pGe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5111.594202898551" y="-93.080357142857139"/>
+            <point key="canvasLocation" x="5643" y="-381"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="d63-fv-8gx">
+            <objects>
+                <viewControllerPlaceholder id="iQG-Vv-HWW" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CBu-rd-g26" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5621" y="191"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="z1o-XW-xwn">
+            <objects>
+                <viewControllerPlaceholder id="qgb-ZP-hB9" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dld-Wf-7m6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5622" y="240"/>
         </scene>
         <!--Project Dashboard-->
         <scene sceneID="3tZ-3H-VQ3">
@@ -327,6 +343,18 @@
                                 <color key="textColor" red="0.1434192359" green="0.2053488195" blue="0.39952546360000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MKd-pg-4pg">
+                                <rect key="frame" x="0.0" y="811" width="414" height="85"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="ESX-Nk-uLO"/>
+                                </constraints>
+                                <items>
+                                    <tabBarItem title="Dashboard" image="house" catalog="system" id="scK-Fe-XGU"/>
+                                    <tabBarItem title="Receipts" image="doc.text" catalog="system" id="KjU-rK-sO3"/>
+                                    <tabBarItem title="Profile" image="person" catalog="system" id="2oG-R1-9Mf"/>
+                                </items>
+                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -337,8 +365,10 @@
                             <constraint firstItem="WwP-6U-ef1" firstAttribute="leading" secondItem="jDd-0K-voC" secondAttribute="trailing" constant="24" id="9pL-gi-rtW"/>
                             <constraint firstItem="8v9-l7-DWk" firstAttribute="trailing" secondItem="9CQ-oV-mVa" secondAttribute="trailing" constant="101" id="APm-nY-Jer"/>
                             <constraint firstItem="t82-pB-mQI" firstAttribute="top" secondItem="jDd-0K-voC" secondAttribute="bottom" constant="55" id="C2V-Ss-Vtw"/>
+                            <constraint firstAttribute="bottom" secondItem="MKd-pg-4pg" secondAttribute="bottom" id="EHt-vC-wXQ"/>
                             <constraint firstItem="Of2-qb-PqG" firstAttribute="top" secondItem="jG5-FY-sXp" secondAttribute="bottom" constant="30" id="Eeh-A4-CG6"/>
                             <constraint firstItem="8v9-l7-DWk" firstAttribute="trailing" secondItem="jdA-z0-rcK" secondAttribute="trailing" constant="35" id="FRu-Ik-Neo"/>
+                            <constraint firstAttribute="trailing" secondItem="MKd-pg-4pg" secondAttribute="trailing" id="Fgu-Ja-YU9"/>
                             <constraint firstItem="jdA-z0-rcK" firstAttribute="top" secondItem="OFp-uQ-gH1" secondAttribute="bottom" constant="20" id="Htg-la-dzx"/>
                             <constraint firstItem="Of2-qb-PqG" firstAttribute="leading" secondItem="8v9-l7-DWk" secondAttribute="leading" constant="35" id="ISf-Ab-zGc"/>
                             <constraint firstItem="t82-pB-mQI" firstAttribute="leading" secondItem="8v9-l7-DWk" secondAttribute="leading" id="LDD-aj-zIf"/>
@@ -361,6 +391,7 @@
                             <constraint firstItem="xW7-ZS-LVF" firstAttribute="leading" secondItem="8v9-l7-DWk" secondAttribute="leading" constant="47" id="oFY-Df-Wit"/>
                             <constraint firstItem="bf2-cm-ZY6" firstAttribute="top" secondItem="9CQ-oV-mVa" secondAttribute="bottom" constant="32" id="sIw-fX-lBm"/>
                             <constraint firstItem="OFp-uQ-gH1" firstAttribute="top" secondItem="8v9-l7-DWk" secondAttribute="top" constant="20" id="xW4-Ac-gjn"/>
+                            <constraint firstItem="MKd-pg-4pg" firstAttribute="leading" secondItem="3op-L3-kc4" secondAttribute="leading" id="yV0-il-2Og"/>
                             <constraint firstItem="zGo-Bt-eVe" firstAttribute="top" secondItem="OFp-uQ-gH1" secondAttribute="bottom" constant="37" id="yt1-DS-CAi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8v9-l7-DWk"/>
@@ -786,17 +817,20 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HYW-gf-fvS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4288" y="-93"/>
+            <point key="canvasLocation" x="4899" y="-381"/>
         </scene>
     </scenes>
     <resources>
         <image name="arrow.right" catalog="system" width="64" height="48"/>
         <image name="circle.fill" catalog="system" width="64" height="60"/>
+        <image name="doc.text" catalog="system" width="56" height="64"/>
+        <image name="house" catalog="system" width="64" height="54"/>
+        <image name="person" catalog="system" width="64" height="58"/>
         <image name="square.stack.3d.down.right.fill" catalog="system" width="62" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="yJE-dR-RL1"/>
         <segue reference="Lm9-zt-vnf"/>
-        <segue reference="1Vz-qL-VZ3"/>
+        <segue reference="d1Z-Tx-SCn"/>
     </inferredMetricsTieBreakers>
 </document>
