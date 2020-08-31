@@ -37,7 +37,10 @@ class BudgetViewController: UIViewController {
     }
     
     func percentToRadians(_ percent: CGFloat) -> CGFloat {
-        let total: CGFloat = percent * 0.062831853071796
+        var total: CGFloat = percent * 0.062831853071796
+        if total > 6.2831853071796 {
+            total = 6.2831853071796
+        }
         return total
     }
     
