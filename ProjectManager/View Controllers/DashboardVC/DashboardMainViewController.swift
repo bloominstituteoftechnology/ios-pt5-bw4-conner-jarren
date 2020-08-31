@@ -48,10 +48,10 @@ class DashboardMainViewController: UIViewController {
             totalAmountSpent.text = receiptController.floatToStringConversion(ReceiptsTableViewController.totalAmount, "%.2f", "$")
         }
         percentageToBudgetLabel.text = "..."
-        createGraph(toBudgetButton.backgroundColor!.cgColor, 2 * CGFloat.pi, 1.0)
+        createGraph(toBudgetButton.backgroundColor!.cgColor, 2 * CGFloat.pi, 1.0, 15)
         run(after: 1) {
-            self.createGraph(UIColor.white.cgColor, 2 * CGFloat.pi, 1.0)
-            self.createGraph(UIColor.systemBlue.cgColor, 1 * CGFloat.pi, 1.0)
+            self.createGraph(UIColor.white.cgColor, 2 * CGFloat.pi, 1.0, 10)
+            self.createGraph(UIColor.systemBlue.cgColor, self.percentToRadians(CGFloat(BudgetViewController.budgetTotalPercentage)), 1.0, 10)
         }
         run(after: 2) {
             self.percentageToBudgetLabel.text = self.receiptController.floatToStringConversion(BudgetViewController.budgetTotalPercentage, "rounded", "%")
@@ -70,17 +70,22 @@ class DashboardMainViewController: UIViewController {
         }
     }
     
-    func createGraph(_ color: CGColor, _ endAngle: CGFloat, _ animated: CFTimeInterval) {
+    func percentToRadians(_ percent: CGFloat) -> CGFloat {
+        let total: CGFloat = percent * 0.062831853071796
+        return total
+    }
+    
+    func createGraph(_ color: CGColor, _ endAngle: CGFloat, _ animated: CFTimeInterval, _ lineWidth: CGFloat) {
         let shapeLayer = CAShapeLayer()
         
         let center = CGPoint(x: 300, y: 250)
-        let circularPath = UIBezierPath(arcCenter: center, radius: 47, startAngle: 0, endAngle: endAngle, clockwise: false)
+        let circularPath = UIBezierPath(arcCenter: center, radius: 47, startAngle: 0, endAngle: endAngle, clockwise: true)
         shapeLayer.path = circularPath.cgPath
         shapeLayer.fillColor = UIColor.clear.cgColor
         
         shapeLayer.strokeEnd = 0
         shapeLayer.strokeColor = color
-        shapeLayer.lineWidth = 10
+        shapeLayer.lineWidth = lineWidth
         shapeLayer.lineCap =  CAShapeLayerLineCap.round
         shapeLayer.lineJoin = CAShapeLayerLineJoin.round
         
