@@ -41,7 +41,10 @@ class ReceiptController {
             let string = String(format: format, float)
             return "$\(string)"
         } else if format == "rounded" && symbol == "%"{
-            let string = Int(float.rounded())
+            var string = 0
+            if float.rounded().isFinite{
+                string = Int(float.rounded())
+            }
             return "\(string)%"
         } else {
             return "..."

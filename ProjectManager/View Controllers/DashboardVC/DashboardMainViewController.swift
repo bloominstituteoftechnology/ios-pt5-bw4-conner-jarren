@@ -55,7 +55,7 @@ class DashboardMainViewController: UIViewController {
             self.createGraph(UIColor.systemBlue.cgColor, 1 * CGFloat.pi, 1.0)
         }
         run(after: 2) {
-            self.percentageToBudgetLabel.text = "50%"
+            self.percentageToBudgetLabel.text = self.receiptController.floatToStringConversion(BudgetViewController.budgetTotalFloat, "rounded", "%")
 
         }
         if ReceiptsTableViewController.lastReceipt == nil{

@@ -23,8 +23,9 @@ class BudgetViewController: UIViewController {
         budgetTotal.text = receiptController.floatToStringConversion(sliderOutlet.value, "%.2f", "$")
         createGraph(UIColor.white.cgColor, 2 * CGFloat.pi, 1.0, 20)
         createGraph(UIColor.systemBlue.cgColor, 1 * CGFloat.pi, 1.0, 20)
-        
+        percentageOutlet.text = "0%"
     }
+    
     func run(after seconds: Int, completion: @escaping () -> Void) {
         let deadline = DispatchTime.now() + .seconds(seconds)
         DispatchQueue.main.asyncAfter(deadline: deadline) {
