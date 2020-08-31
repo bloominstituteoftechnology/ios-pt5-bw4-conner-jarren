@@ -523,6 +523,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="budgetTotal" destination="zmi-nF-CDJ" id="HTl-8e-LtM"/>
+                        <outlet property="percentageOutlet" destination="0tE-TO-CeP" id="Q8S-qR-fCJ"/>
                         <outlet property="sliderOutlet" destination="Peg-ov-1z5" id="1CF-1z-DQ4"/>
                         <outlet property="widgetView" destination="jHe-c9-JWu" id="oF0-Wf-4IM"/>
                     </connections>

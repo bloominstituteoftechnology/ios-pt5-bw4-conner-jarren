@@ -11,7 +11,7 @@ import UIKit
 class DashboardMainViewController: UIViewController {
     
     var receiptController = ReceiptController()
-    
+        
     @IBOutlet var totalAmountSpent: UILabel!
     @IBOutlet var percentageToBudgetLabel: UILabel!
     @IBOutlet var numberOfSavedProductsLabel: UILabel!
@@ -29,7 +29,7 @@ class DashboardMainViewController: UIViewController {
         lastAddedReceipt.text = ""
         secondActivityStatement.text = ""
         dateLastAddedReceipt.text = ""
-        
+
     }
     
     func run(after seconds: Int, completion: @escaping () -> Void) {
@@ -40,12 +40,13 @@ class DashboardMainViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        print(ReceiptsTableViewController.totalAmount)
         notesTotalLabel.text = String(NotesTableViewController.totalNotes)
         numberOfSavedProductsLabel.text = String(ProductsTableViewController.totalProduct)
-        if ReceiptsTableViewController.totalAmount == "" {
+        if ReceiptsTableViewController.totalAmount == 0.0 {
             totalAmountSpent.text = "$0.00"
         } else {
-            totalAmountSpent.text = ReceiptsTableViewController.totalAmount
+            totalAmountSpent.text = receiptController.floatToStringConversion(ReceiptsTableViewController.totalAmount, "%.2f", "$")
         }
         percentageToBudgetLabel.text = "..."
         createGraph(toBudgetButton.backgroundColor!.cgColor, 2 * CGFloat.pi, 1.0)
@@ -66,7 +67,7 @@ class DashboardMainViewController: UIViewController {
             firstActivityStatement.text = "You last added a receipt for"
             secondActivityStatement.text = "that amounted to"
             lastAddedReceipt.text = ReceiptsTableViewController.lastReceipt.date
-            dateLastAddedReceipt.text = receiptController.floatToStringConversion(ReceiptsTableViewController.lastReceipt.totalCost)
+            dateLastAddedReceipt.text = receiptController.floatToStringConversion(ReceiptsTableViewController.lastReceipt.totalCost, "%.2f", "$")
         }
     }
     

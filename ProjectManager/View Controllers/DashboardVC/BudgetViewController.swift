@@ -11,23 +11,29 @@ import UIKit
 class BudgetViewController: UIViewController {
     
     var receiptController = ReceiptController()
+    static var budgetTotalFloat: Float = 0.0
 
     @IBOutlet var sliderOutlet: UISlider!
     @IBOutlet var budgetTotal: UILabel!
     @IBOutlet var widgetView: UIView!
+    @IBOutlet var percentageOutlet: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        budgetTotal.text = receiptController.floatToStringConversion(sliderOutlet.value)
+        budgetTotal.text = receiptController.floatToStringConversion(sliderOutlet.value, "%.2f", "$")
         createGraph(UIColor.white.cgColor, 2 * CGFloat.pi, 1.0, 20)
         createGraph(UIColor.systemBlue.cgColor, 1 * CGFloat.pi, 1.0, 20)
-
+        
     }
     func run(after seconds: Int, completion: @escaping () -> Void) {
         let deadline = DispatchTime.now() + .seconds(seconds)
         DispatchQueue.main.asyncAfter(deadline: deadline) {
             completion()
         }
+    }
+    
+    func calcPercentage(_ x: Float, _ y: Float) -> Float {
+        return (x / y) * 100.0
     }
     
     func createGraphReset() {
@@ -66,10 +72,14 @@ class BudgetViewController: UIViewController {
     }
     
     @IBAction func sliderChanged(_ sender: Any) {
-        budgetTotal.text = receiptController.floatToStringConversion(sliderOutlet.value)
+        BudgetViewController.budgetTotalFloat = sliderOutlet.value
+        BudgetViewController.budgetTotalFloat = calcPercentage(BudgetViewController.budgetTotalFloat, ReceiptsTableViewController.totalAmount)
+        budgetTotal.text = receiptController.floatToStringConversion(sliderOutlet.value, "%.2f", "$")
         run(after: 1) {
             self.createGraphReset()
-
+        }
+        run(after: 2) {
+            self.percentageOutlet.text = self.receiptController.floatToStringConversion(BudgetViewController.self.budgetTotalFloat, "rounded", "%")
         }
     }
     
