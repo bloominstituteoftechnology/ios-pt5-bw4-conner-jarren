@@ -58,7 +58,6 @@ class BudgetViewController: UIViewController {
     func createGraphReset() {
         run(after: 2) {
             self.createGraph(UIColor.white.cgColor, 2 * CGFloat.pi, 1.0, 20)
-            print(self.percentToRadians(CGFloat(BudgetViewController.budgetTotalPercentage)))
             self.createGraph(UIColor.systemBlue.cgColor, self.percentToRadians(CGFloat(BudgetViewController.budgetTotalPercentage)), 1.0, 20)
         }
         createGraph(widgetView.backgroundColor!.cgColor, 2 * CGFloat.pi, 1.0, 50)
