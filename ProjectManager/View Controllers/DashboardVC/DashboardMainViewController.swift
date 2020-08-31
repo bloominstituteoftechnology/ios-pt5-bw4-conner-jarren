@@ -40,7 +40,6 @@ class DashboardMainViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        print(ReceiptsTableViewController.totalAmount)
         notesTotalLabel.text = String(NotesTableViewController.totalNotes)
         numberOfSavedProductsLabel.text = String(ProductsTableViewController.totalProduct)
         if ReceiptsTableViewController.totalAmount == 0.0 {
@@ -55,7 +54,7 @@ class DashboardMainViewController: UIViewController {
             self.createGraph(UIColor.systemBlue.cgColor, 1 * CGFloat.pi, 1.0)
         }
         run(after: 2) {
-            self.percentageToBudgetLabel.text = self.receiptController.floatToStringConversion(BudgetViewController.budgetTotalFloat, "rounded", "%")
+            self.percentageToBudgetLabel.text = self.receiptController.floatToStringConversion(BudgetViewController.budgetTotalPercentage, "rounded", "%")
 
         }
         if ReceiptsTableViewController.lastReceipt == nil{
